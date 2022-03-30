@@ -1,0 +1,35 @@
+name: Deploy
+on:
+  push:
+    branches:
+    - main
+  schedule:
+  - cron: '30 0 * * *'
+jobs:
+  deploy:
+    name: "Deploy website"
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1.0.0
+    - uses: dcodeIO/setup-node-nvm@master
+      with:
+        node-version: 16
+    - name: Build
+      run: |
+        npm ci --no-audit
+        node scripts/update-data
+        node scripts/update-svgs
+        npm run build
+        node scripts/update-sdk
+    - name: Deploy
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        cd dist
+        echo www.proton.org > CNAME
+        git init -b pages
+        git config user.name "GitHub Actions"
+        git config user.email "actions@github.com"
+        git add -A
+        git commit -m 'deploy'
+        git push -f https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git pages:gh-pages
