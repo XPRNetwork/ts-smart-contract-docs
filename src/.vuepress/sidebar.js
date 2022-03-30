@@ -37,6 +37,7 @@ function getDefaultSidebar() {
           collapsable: true,
           sidebarDepth: 0,
           children: [
+            '/stdlib/asset',
             '/stdlib/globals',
             '/stdlib/array',
             '/stdlib/arraybuffer',
