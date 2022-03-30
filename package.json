@@ -25,7 +25,6 @@
     "watchpack": "2.1.1"
   },
   "dependencies": {
-    "proton": "^0.18.32",
-    "monaco-editor": "^0.33.0"
+    "assemblyscript": "^0.18.32"
   }
 }
