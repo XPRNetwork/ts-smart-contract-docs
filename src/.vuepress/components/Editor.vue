@@ -3,7 +3,7 @@
         <iframe
             class="iframe-container"
             title="Editor"
-            src="https://ts-sc-editor.netlify.app/"
+            src="https://protonide.com"
             sandbox="allow-scripts allow-pointer-lock"
             ref="editorFrame"
         ></iframe>
