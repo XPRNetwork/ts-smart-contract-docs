@@ -6,7 +6,7 @@ description: Represents a token quantity
 
 An asset is a representation of a token's amount, symbol and precision.
 
-It is important to note that smart contracts view token amounts as raw values without decimals. Take for example XPR with precision 4. An asset representing `1.2345 XPR` would have an amount value of `12,345`
+It is important to note that smart contracts view token amounts as raw values without decimals. Take for example XPR with precision 4. An asset representing `1.2345 XPR` would have an amount value of `12,345`.
 
 ## Import
 
