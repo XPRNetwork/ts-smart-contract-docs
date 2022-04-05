@@ -4,3 +4,6 @@ data/contributors.json
 data/sponsors.json
 src/.vuepress/public/contributors.svg
 src/.vuepress/public/sponsors.svg
+
+# Local Netlify folder
+.netlify
