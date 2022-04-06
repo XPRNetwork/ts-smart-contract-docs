@@ -24,15 +24,15 @@ This object can be used to check account authentication or/and permission.
 **Example:**
 ```ts
   const payer = new PermissionLevel(Name.fromString("payer")) 
-  // creates account for payer@active
+  // specifies permission for payer@active
 
   const buyer = new PermissionLevel(Name.fromString("buyer"), Name.fromString("current")) 
-  // creates account for buyer@current
+  // specifies permission for buyer@current
 ```
 
 ### Action
 
-NEED EXPLANATION ABOUT THIS CLASS
+Creates object for action that can be performed in blockchain.
 
 #### Constructor
 
@@ -44,6 +44,29 @@ NEED EXPLANATION ABOUT THIS CLASS
     public data: u8[] = [],
   )
   ```
+  `authorization` - a list of authorizations provided to action
+
+  `account` - the name of the contract that will be called in action
+
+  `name` - the name of the action in the contract that will be called
+  
+  `data` - parameters to pass to action
+
+**Example:**
+```ts
+  const payer = new PermissionLevel(Name.fromString("payer"));
+
+  const permissions = [payer];
+
+  const contract = Name.fromString('test');
+  const action_name = Name.fromString('pay');
+
+  const data = { transfer: '1.0000 XPR' };
+
+  const action = new Action(permissions, contract, action_name, data.pack());
+  action.send();
+
+```
 
 ## Functions
 
@@ -52,7 +75,7 @@ NEED EXPLANATION ABOUT THIS CLASS
 * ```ts
   function requireAuth(name: Name): void
   ```
-  This function verifies that specified account exists in the set of provided auths on a action. It throws an error if not found.
+  This function verifies that the action caller has the permission of name@active. An error is thrown if the action caller does not satisfy this permission.
 
   The function should be used inside the action method of the contract. 
 
@@ -73,7 +96,7 @@ NEED EXPLANATION ABOUT THIS CLASS
 * ```ts
   requireAuth2(permissionLevel: PermissionLevel): void
   ```
-  This function verifies that specified account exists in the set of provided auths on a action with appropriate permission. It throws an error if not found.
+  This function verifies that the action caller has the permission of specified permissionLevel. An error is thrown if the action caller does not satisfy this permission.
 
   The function should be used inside the action method of the contract. The behavior is almost the same as requireAuth
 
@@ -95,11 +118,11 @@ NEED EXPLANATION ABOUT THIS CLASS
 * ```ts
   function hasAuth(name: Name): bool
   ```
-  This function verifies that the provided name has auth (exists in block chain).
+  This function verifies that the action caller has the permission of name@active.
 
-  The function only preforms the check, but will not unwinds all pending changes if the name has not auth
+  The function only preforms the check, but will not throw an error if name@active authorization is not satisfied
   
-  If you need to perform check and unwind changes see `check` function
+  If you need to perform check and throw is not satisfied, see `check` function
 
   **Example**
   ```ts
@@ -117,11 +140,11 @@ NEED EXPLANATION ABOUT THIS CLASS
 * ```ts
   function isAccount(name: Name): bool
   ```
-  This function verifies that the name passed as name argument is an existing account. 
+  The function only performs the check, but will not throw an error if the name is not an existing account
 
   The function only preforms the check, but will not unwinds all pending changes if the name is not an existing account
 
-  If you need to perform check and unwind changes see `check` function
+  If you need to perform check and throw is not satisfied, see `check` function
 
   **Example**
   ```ts
@@ -159,7 +182,7 @@ NEED EXPLANATION ABOUT THIS CLASS
 * ```ts
   function currentReceiver(): Name
   ```
-  Get the current receiver of the action. The contract name should be returned in
+  Get the current receiver of the action. Will always be equal to the name of the current executing contract.
 
   **Example**
   ```ts
@@ -169,14 +192,22 @@ NEED EXPLANATION ABOUT THIS CLASS
     @action('action')
     doAction(): void {
       const current = currentReceiver();
-      // current will be equal to basic
+      // current will be equal to Name.fromString("basic")
     }
   }
   ```
 
 ### getSender
+* ```ts
+  function function getSender(): Name
+  ```
+  This function return Name(0) when current action is not an inline action.
 
-NOT CLEAR WHAT THIS FUNCTION DOES
+  Users interact with blockchain by submitting 1 transaction which has an array of actions. Those actions are called top-level actions, so they are not inline actions. However each of those top-level actions could send additional "inline" actions.
+  
+  If `Action A` on `Contract A` (top-level) sends `Action B` on `Contract B` (inline), calling `getSender()` inside `B` would return `Name(A)`
+
+  If you called getSender inside a top-level action, you would get Name(0) to indicate its top-level 
 
 ### readActionData
 * ```ts
@@ -186,7 +217,7 @@ NOT CLEAR WHAT THIS FUNCTION DOES
   
   `readActionData` allows you to read the data passed in for the current action. The data is packed, so you need to unpack it before using.
   
-  In most cases you don't need to do it, because the framework will do it for you.
+  In most cases you don't need to do it, as the framework will handle it for you automatically. And you'll get unpacked values as action arguments
 
 ### unpackActionData
 * ```ts
@@ -196,7 +227,7 @@ NOT CLEAR WHAT THIS FUNCTION DOES
   
   `unpackActionData` allows you to read the unpacked data passed in for the current action.
   
-  In most cases you don't need to do it, because the framework will do it for you.
+  In most cases you don't need to do it, as the framework will handle it for you automatically. And you'll get unpacked values as action arguments
 
 ### actionDataSize
 * ```ts
