@@ -5,24 +5,17 @@
   "license": "Apache-2.0",
   "description": "Proton's Website.",
   "scripts": {
-    "start": "vuepress dev src --host localhost --no-cache",
-    "build": "vuepress build src",
-    "serve": "vuepress serve src",
-    "preinstall": "npx npm-force-resolutions"
+    "dev": "vuepress dev src",
+    "build": "vuepress build src"
   },
   "devDependencies": {
     "@vuepress/plugin-html-redirect": "^0.1.2",
     "he": "^1.2.0",
-    "node-fetch": "^2.6.7",
     "pngquant": "^4.0.0",
     "prism-themes": "^1.9.0",
     "sharp": "^0.30.2",
-    "vuepress": "^1.8.2",
-    "vuepress-plugin-serve": "^2.0.4",
+    "vuepress": "^1.5.3",
     "vuepress-plugin-sitemap": "^2.3.1"
-  },
-  "resolutions": {
-    "watchpack": "2.1.1"
   },
   "dependencies": {
     "assemblyscript": "^0.18.32"

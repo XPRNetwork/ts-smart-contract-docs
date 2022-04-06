@@ -1,3 +1,5 @@
+const { description } = require('../../package')
+
 module.exports = {
   base: '/',
   dest: './dist',
@@ -8,6 +10,21 @@ module.exports = {
       description: 'Writing blockchain apps using TS/AS semantics',
     }
   },
+
+  /**
+   * Ref：https://v1.vuepress.vuejs.org/config/#title
+   */
+  title: 'Proton Smart Contracts',
+  /**
+   * Ref：https://v1.vuepress.vuejs.org/config/#description
+   */
+  description: description,
+
+  /**
+   * Extra tags to be injected to the page HTML `<head>`
+   *
+   * ref：https://v1.vuepress.vuejs.org/config/#head
+   */
   head: [
     ['link', { rel: "apple-touch-icon", sizes: "180x180", href: "/favicons/apple-touch-icon.png" }],
     ['link', { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicons/favicon-32x32.png" }],
@@ -22,6 +39,14 @@ module.exports = {
     ['meta', { name: "viewport", content: "width=device-width, initial-scale=1" }],
   ],
   theme: '.vuepress/theme',
+
+
+
+  /**
+   * Theme configuration, here is the default theme configuration for VuePress.
+   *
+   * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
+   */
   themeConfig: {
     logo: '/images/icon.svg',
     nav: require('./nav'),
@@ -38,33 +63,21 @@ module.exports = {
       indexName: 'proton'
     }
   },
-  evergreen: true,
   extraWatchFiles: [
     '.vuepress/nav.js',
-    '.vuepress/sidebar.js',
-    '**/*.md',
-    '**/*.vue'
+    '.vuepress/sidebar.js'
   ],
+
+  /**
+   * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
+   */
   plugins: [
     '@vuepress/plugin-html-redirect',
-    'vuepress-plugin-serve',
     ['vuepress-plugin-sitemap', {
       hostname: 'https://www.proton.org',
       exclude: ['/404.html']
     }]
   ],
-  chainWebpack(config, isServer) {
-    if (!isServer) {
-        config.resolve.modules.merge(["node_modules"]);
-    }
-    return config;
-  },
-  // chainWebpack(config, isServer) {
-  //   if (isServer) return
-  //   config
-  //     .entry('custom')
-  //     .add('./src/.vuepress/custom.js')
-  // },
   markdown: {
     extendMarkdown
   }
