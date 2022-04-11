@@ -19,7 +19,7 @@ Rarely used, typically in blockchain block headers
 
 <sub>**Example:**</sub>
 ```ts
-  import { BlockTimestamp } from 'as-chain'
+  import { BlockTimestamp } from 'proton-tsc'
 
   const bt = new BlockTimestamp(5)
   // tp.slot == 5

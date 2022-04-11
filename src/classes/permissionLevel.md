@@ -20,7 +20,7 @@ This object can be used to check account authentication or/and permission.
   ```
   <sub>**Example:**</sub>
   ```ts
-    import { PermissionLevel } from 'as-chain'
+    import { PermissionLevel } from 'proton-tsc'
 
     const payer = new PermissionLevel(Name.fromString("payer")) 
     // specifies permission for payer@active

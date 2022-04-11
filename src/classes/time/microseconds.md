@@ -17,7 +17,7 @@ Creates a microseconds time object
 
 <sub>**Example:**</sub>
 ```ts
-  import { Microseconds } from 'as-chain'
+  import { Microseconds } from 'proton-tsc'
 
   const ms5 = new Microseconds(5)
   // ms5.count() == 5

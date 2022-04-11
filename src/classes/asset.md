@@ -28,7 +28,7 @@ It is important to note that smart contracts view token amounts as raw values wi
 
     <sub>**Example:**</sub>
     ```ts
-      import { Asset, Symbol } from 'as-chain'
+      import { Asset, Symbol } from 'proton-tsc'
 
       const symbol = new Symbol(4, "XPR")
       const asset = new Asset(10000, symbol)

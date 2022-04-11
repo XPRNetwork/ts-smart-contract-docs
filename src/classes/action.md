@@ -26,7 +26,7 @@ Creates object for action that can be performed in blockchain.
 
   <sub>**Example:**</sub>
   ```ts
-    import { PermissionLevel, Name, Action } from 'as-chain'
+    import { PermissionLevel, Name, Action } from 'proton-tsc'
 
     const payer = new PermissionLevel(Name.fromString("payer"));
 

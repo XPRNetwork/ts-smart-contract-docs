@@ -17,7 +17,7 @@ Proton Smart Contracts use [AssemblyScript](https://www.assemblyscript.org/), a 
 A simple Proton smart contract has the structure:
 
 ```ts
-import { Contract, print } from 'as-chain'
+import { Contract, print } from 'proton-tsc'
 
 @contract("hello")
 class HelloContract extends Contract {
@@ -30,7 +30,7 @@ class HelloContract extends Contract {
 
 To generate the WASM and ABI that you can upload to the Proton blockchain, simply run:
 ```sh
-npx eosio-asc hello.ts
+npx proton-asc hello.ts
 ```
 
 Ready to begin your journey? Head on over to [get started](./getting-started.md)!

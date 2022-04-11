@@ -17,7 +17,7 @@ Creates a time point object
 
 <sub>**Example:**</sub>
 ```ts
-  import { TimePoint } from 'as-chain'
+  import { TimePoint } from 'proton-tsc'
 
   const tp = new TimePoint(5)
   // tp.elapsed.count() == 5

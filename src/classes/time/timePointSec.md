@@ -17,7 +17,7 @@ Creates a time point seconds object
 
 <sub>**Example:**</sub>
 ```ts
-  import { TimePointSec } from 'as-chain'
+  import { TimePointSec } from 'proton-tsc'
 
   const tp = new TimePointSec(5)
   // tp.utcSeconds == 5
