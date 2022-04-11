@@ -47,8 +47,6 @@ A place for all things Proton. Feel free to add your projects and applications.
   Proton Market NFT marketplace frontend
 * [NFT Mint](https://github.com/ProtonProtocol/nft-mint) <br />
   Example code showing how to create collection, schema, template and assets from backend.
-* [Monsters NFT](https://github.com/ProtonProtocol/nft-demo) <br />
-  This demo shows the basic functionality of NFTs on the Proton chain. Through the use of the Proton Web SDK, this demo allows for purchasing and selling of monsters NFT. [Live Demo](https://nft.protonchain.com)
 
 ## Core
 * [Proton](https://github.com/ProtonProtocol/proton) <br />
