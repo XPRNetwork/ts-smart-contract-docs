@@ -38,7 +38,7 @@ A place for all things Proton. Feel free to add your projects and applications.
 * [Proton Liquidation Bot](https://github.com/ProtonProtocol/proton-liquidation-bot) <br />
   Bot that searches for Proton Loan liquidations and executes them.
   
-  ## NFTs
+## NFTs
 * [Proton Market Template](https://github.com/ProtonProtocol/proton-market-template) <br />
   Build white label NFT marketplace for your collection
 * [Proton Mint Contract](https://github.com/ProtonProtocol/proton-mint-contract) <br />
