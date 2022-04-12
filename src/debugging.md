@@ -7,7 +7,7 @@ The easiest way to debug your smart contracts is by using `print` statements ins
 
 ### Debug symbols
 
-When compiling with the `--debug` option, the compiler appends a name section to the binary, containing names of functions, globals, locals and so on. These names will show up in stack traces.
+When compiling with the `--debug` option, the compiler appends a name section to the binary, containing names of functions, globals, locals and so on. These names will show up in stack traces. Note that debug builds are larger in WASM size, and should only be used for testing.
 
 ### Source maps
 

@@ -1,6 +1,6 @@
 ---
-metaTitle: Proton
-description: A TypeScript-like language for WebAssembly
+metaTitle: Proton Smart Contracts
+description: Build Proton Smart Contracts with Typescript
 navbar: false
 sidebar: false
 editLink: false

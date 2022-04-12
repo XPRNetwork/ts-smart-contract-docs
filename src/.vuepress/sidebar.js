@@ -24,23 +24,23 @@ function getDefaultSidebar() {
       collapsable: false,
       sidebarDepth: 0,
       children: [
+        { title: "Testing", path: '/testing' },
+        { title: "Debugging", path: '/debugging' },
         {
-          title: "Concepts",
-          path: '/concepts'
+          title: 'Language Specifics',
+          collapsable: true,
+          sidebarDepth: 0,
+          children: [
+            { title: "Concepts", path: '/concepts' },
+            { title: "Number Types", path: '/types' },
+            { title: "Globals", path: '/globals' }
+          ]
         },
-        {
-          title: "Debugging",
-          path: '/debugging'
-        },
-        {
-          title: "Number Types",
-          path: '/types'
-        }
       ]
     },
     {
       title: 'Examples',
-      collapsable: false,
+      collapsable: true,
       sidebarDepth: 1,
       children: [
         { title: 'Overview', path: '/examples' },
@@ -54,6 +54,7 @@ function getDefaultSidebar() {
       children: [
         { title: 'Authentication', path: '/api/authentication' },
         { title: 'Blockchain Time', path: '/api/currentTime' },
+        { title: 'Cryptography', path: '/api/cryptography' },
       ]
     },
     {
@@ -64,6 +65,16 @@ function getDefaultSidebar() {
         { title: 'Action', path: '/classes/action' },
         { title: 'Asset', path: '/classes/asset' },
         { title: 'PermissionLevel', path: '/classes/permissionLevel' },
+        {
+          title: 'PublicKey',
+          collapsable: true,
+          children: [
+            { title: "PublicKey", path: '/classes/publicKey/publicKey' },
+            { title: "ECCPublicKey", path: '/classes/publicKey/eccPublicKey' },
+            { title: "WebAuthNPublicKey", path: '/classes/publicKey/webauthnPublicKey' }
+          ]
+        },
+        { title: 'Signature', path: '/classes/signature' },
         {
           title: 'Time',
           collapsable: true,

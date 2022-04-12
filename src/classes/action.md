@@ -22,7 +22,7 @@ Creates object for action that can be performed in blockchain.
 
   `name` - the name of the action in the contract that will be called
   
-  `data` - parameters to pass to action
+  `data` - packed bytes representing parameters to pass to the action
 
   <sub>**Example:**</sub>
   ```ts
