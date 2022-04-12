@@ -16,9 +16,9 @@ On your way to your first Proton Smart Contract!
 npm i -g @proton/cli
 ```
 
-2. Change network to proton-test
+2. Change chain to Proton Testnet
 ```
-proton network:set
+proton chain:set proton-test
 ```
 
 3. Create an account (12 characters max using charset a-z and 1-5)
@@ -49,12 +49,12 @@ npm run playground
 
 1. Obtain some XPR from testnet faucet
 ```
-proton faucet XPR
+proton faucet:claim XPR <ACCOUNT_NAME>
 ```
 
 2. Purchase some blockchain storage (RAM)
 ```
-proton ram:buy
+proton ram:buy <ACCOUNT_NAME> <ACCOUNT_NAME> 300000
 ```
 
 3. Deploy Contract
@@ -69,7 +69,7 @@ Next, we will interact with the contract through our CLI to verify successful de
 
 The following command executes "action1" on your contract:
 ```
-proton action <ACCOUNT_NAME> action1 -p <ACCOUNT_NAME>@active
+proton action <ACCOUNT_NAME> action1 -p <ACCOUNT_NAME>
 ```
 
 ## What's next?
