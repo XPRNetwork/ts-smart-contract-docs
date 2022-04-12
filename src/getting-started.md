@@ -34,12 +34,7 @@ proton account:create <ACCOUNT_NAME>
 proton contract:create <ACCOUNT_NAME>
 ```
 
-2. Build the new smart contract
-```
-npm run build
-```
-
-3. Run the playground (a simulated blockchain environment)
+2. Build contract and run the playground (a simulated blockchain environment)
 ```
 npm run playground
 ```
