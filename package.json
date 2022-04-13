@@ -5,7 +5,7 @@
   "license": "Apache-2.0",
   "description": "Proton's Smart Contract docs.",
   "scripts": {
-    "start": "npm run dev",
+    "start": "yarn dev",
     "dev": "vuepress dev src",
     "build": "vuepress build src"
   },
