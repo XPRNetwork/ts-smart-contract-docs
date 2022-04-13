@@ -5,7 +5,7 @@ On your way to your first Proton Smart Contract!
 
 ## Pre-requisites
 
-- NodeJS 16 [Installation Guide](https://github.com/ProtonProtocol/proton-cli/blob/master/INSTALL_NODE.md)
+- NodeJS 16 [Installation Guide](https://github.com/ProtonProtocol/proton-cli#install-nodejs)
 - NPM
 - Git
 
@@ -32,6 +32,7 @@ proton account:create <ACCOUNT_NAME>
 
 ```sh
 proton contract:create <ACCOUNT_NAME>
+cd <ACCOUNT_NAME>
 ```
 
 2. Build contract and run the playground (a simulated blockchain environment)

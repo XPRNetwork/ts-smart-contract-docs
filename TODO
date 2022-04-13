@@ -1,18 +1,15 @@
 Protocol guides https://developers.eos.io/welcome/v2.1/protocol-guides/index
 
-
 # Syed
-- Inline Action
-- Action Wrapper
 - Storage article
     - Table Store
     - Singleton
-
+- Inline Action
+- Action Wrapper
 # Later
-- bignum
 - decorators
+- bignum
 - Utils
 
 # Andrey
-- debug print
 - ExtendedAsset / Symbol / ExtendedSymbol
