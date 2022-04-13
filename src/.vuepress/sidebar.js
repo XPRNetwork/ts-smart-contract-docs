@@ -55,7 +55,7 @@ function getDefaultSidebar() {
         { title: 'Authentication', path: '/api/authentication' },
         { title: 'Blockchain Time', path: '/api/currentTime' },
         { title: 'Cryptography', path: '/api/cryptography' },
-        { title: 'Debug', path: '/api/debug' },
+        { title: 'Print', path: '/api/print' },
 
       ]
     },
