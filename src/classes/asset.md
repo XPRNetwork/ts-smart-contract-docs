@@ -66,7 +66,7 @@ It is important to note that smart contracts view token amounts as raw values wi
   ```ts
   const symbol = new Symbol(6, "XUSDC")
   const asset = new Asset(1000000, symbol)
-  console.log(asset.toString()) // 1.000000 XUSDC
+  print(asset.toString()) // 1.000000 XUSDC
   ```
 
 ## Static Methods

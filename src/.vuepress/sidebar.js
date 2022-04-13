@@ -64,6 +64,7 @@ function getDefaultSidebar() {
       children: [
         { title: 'Action', path: '/classes/action' },
         { title: 'Asset', path: '/classes/asset' },
+        { title: 'Name', path: '/classes/name' },
         { title: 'PermissionLevel', path: '/classes/permissionLevel' },
         {
           title: 'PublicKey',
