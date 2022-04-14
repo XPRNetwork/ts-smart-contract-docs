@@ -5,7 +5,7 @@ On your way to your first Proton Smart Contract!
 
 ## Pre-requisites
 
-- NodeJS 16 [Installation Guide](https://github.com/ProtonProtocol/proton-cli/blob/master/INSTALL_NODE.md)
+- NodeJS 16 [Installation Guide](https://github.com/ProtonProtocol/proton-cli#install-nodejs)
 - NPM
 - Git
 
@@ -32,9 +32,10 @@ proton account:create <ACCOUNT_NAME>
 
 ```sh
 proton contract:create <ACCOUNT_NAME>
+cd <ACCOUNT_NAME>
 ```
 
-2. Build contract and run the playground (a simulated blockchain environment)
+2. Build contract (to `target` folder) and run the playground (a simulated blockchain environment)
 ```
 npm run playground
 ```
@@ -54,7 +55,7 @@ proton ram:buy <ACCOUNT_NAME> <ACCOUNT_NAME> 300000
 
 3. Deploy Contract
 ```
-proton contract:set ./<ACCOUNT_NAME>/target <ACCOUNT_NAME>
+proton contract:set <ACCOUNT_NAME> ./target
 ```
 
 ## Interact with deployed contract
@@ -64,7 +65,7 @@ Next, we will interact with the contract through our CLI to verify successful de
 
 The following command executes "action1" on your contract:
 ```
-proton action <ACCOUNT_NAME> action1 -p <ACCOUNT_NAME>
+proton action <ACCOUNT_NAME> action1 '[]' <ACCOUNT_NAME>
 ```
 
 ## What's next?

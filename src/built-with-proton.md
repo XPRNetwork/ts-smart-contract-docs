@@ -35,7 +35,7 @@ A place for all things Proton. Feel free to add your projects and applications.
   Library to create BIP32 compatible mnemonics for Proton
 * [FOOBAR Faucet](https://github.com/ProtonProtocol/foobar-faucet) <br />
   Demo that implements an off-chain faucet distributing FOOBAR test tokens
-* [Proton Liquidation Bot](https://github.com/ProtonProtocol/proton-liquidation-bot) <br />
+* [Proton Liquidation Bot](https://github.com/ProtonProtocol/proton-loan-liquidation-bot) <br />
   Bot that searches for Proton Loan liquidations and executes them.
   
 ## NFTs
