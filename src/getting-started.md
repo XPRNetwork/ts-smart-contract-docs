@@ -55,7 +55,7 @@ proton ram:buy <ACCOUNT_NAME> <ACCOUNT_NAME> 300000
 
 3. Deploy Contract
 ```
-proton contract:set ./<ACCOUNT_NAME>/target <ACCOUNT_NAME>
+proton contract:set <ACCOUNT_NAME> ./<ACCOUNT_NAME>/target
 ```
 
 ## Interact with deployed contract
@@ -65,7 +65,7 @@ Next, we will interact with the contract through our CLI to verify successful de
 
 The following command executes "action1" on your contract:
 ```
-proton action <ACCOUNT_NAME> action1 -p <ACCOUNT_NAME>
+proton action <ACCOUNT_NAME> action1 '[]' <ACCOUNT_NAME>
 ```
 
 ## What's next?

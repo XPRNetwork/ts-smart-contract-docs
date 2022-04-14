@@ -28,7 +28,7 @@ npm install --save-dev ts-node mocha chai
 
 ## Run a test
 ```
-LOG_LEVEL=debug mocha -s 250 mytest.spec.ts -r ts-node/register
+npx cross-env LOG_LEVEL=debug mocha -s 250 mytest.spec.ts -r ts-node/register
 ```
 
 ## Common Usage
