@@ -20,7 +20,7 @@ function getDefaultSidebar() {
       sidebarDepth: 1,
     },
     {
-      title: 'Using the SDK',
+      title: 'Contract SDK',
       collapsable: false,
       sidebarDepth: 0,
       children: [
@@ -53,6 +53,7 @@ function getDefaultSidebar() {
       sidebarDepth: 1,
       children: [
         { title: 'Authentication', path: '/api/authentication' },
+        { title: 'Assert', path: '/api/assert' },
         { title: 'Blockchain Time', path: '/api/currentTime' },
         { title: 'Cryptography', path: '/api/cryptography' },
         { title: 'Print', path: '/api/print' },
