@@ -65,9 +65,12 @@ function getDefaultSidebar() {
       collapsable: false,
       sidebarDepth: 0,
       children: [
-        { title: 'Action', path: '/classes/action' },
-        { title: 'Asset', path: '/classes/asset' },
         { title: 'Name', path: '/classes/name' },
+        { title: 'Symbol', path: '/classes/symbol' },
+        { title: 'ExtendedSymbol', path: '/classes/extended-symbol' },
+        { title: 'Asset', path: '/classes/asset' },
+        { title: 'ExtendedAsset', path: '/classes/extended-asset' },
+        { title: 'Action', path: '/classes/action' },
         { title: 'PermissionLevel', path: '/classes/permissionLevel' },
         {
           title: 'PublicKey',
