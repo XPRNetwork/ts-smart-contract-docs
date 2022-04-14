@@ -35,7 +35,7 @@ proton contract:create <ACCOUNT_NAME>
 cd <ACCOUNT_NAME>
 ```
 
-2. Build contract and run the playground (a simulated blockchain environment)
+2. Build contract (to `target` folder) and run the playground (a simulated blockchain environment)
 ```
 npm run playground
 ```
@@ -55,7 +55,7 @@ proton ram:buy <ACCOUNT_NAME> <ACCOUNT_NAME> 300000
 
 3. Deploy Contract
 ```
-proton contract:set <ACCOUNT_NAME> ./<ACCOUNT_NAME>/target
+proton contract:set <ACCOUNT_NAME> ./target
 ```
 
 ## Interact with deployed contract
