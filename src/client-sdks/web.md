@@ -188,11 +188,11 @@ The `account` value is the token contract for the token being exchanged. In the 
 The actor and permission values can be destructured from the `session.auth` value from `login`.\
 The `memo` value serves as additional details attached to the transaction, but does not affect the transaction.&#x20;
 
-{% hint style="info" %}
-For any transactions with `X` wrapped tokens, the account must be set to `xtokens`
 
-For all other transactions including `XPR`, the account must be set to `eosio.tokens`
-{% endhint %}
+> For any transactions with `X` wrapped tokens, the account must be set to `xtokens`
+> 
+> For all other transactions including `XPR`, the account must be set to `eosio.tokens`
+
 
 {% hint style="warning" %}
 FOOBAR token is a fake token that can be used for testing purposes on Proton Chain mainnet. This token is dispensed for free at the [Foobar Faucet](https://foobar.protonchain.com). For any transactions with FOOBAR token, please reference the code block below.
@@ -257,6 +257,4 @@ restoreSession = async () => {
 }
 ```
 
-{% hint style="info" %}
 If there is no saved session or if saved session information is incomplete, the ProtonWebSDK function will return { null, null } and will remove any remaining saved information to remove unexpected side effects.
-{% endhint %}
