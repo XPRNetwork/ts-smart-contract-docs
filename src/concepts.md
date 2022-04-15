@@ -94,8 +94,6 @@ function doSomething(foo: Foo): void {
 }
 ```
 
-## Static Type Checks
-
 
 ## Language features
 
