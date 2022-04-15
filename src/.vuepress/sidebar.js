@@ -106,6 +106,16 @@ function getDefaultSidebar() {
             },
           ]
         },
+        {
+          title: 'Storage',
+          collapsable: true,
+          children: [
+            {
+              title: 'TableStore',
+              path: '/classes/storage/table-store.md'
+            }
+          ]
+        }
       ]
     }
   ]
