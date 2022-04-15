@@ -41,6 +41,17 @@ function getDefaultSidebar() {
       ]
     },
     {
+      title: 'Client SDKs',
+      collapsable: true,
+      sidebarDepth: 1,
+      children: [
+        { title: "Web", path: '/client-sdks/web' },
+        { title: "React Native", path: '/client-sdks/react-native'  },
+        { title: "Kotlin", path: '/client-sdks/kotlin'  },
+        { title: "Swift", path: '/client-sdks/swift' },
+      ]
+    },
+    {
       title: 'Examples',
       collapsable: true,
       sidebarDepth: 1,

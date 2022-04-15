@@ -55,7 +55,7 @@ module.exports = {
     displayAllHeaders: false,
     docsRepo: 'ProtonProtocol/proton-ts-sc-docs',
     docsDir: 'src',
-    docsBranch: 'main',
+    docsBranch: 'master',
     editLinks: true,
     editLinkText: 'Edit this page on GitHub',
     algolia: {
