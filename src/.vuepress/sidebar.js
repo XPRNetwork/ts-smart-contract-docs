@@ -78,53 +78,47 @@ function getDefaultSidebar() {
       collapsable: false,
       sidebarDepth: 0,
       children: [
-        { title: 'Name', path: '/classes/name' },
-        { title: 'Symbol', path: '/classes/symbol' },
-        { title: 'ExtendedSymbol', path: '/classes/extended-symbol' },
-        { title: 'Asset', path: '/classes/asset' },
-        { title: 'ExtendedAsset', path: '/classes/extended-asset' },
-        { title: 'Action', path: '/classes/action' },
-        { title: 'PermissionLevel', path: '/classes/permissionLevel' },
+        { title: 'Name', path: '/classes/Name' },
+        { title: 'Symbol', path: '/classes/Symbol' },
+        { title: 'ExtendedSymbol', path: '/classes/ExtendedSymbol' },
+        { title: 'Asset', path: '/classes/Asset' },
+        { title: 'ExtendedAsset', path: '/classes/ExtendedAsset' },
+        { title: 'Action', path: '/classes/Action' },
+        { title: 'PermissionLevel', path: '/classes/PermissionLevel' },
         {
-          title: 'PublicKey',
+          title: 'TableStore',
+          path: '/classes/TableStore.md'
+        },
+        {
+          title: 'Keys',
           collapsable: true,
           children: [
-            { title: "PublicKey", path: '/classes/publicKey/publicKey' },
-            { title: "ECCPublicKey", path: '/classes/publicKey/eccPublicKey' },
-            { title: "WebAuthNPublicKey", path: '/classes/publicKey/webauthnPublicKey' }
+            { title: "PublicKey", path: '/classes/keys/PublicKey' },
+            { title: "ECCPublicKey", path: '/classes/keys/ECCPublicKey' },
+            { title: "WebAuthNPublicKey", path: '/classes/keys/WebAuthNPublicKey' }
           ]
         },
-        { title: 'Signature', path: '/classes/signature' },
+        { title: 'Signature', path: '/classes/Signature' },
         {
           title: 'Time',
           collapsable: true,
           children: [
             {
               title: "Microseconds",
-              path: '/classes/time/microseconds'
+              path: '/classes/time/Microseconds'
             },
             {
               title: "TimePoint",
-              path: '/classes/time/timePoint'
+              path: '/classes/time/TimePoint'
             },
             {
               title: "TimePointSec",
-              path: '/classes/time/timePointSec'
+              path: '/classes/time/TimePointSec'
             },
             {
               title: "BlockTimestamp",
-              path: '/classes/time/blockTimestamp'
+              path: '/classes/time/BlockTimestamp'
             },
-          ]
-        },
-        {
-          title: 'Storage',
-          collapsable: true,
-          children: [
-            {
-              title: 'TableStore',
-              path: '/classes/storage/table-store.md'
-            }
           ]
         }
       ]
