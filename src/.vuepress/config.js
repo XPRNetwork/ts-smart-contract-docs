@@ -6,7 +6,7 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'Proton Smart Contracts',
+      title: 'Proton Web3',
       description: 'Writing blockchain smart contracts using TS/AS semantics',
     }
   },
@@ -14,7 +14,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Proton Smart Contracts',
+  title: 'Proton Web3',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
