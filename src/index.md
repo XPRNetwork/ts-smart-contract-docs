@@ -21,7 +21,7 @@ pageClass: frontpage
     </svg>
 
   </div>
-  <h1>Typescript library for writing Proton smart contracts.</h1>
+  <h1>Web3 SDKs for writing and interacting with Proton smart contracts.</h1>
   <p class="action">
     <a href="/introduction.html" class="docs">
       Get Started

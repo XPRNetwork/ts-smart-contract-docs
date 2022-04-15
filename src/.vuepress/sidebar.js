@@ -22,8 +22,10 @@ function getDefaultSidebar() {
     {
       title: 'Contract SDK',
       collapsable: false,
-      sidebarDepth: 0,
+      sidebarDepth: 1,
       children: [
+        { title: "Accounts and Permissions", path: '/accountsAndPermissions' },
+        { title: "Storage", path: '/storage' },
         { title: "Testing", path: '/testing' },
         { title: "Debugging", path: '/debugging' },
         {

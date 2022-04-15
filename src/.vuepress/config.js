@@ -72,6 +72,7 @@ module.exports = {
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
+    '@proton/vuepress-plugin-graphviz',
     '@vuepress/plugin-html-redirect',
     ['vuepress-plugin-sitemap', {
       hostname: 'https://www.proton.org',

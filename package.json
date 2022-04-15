@@ -10,13 +10,15 @@
     "build": "vuepress build src"
   },
   "devDependencies": {
-    "@vuepress/plugin-html-redirect": "^0.1.2",
+    "@proton/vuepress-plugin-graphviz": "^2.2.1",
+    "@vuepress/plugin-html-redirect": "^0.1.4",
     "he": "^1.2.0",
     "pngquant": "^4.0.0",
     "prism-themes": "^1.9.0",
-    "sharp": "^0.30.2",
-    "vuepress": "^1.5.3",
-    "vuepress-plugin-sitemap": "^2.3.1"
+    "sharp": "^0.30.3",
+    "vuepress": "^1.9.7",
+    "vuepress-plugin-sitemap": "^2.3.1",
+    "worker-loader": "^3.0.8"
   },
   "dependencies": {
     "assemblyscript": "^0.18.32"
