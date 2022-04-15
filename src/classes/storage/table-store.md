@@ -25,9 +25,9 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
   
       Example: `Name.fromString('mycontract')`
 
-    `scope` - The `Name` object with for the scope to isolate data. Collection name for example
+    `scope` - The `Name` object with for the scope of the table. Recommended same as contract name
     
-      Example: `Name.fromString('collection')`
+      Example: `Name.fromString('mycontract')`
     
     `table` - The `Name` object with for the table name
     
@@ -43,7 +43,7 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
       import { TableStore } from 'proton-tsc'
 
       const contract = Name.fromString('mycontract');
-      const scope = Name.fromString('collection');
+      const scope = Name.fromString('mycontract');
       const table = Name.fromString('mytable');
 
       const tablestore = new TableStore(contract, scope, table);
