@@ -77,6 +77,23 @@ function doSomething(foo: Foo): void {
 }
 ```
 
+**Triple equal checks strict reference equality:**
+```ts
+❌
+function doSomething(foo: Foo): void {
+  const a = "abc"
+  const b = "def"
+  check(a === b, "will fail")
+}
+
+✅
+function doSomething(foo: Foo): void {
+  const a = "abc"
+  const b = "def"
+  check(a == b, "will fail")
+}
+```
+
 ## Static Type Checks
 
 

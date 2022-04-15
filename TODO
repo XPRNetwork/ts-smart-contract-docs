@@ -1,11 +1,8 @@
 Protocol guides https://developers.eos.io/welcome/v2.1/protocol-guides/index
 
 # Syed
-- Storage article
-    - Table Store
-    - Singleton
-- Inline Action
-- Action Wrapper
+- Notifications
+- Inline Action + Action Wrapper
 
 # Later
 - decorators
