@@ -24,7 +24,7 @@ function getDefaultSidebar() {
       collapsable: false,
       sidebarDepth: 1,
       children: [
-        { title: "Accounts and Permissions", path: '/accountsAndPermissions' },
+        { title: "Accounts and Permissions", path: '/accounts-and-permissions' },
         { title: "Storage", path: '/storage' },
         { title: "Testing", path: '/testing' },
         { title: "Debugging", path: '/debugging' },
