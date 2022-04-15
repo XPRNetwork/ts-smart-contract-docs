@@ -40,7 +40,7 @@ pageClass: frontpage
 <div id="features">
   <div class="feature">
     <h2>Designed for WebAssembly</h2>
-    <p>Proton targets WebAssembly's feature set specifically, giving developers low-level control over their code.</p>
+    <p>Proton smart contracts compile to WASM for maximum performance at 4000 TPS.</p>
   </div>
   <div class="feature">
     <h2>Familiar TypeScript syntax</h2>
