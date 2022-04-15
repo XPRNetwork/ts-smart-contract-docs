@@ -169,12 +169,30 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
 * ```ts
   lowerBound(id: u64): T | null
   ```
-  NEED EXPLANATION
+  Returns the first element with primary key greater than or equal to the provided primary key.
+
+  <sub>**Example:**</sub>
+  ```ts
+  // there are records with ids: 3, 5, 7
+  const record = tablestore.lowerBound(4)
+  // will return record with id 5.
+  const record = tablestore.lowerBound(3)
+  // will return record with id 3.
+  ```
 
 * ```ts
   upperBound(id: u64): T | null
   ```
-  NEED EXPLANATION
+  Returns the first element with primary key less than or equal to the provided primary key.
+
+  <sub>**Example:**</sub>
+  ```ts
+  // there are records with ids: 3, 5, 7
+  const record = tablestore.upperBound(4)
+  // will return record with id 3.
+  const record = tablestore.upperBound(5)
+  // will return record with id 5.
+  ```
 
 * ```ts
   get availablePrimaryKey(): u64
