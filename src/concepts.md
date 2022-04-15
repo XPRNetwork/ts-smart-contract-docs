@@ -90,7 +90,7 @@ function doSomething(foo: Foo): void {
 function doSomething(foo: Foo): void {
   const a = "abc"
   const b = "def"
-  check(a == b, "will fail")
+  check(a == b, "will pass")
 }
 ```
 
