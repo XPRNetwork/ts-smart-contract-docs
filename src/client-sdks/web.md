@@ -83,7 +83,7 @@ _Custom Styling for Wallet Selector Modal_
 
 The wallet selector modal can be customized like so with the following example:
 
-<!-- ![](../.gitbook/assets/image.png) -->
+<img src="../images/webSdk.png" height="600">
 
 ```
 customStyleOptions: {
