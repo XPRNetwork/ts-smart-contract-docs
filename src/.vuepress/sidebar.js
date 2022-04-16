@@ -79,7 +79,7 @@ function getDefaultSidebar() {
       children: [
         { title: 'Name', path: '/classes/name' },
         { title: 'Symbol', path: '/classes/symbol' },
-        { title: 'ExtendedSymbol', path: '/classes/extendedsymbol' },
+        // { title: 'ExtendedSymbol', path: '/classes/extendedsymbol' },
         { title: 'Asset', path: '/classes/asset' },
         // { title: 'ExtendedAsset', path: '/classes/extendedasset' },
         // { title: 'Action', path: '/classes/action' },
