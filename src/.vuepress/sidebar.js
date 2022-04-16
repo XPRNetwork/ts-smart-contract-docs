@@ -81,19 +81,19 @@ function getDefaultSidebar() {
         { title: 'Symbol', path: '/classes/symbol' },
         // { title: 'ExtendedSymbol', path: '/classes/extendedsymbol' },
         { title: 'Asset', path: '/classes/asset' },
-        // { title: 'ExtendedAsset', path: '/classes/extendedasset' },
-        // { title: 'Action', path: '/classes/action' },
-        // { title: 'PermissionLevel', path: '/classes/permissionlevel' },
-        // { title: 'TableStore', path: '/classes/tablestore' },
-        // {
-        //   title: 'Keys',
-        //   collapsable: true,
-        //   children: [
-        //     { title: "PublicKey", path: '/classes/keys/publickey' },
-        //     { title: "ECCPublicKey", path: '/classes/keys/eccpublickey' },
-        //     { title: "WebAuthNPublicKey", path: '/classes/keys/webauthnpublickey' }
-        //   ]
-        // },
+        { title: 'ExtendedAsset', path: '/classes/extendedasset' },
+        { title: 'Action', path: '/classes/action' },
+        { title: 'PermissionLevel', path: '/classes/permissionlevel' },
+        { title: 'TableStore', path: '/classes/tablestore' },
+        {
+          title: 'Keys',
+          collapsable: true,
+          children: [
+            { title: "PublicKey", path: '/classes/keys/publickey' },
+            { title: "ECCPublicKey", path: '/classes/keys/eccpublickey' },
+            { title: "WebAuthNPublicKey", path: '/classes/keys/webauthnpublickey' }
+          ]
+        },
         // { title: 'Signature', path: '/classes/signature' },
         // {
         //   title: 'Time',
