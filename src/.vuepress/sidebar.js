@@ -1,7 +1,5 @@
 module.exports = {
-  // '/classes/': getclassesSidebar(),
   // '/examples': getExamplesSidebar(),
-  // '/built-with-proton': getExamplesSidebar(),
   '/': getDefaultSidebar()
 }
 
@@ -26,6 +24,8 @@ function getDefaultSidebar() {
       children: [
         { title: "Accounts and Permissions", path: '/accounts-and-permissions' },
         { title: "Storage", path: '/storage' },
+        { title: "Inline Actions", path: '/inline-actions' },
+        { title: "Notifications", path: '/notifications' },
         { title: "Testing", path: '/testing' },
         { title: "Debugging", path: '/debugging' },
         {
