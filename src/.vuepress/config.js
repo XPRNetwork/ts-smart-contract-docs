@@ -75,7 +75,7 @@ module.exports = {
     '@proton/vuepress-plugin-graphviz',
     '@vuepress/plugin-html-redirect',
     ['vuepress-plugin-sitemap', {
-      hostname: 'https://www.proton.org',
+      hostname: 'https://www.docs.protonchain.com',
       exclude: ['/404.html']
     }]
   ],
