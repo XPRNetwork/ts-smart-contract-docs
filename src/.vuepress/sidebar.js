@@ -70,15 +70,14 @@ function getDefaultSidebar() {
         { title: 'Blockchain Time', path: '/api/currentTime' },
         { title: 'Cryptography', path: '/api/cryptography' },
         { title: 'Print', path: '/api/print' },
-
       ]
     },
-    // {
-    //   title: 'Classes',
-    //   collapsable: false,
-    //   sidebarDepth: 0,
-    //   children: [
-    //     { title: 'Name', path: '/classes/Name' },
+    {
+      title: 'Classes',
+      collapsable: false,
+      sidebarDepth: 0,
+      children: [
+        { title: 'Name', path: '/classes/Name' },
     //     { title: 'Symbol', path: '/classes/Symbol' },
     //     { title: 'ExtendedSymbol', path: '/classes/ExtendedSymbol' },
     //     { title: 'Asset', path: '/classes/Asset' },
@@ -115,8 +114,8 @@ function getDefaultSidebar() {
     //         { title: "Checksum512", path: '/classes/checksum/Checksum512' },
     //       ]
     //     }
-    //   ]
-    // }
+      ]
+    }
   ]
 }
 
