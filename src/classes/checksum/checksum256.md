@@ -1,8 +1,8 @@
 ---
-description: Checksum160
+description: Checksum256
 ---
 
-# Checksum160
+# Checksum256
 
 Represents a 256 bit checksum (32 bytes)
 

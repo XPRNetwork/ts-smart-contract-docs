@@ -81,39 +81,39 @@ function getDefaultSidebar() {
         { title: 'Symbol', path: '/classes/symbol' },
         { title: 'ExtendedSymbol', path: '/classes/extendedsymbol' },
         { title: 'Asset', path: '/classes/asset' },
-        { title: 'ExtendedAsset', path: '/classes/extendedasset' },
-        { title: 'Action', path: '/classes/action' },
-        { title: 'PermissionLevel', path: '/classes/permissionlevel' },
-        { title: 'TableStore', path: '/classes/tablestore' },
-        {
-          title: 'Keys',
-          collapsable: true,
-          children: [
-            { title: "PublicKey", path: '/classes/keys/publickey' },
-            { title: "ECCPublicKey", path: '/classes/keys/eccpublickey' },
-            { title: "WebAuthNPublicKey", path: '/classes/keys/webauthnpublickey' }
-          ]
-        },
-        { title: 'Signature', path: '/classes/signature' },
-        {
-          title: 'Time',
-          collapsable: true,
-          children: [
-            { title: "Microseconds", path: '/classes/time/microseconds' },
-            { title: "TimePoint", path: '/classes/time/timepoint' },
-            { title: "TimePointSec", path: '/classes/time/timepointsec' },
-            { title: "BlockTimestamp", path: '/classes/time/blocktimestamp' },
-          ]
-        },
-        {
-          title: 'Checksum',
-          collapsable: true,
-          children: [
-            { title: "Checksum160", path: '/classes/checksum/checksum160' },
-            { title: "Checksum256", path: '/classes/checksum/checksum256' },
-            { title: "Checksum512", path: '/classes/checksum/checksum512' },
-          ]
-        }
+        // { title: 'ExtendedAsset', path: '/classes/extendedasset' },
+        // { title: 'Action', path: '/classes/action' },
+        // { title: 'PermissionLevel', path: '/classes/permissionlevel' },
+        // { title: 'TableStore', path: '/classes/tablestore' },
+        // {
+        //   title: 'Keys',
+        //   collapsable: true,
+        //   children: [
+        //     { title: "PublicKey", path: '/classes/keys/publickey' },
+        //     { title: "ECCPublicKey", path: '/classes/keys/eccpublickey' },
+        //     { title: "WebAuthNPublicKey", path: '/classes/keys/webauthnpublickey' }
+        //   ]
+        // },
+        // { title: 'Signature', path: '/classes/signature' },
+        // {
+        //   title: 'Time',
+        //   collapsable: true,
+        //   children: [
+        //     { title: "Microseconds", path: '/classes/time/microseconds' },
+        //     { title: "TimePoint", path: '/classes/time/timepoint' },
+        //     { title: "TimePointSec", path: '/classes/time/timepointsec' },
+        //     { title: "BlockTimestamp", path: '/classes/time/blocktimestamp' },
+        //   ]
+        // },
+        // {
+        //   title: 'Checksum',
+        //   collapsable: true,
+        //   children: [
+        //     { title: "Checksum160", path: '/classes/checksum/checksum160' },
+        //     { title: "Checksum256", path: '/classes/checksum/checksum256' },
+        //     { title: "Checksum512", path: '/classes/checksum/checksum512' },
+        //   ]
+        // }
       ]
     }
   ]

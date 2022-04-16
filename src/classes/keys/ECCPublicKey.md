@@ -2,7 +2,7 @@
 description: ECCPublicKey
 ---
 
-# PublicKey
+# ECCPublicKey
 
 Represents a public key object storing either a K1 or R1 key
 
