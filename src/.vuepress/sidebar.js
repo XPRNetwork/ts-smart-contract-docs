@@ -78,47 +78,41 @@ function getDefaultSidebar() {
       collapsable: false,
       sidebarDepth: 0,
       children: [
-        { title: 'Name', path: 'classes/Name' },
-        { title: 'Symbol', path: 'classes/Symbol' },
-        { title: 'ExtendedSymbol', path: 'classes/ExtendedSymbol' },
-        { title: 'Asset', path: 'classes/Asset' },
-        { title: 'ExtendedAsset', path: 'classes/ExtendedAsset' },
-        { title: 'Action', path: 'classes/Action' },
-        { title: 'PermissionLevel', path: 'classes/PermissionLevel' },
-        {
-          title: 'TableStore',
-          path: 'classes/TableStore.md'
-        },
+        { title: 'Name', path: 'classes/name' },
+        { title: 'Symbol', path: 'classes/symbol' },
+        { title: 'ExtendedSymbol', path: 'classes/extendedSymbol' },
+        { title: 'Asset', path: 'classes/asset' },
+        { title: 'ExtendedAsset', path: 'classes/extendedAsset' },
+        { title: 'Action', path: 'classes/action' },
+        { title: 'PermissionLevel', path: 'classes/permissionLevel' },
+        { title: 'TableStore', path: 'classes/tableStore.md' },
         {
           title: 'Keys',
           collapsable: true,
           children: [
-            { title: "PublicKey", path: 'classes/keys/PublicKey' },
-            { title: "ECCPublicKey", path: 'classes/keys/ECCPublicKey' },
-            { title: "WebAuthNPublicKey", path: 'classes/keys/WebAuthNPublicKey' }
+            { title: "PublicKey", path: 'classes/keys/publicKey' },
+            { title: "ECCPublicKey", path: 'classes/keys/eccPublicKey' },
+            { title: "WebAuthNPublicKey", path: 'classes/keys/webAuthNPublicKey' }
           ]
         },
-        { title: 'Signature', path: 'classes/Signature' },
+        { title: 'Signature', path: 'classes/signature' },
         {
           title: 'Time',
           collapsable: true,
           children: [
-            {
-              title: "Microseconds",
-              path: 'classes/time/Microseconds'
-            },
-            {
-              title: "TimePoint",
-              path: 'classes/time/TimePoint'
-            },
-            {
-              title: "TimePointSec",
-              path: 'classes/time/TimePointSec'
-            },
-            {
-              title: "BlockTimestamp",
-              path: 'classes/time/BlockTimestamp'
-            },
+            { title: "Microseconds", path: 'classes/time/microseconds' },
+            { title: "TimePoint", path: 'classes/time/timePoint' },
+            { title: "TimePointSec", path: 'classes/time/timePointSec' },
+            { title: "BlockTimestamp", path: 'classes/time/blockTimestamp' },
+          ]
+        },
+        {
+          title: 'Checksum',
+          collapsable: true,
+          children: [
+            { title: "Checksum160", path: 'classes/checksum/checksum160' },
+            { title: "Checksum256", path: 'classes/checksum/checksum256' },
+            { title: "Checksum512", path: 'classes/checksum/checksum512' },
           ]
         }
       ]
