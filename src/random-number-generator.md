@@ -2,7 +2,6 @@
 description: RNG
 ---
 
-
 # Random Number Generator (RNG)
 
 Proton provides an easy to use way to get random numbers on the blockchain. 
@@ -25,9 +24,9 @@ class Rng extends Contract {
         requestId: u64,
         signingValue: u64
     ): void {
-        // ... Authenticate if needed
+        // ... Authenticate if needed ...
         
-        // ... Save account, requestId and signing value to a table
+        // ... Save account, requestId and signing value to a table ...
 
         // Send RNG request
         sendRequestRandom(this.receiver, requestId, signingValue)
@@ -48,6 +47,8 @@ import { sendRequestRandom, rngChecksumToU64, RNG_CONTRACT } from 'proton-tsc/rn
 
 @contract
 class Rng extends Contract {
+    // ... code for requesting RNG value ...
+
     @action("receiverand")
     receiverand(
       requestId: u64,
@@ -56,7 +57,7 @@ class Rng extends Contract {
         // Authenticate
         requireAuth(RNG_CONTRACT);
 
-        // ... Get data from your own tables using requestId
+        // ... Get data from your own tables using requestId ...
 
         // Set random value (100 is used as max value here)
         const randomValue = rngChecksumToU64(randomChecksum, 100);
