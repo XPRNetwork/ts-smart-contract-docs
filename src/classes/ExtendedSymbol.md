@@ -15,11 +15,8 @@ An extended symbol stores code, precision of the token amount and a contract nam
   )
   ```
     `sym` -  The `Symbol` object.
-      Example: `Symbol("XPR", 4)`
   
     `contract` - The `Name` object with for the contract
-    
-      Example: `Name.fromString('mycontract')`
 
     <sub>**Example:**</sub>
     ```ts

@@ -16,12 +16,8 @@ An extended asset is a representation of a token's amount, symbol, precision and
   ```
     `quantity` -  The `Asset` object.
       
-    Example: `Asset.fromString("1.0000 XPR")`
-    
     `contract` - The `Name` object with for the contract
     
-    Example: `Name.fromString('mycontract')`
-
     <sub>**Example:**</sub>
     ```ts
       import { ExtendedAsset, Asset, Name } from 'proton-tsc'
