@@ -2,18 +2,18 @@
 description: Security
 ---
 
-## Security
+# Security
 
 The main goal of smart contract security is to prevent the usage of your smart contracts in unexpected ways.
 
 Remember that anyone can call an action on your contract with any acceptable parameter. As a developer, it is your responsibility to validate every parameter inputted into the contract.
 
-### General Recommendations
+## General Recommendations
 - Write unit tests to cover all expected states and incorrect authorization cases
 - Write integration tests to cover interactions of your smart contract with other contracts
 - Apply a multi-signature to your smart contract to prevent private key hacks
 
-### Common Pitfalls
+## Common Pitfalls
 - Using `===` instead of `==`, remember that `===` checks for reference equality
   - Fix: Always use `==`
 - Changing the columns of a table can corrupt the data
