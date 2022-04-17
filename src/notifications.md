@@ -66,8 +66,10 @@ class ReceiverContract extends Contract {
 
 **Note 1:** A contract will only receive notifications from contracts other than itself.
 
-**Note 2:** Always validate the firstReceiver, remember any contract can send you a notification.
+**Note 2:** The only authorization available in a receiving notification is that of `contract@eosio.code`, which means that trying to `requireAuth` or set another account as a RAM payer will fail.
 
-**Note 3:** Always validate the parameters.
+**Note 3:** Always validate the firstReceiver, remember any contract can send you a notification.
 
-**Note 4:** If your token is sending outgoing token transfers and listening for incoming notifications, remember that token contracts specify `requireRecipient(from)`, so your contract would be notified of this. In the example above we account for this by skipping if outgoing.
+**Note 4:** Always validate the parameters.
+
+**Note 5:** If your token is sending outgoing token transfers and listening for incoming notifications, remember that token contracts specify `requireRecipient(from)`, so your contract would be notified of this. In the example above we account for this by skipping if outgoing.

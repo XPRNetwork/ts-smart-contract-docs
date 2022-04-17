@@ -28,6 +28,7 @@ function getDefaultSidebar() {
         { title: "Notifications", path: '/notifications' },
         { title: "Testing", path: '/testing' },
         { title: "Debugging", path: '/debugging' },
+        { title: "Security", path: '/security' },
         {
           title: 'Language Specifics',
           collapsable: true,
