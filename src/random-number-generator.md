@@ -10,8 +10,8 @@ Proton provides an easy to use way to get random numbers on the blockchain.
 
 RNG requests using `sendRequestRandom` require 3 parameters from you:
 -  `contract` - Name - Contract to call `receiverand` action on once random number is generated.
--  `requestId` - u64 - Any ID to tie the RNG request to your own data
--  `signingValue` - u64 - A random value which will be signed by the RNG provider for verification
+-  `requestId` - u64 - Any ID to tie the RNG request to your own data.
+-  `signingValue` - u64 - A value which will be used by the RNG provider to create a random checksum.
 
 ```ts
 import { Name, check, requireAuth, Contract, Checksum256, TableStore } from 'proton-tsc'
