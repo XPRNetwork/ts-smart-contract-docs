@@ -26,7 +26,6 @@ function getDefaultSidebar() {
         { title: "Storage", path: '/storage' },
         { title: "Inline Actions", path: '/inline-actions' },
         { title: "Notifications", path: '/notifications' },
-        { title: "Random Number Generator", path: '/random-number-generator' },
         { title: "Testing", path: '/testing' },
         { title: "Debugging", path: '/debugging' },
         { title: "Security", path: '/security' },
@@ -72,6 +71,7 @@ function getDefaultSidebar() {
         { title: 'Blockchain Time', path: '/api/currentTime' },
         { title: 'Cryptography', path: '/api/cryptography' },
         { title: 'Print', path: '/api/print' },
+        { title: "Random Number Generator", path: '/random-number-generator' },
       ]
     },
     {
