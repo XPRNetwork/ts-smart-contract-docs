@@ -7,19 +7,19 @@ description: Inline Actions
 
 ## Overview
 
-Inline Actions provide a way for smart contracts to execute actions on other contracts.
+Actions submitted by a user as part of a transaction are referred to as root actions.
+
+Actions sent from inside a smart contract are referred to as inline actions.
 
 ## Execution order
 
 Proton's architecture helps mitigate re-entrancy attacks by scheduling inline actions instead of executing them immediately. 
 
-The actions array in a transaction submitted by the user to the blockchain are referred to as root actions. Root actions are executed in the order provided and each of these root actions may send outgoing notifications or inline actions recursively. Root action 1 and all of its recursive notifications and inline actions must be fully executed before root action 2 is executed.
+Every root and inline action maintains its own 2 internal FIFO queues for:
+1. Notifications
+2. Actions
 
-Each root and inline action create their own 2 internal FIFO queues:
-1. Notification queue
-2. Action queue
-
-As code executes in the current root or inline action's context:
+As code executes in the current action's context:
 1. Outgoing notifications get added to the current action's notification queue.
 2. Outgoing actions get added to the current action's actions queue.
 
@@ -28,11 +28,11 @@ The blockchain execution logic follows:
 2. If current action's notification queue is empty, process the next action in the actions queue.
 3. If current action's notification and action queues are empty, process queues from the parent action.
 
-Example:
+Execution order playground:
 
 <ExecutionOrder/>
 
-<img src="./images/executionOrder.png">
+<!-- <img src="./images/executionOrder.png"> -->
 
 ## Sending Inline Action
 

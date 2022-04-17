@@ -1,29 +1,151 @@
 <template>
-    <div class="editor-container">
-        abc
-    </div>
+  <ExecutionOrderHelper v-model="myArray"/>
 </template>
 
 <script>
-export default {
-  name: 'Editor',
-  data () {
-      return {
+import draggable from 'vuedraggable'
+import ExecutionOrderHelper from './ExecutionOrderHelper.vue'
 
-      }
+export default {
+  components: {
+    draggable,
+    ExecutionOrderHelper
+  },
+  name: 'Editor',
+
+  watch: {
+    myArray: {
+      handler: function (currentValue) {
+        // let executionOrder = 0
+        // let creationOrder = 0
+
+        // let childrenEnd = false
+
+        // const queue = []
+
+        // const handleAction = (action) => {
+        //   action.creationOrder = ++creationOrder
+        //   action.elements.forEach()
+        //   hand
+        //   if
+        // }
+
+        // currentValue.forEach(action => {
+        //   action.creationOrder = ++creationOrder
+
+        // })
+      },
+      immediate: true
+    }
+  },
+
+  data () {
+    return {
+      myArray: [
+        {
+          type: 'Action',
+          elements: [
+            {
+              type: 'Action',
+              elements: [
+                {
+                  type: 'Notification',
+                  elements: [],
+                  isInline: false,
+                  isNotification: false
+                },
+                {
+                  type: 'Action',
+                  elements: [],
+                  isInline: false,
+                  isNotification: false
+                }
+              ],
+              isInline: false,
+              isNotification: false
+            },
+            {
+              type: 'Notification',
+              elements: [
+                {
+                  type: 'Action',
+                  elements: [],
+                  isInline: false,
+                  isNotification: false
+                },
+                {
+                  type: 'Notification',
+                  elements: [],
+                  isInline: false,
+                  isNotification: false
+                }
+              ],
+              isInline: false,
+              isNotification: false
+            },
+            {
+              type: 'Notification',
+              elements: [
+                {
+                  type: 'Action',
+                  elements: [],
+                  isInline: false,
+                  isNotification: false
+                },
+                {
+                  type: 'Notification',
+                  elements: [],
+                  isInline: false,
+                  isNotification: false
+                }
+              ],
+              isInline: false,
+              isNotification: false
+            },
+            {
+              type: 'Action',
+              elements: [
+                {
+                  type: 'Action',
+                  elements: [],
+                  isInline: false,
+                  isNotification: false
+                },
+                {
+                  type: 'Notification',
+                  elements: [],
+                  isInline: false,
+                  isNotification: false
+                }
+              ],
+              isInline: false,
+              isNotification: false
+            }
+          ],
+          isInline: false,
+          isNotification: false
+        },
+        {
+          type: 'Action',
+          elements: [
+            {
+              type: 'Action',
+              elements: [],
+              isInline: false,
+              isNotification: false
+            },
+            {
+              type: 'Notification',
+              elements: [],
+              isInline: false,
+              isNotification: false
+            }
+          ],
+          isInline: false,
+          isNotification: false
+        },
+      ]
+    }
   }
 }
 </script>
-
-<style scoped>
-.editor-container {
-    width: 100%;
-}
-
-.iframe-container {
-    width: 100%;
-    height: 650px;
-    position: relative;
-    background-color: #1e1e1e
-}
-</style>
