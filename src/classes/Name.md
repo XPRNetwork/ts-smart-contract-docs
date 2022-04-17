@@ -62,7 +62,7 @@ On Proton, users can freely register names with a minimum of 4 characters. Names
   <sub>**Example:**</sub>
   ```ts
   const loanToken = Name.fromString("loan.token")
-  print(`${loanToken.prefix()}`) // token
+  print(`${loanToken.prefix()}`) // loan
 
   const abc = Name.fromString("a.b.c")
   print(`${abc.prefix()}`) // a.b
