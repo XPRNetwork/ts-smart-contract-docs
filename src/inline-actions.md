@@ -11,7 +11,7 @@ Inline Actions provide a way for smart contracts to execute actions on other con
 
 ## Execution order
 
-Proton's architecture prevents re-entrancy attacks by scheduling inline actions instead of executing them immediately. 
+Proton's architecture helps mitigate re-entrancy attacks by scheduling inline actions instead of executing them immediately. 
 
 The actions array in a transaction submitted by the user to the blockchain are referred to as root actions. Root actions are executed in the order provided and each of these root actions may send outgoing notifications or inline actions recursively. Root action 1 and all of its recursive notifications and inline actions must be fully executed before root action 2 is executed.
 
@@ -29,6 +29,8 @@ The blockchain execution logic follows:
 3. If current action's notification and action queues are empty, process queues from the parent action.
 
 Example:
+
+<ExecutionOrder/>
 
 <img src="./images/executionOrder.png">
 
