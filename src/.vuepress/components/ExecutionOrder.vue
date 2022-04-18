@@ -18,6 +18,7 @@ export default {
   watch: {
     rootActions: {
       handler: function (rootActions, oldRootActions) {
+        console.log('handler')
         for (const rootAction of rootActions) {
           rootAction.isRoot = true
           if (rootAction.type === 'Notification') {

@@ -3,9 +3,8 @@
     v-bind="dragOptions"
     tag="div"
     class="item-container"
-    :list="list"
-    :value="value"
-    @input="emitter"
+    :value="realValue"
+    @input="onInput"
   >
     <div class="item-group" :key="el.executionOrder + `${i}`" v-for="(el, i) in realValue">
       <div class="item" style="display: flex; justify-content: space-between;">
@@ -16,7 +15,7 @@
           <span>{{ el.executionOrder }}</span>
         </div>
       </div>
-      <nested-test class="item-sub" :list="el.elements" @input="newElements => console.log(newElements)" />
+      <nested-test class="item-sub" @input="onInputChild" :value="JSON.parse(JSON.stringify(el.elements))" />
     </div>
   </draggable>
 </template>
@@ -30,17 +29,16 @@ export default {
     value: {
       required: false,
       type: Array,
-      default: null
-    },
-    list: {
-      required: false,
-      type: Array,
-      default: null
+      default: null,
     }
   },
   methods: {
-    emitter(value) {
-      this.$emit("input", value);
+    onInputChild (value) {
+      console.log('child', value)
+    },
+    onInput (value) {
+      console.log('parent', value)
+      this.$emit('input', value)
     }
   },
   components: {
@@ -55,10 +53,13 @@ export default {
         ghostClass: "ghost"
       };
     },
-    // this.value when input = v-model
-    // this.list  when input != v-model
-    realValue() {
-      return this.value ? this.value : this.list;
+    realValue: {
+      set(value) {
+        this.$emit('input', value)
+      },
+      get () {
+        return this.value
+      }
     }
   }
 };
