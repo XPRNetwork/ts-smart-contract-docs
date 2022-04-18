@@ -1,5 +1,5 @@
 <template>
-  <ExecutionOrderHelper v-model="myArray"/>
+  <ExecutionOrderHelper v-model="rootActions"/>
 </template>
 
 <script>
@@ -13,138 +13,52 @@ export default {
   },
   name: 'Editor',
 
+  props: ['rootActions'],
+
   watch: {
-    myArray: {
-      handler: function (currentValue) {
-        // let executionOrder = 0
-        // let creationOrder = 0
+    rootActions: {
+      handler: function (rootActions, oldRootActions) {
+        for (const rootAction of rootActions) {
+          rootAction.isRoot = true
+          if (rootAction.type === 'Notification') {
+            this.rootActions = oldRootActions
+            return
+          }
+        }
 
-        // let childrenEnd = false
+        const handleContext = (context) => {
+          return {
+            NewIA: context.elements.filter(_ => _.type === 'Action'),
+            NewN: context.elements.filter(_ => _.type === 'Notification'),
+          }
+        }
 
-        // const queue = []
+        let executionOrder = 0
 
-        // const handleAction = (action) => {
-        //   action.creationOrder = ++creationOrder
-        //   action.elements.forEach()
-        //   hand
-        //   if
-        // }
+        for (const rootAction of rootActions) {
+          let RootN = []
+          let RootIA = [rootAction]
 
-        // currentValue.forEach(action => {
-        //   action.creationOrder = ++creationOrder
+          while (RootN.length || RootIA.length) {
+            const action = RootN.shift() || RootIA.shift()
+            action.executionOrder = ++executionOrder
+            
+            const { NewIA, NewN } = handleContext(action)
 
-        // })
+            // Concat Notifications
+            RootN = RootN.concat(NewN)
+
+            // Concat Inline Actions
+            if (action.type === 'Notification') {
+              RootIA = RootIA.concat(NewIA)
+            } else {
+              RootIA = NewIA.concat(RootIA)
+            }
+          }
+        }
       },
+      deep: true,
       immediate: true
-    }
-  },
-
-  data () {
-    return {
-      myArray: [
-        {
-          type: 'Action',
-          elements: [
-            {
-              type: 'Action',
-              elements: [
-                {
-                  type: 'Notification',
-                  elements: [],
-                  isInline: false,
-                  isNotification: false
-                },
-                {
-                  type: 'Action',
-                  elements: [],
-                  isInline: false,
-                  isNotification: false
-                }
-              ],
-              isInline: false,
-              isNotification: false
-            },
-            {
-              type: 'Notification',
-              elements: [
-                {
-                  type: 'Action',
-                  elements: [],
-                  isInline: false,
-                  isNotification: false
-                },
-                {
-                  type: 'Notification',
-                  elements: [],
-                  isInline: false,
-                  isNotification: false
-                }
-              ],
-              isInline: false,
-              isNotification: false
-            },
-            {
-              type: 'Notification',
-              elements: [
-                {
-                  type: 'Action',
-                  elements: [],
-                  isInline: false,
-                  isNotification: false
-                },
-                {
-                  type: 'Notification',
-                  elements: [],
-                  isInline: false,
-                  isNotification: false
-                }
-              ],
-              isInline: false,
-              isNotification: false
-            },
-            {
-              type: 'Action',
-              elements: [
-                {
-                  type: 'Action',
-                  elements: [],
-                  isInline: false,
-                  isNotification: false
-                },
-                {
-                  type: 'Notification',
-                  elements: [],
-                  isInline: false,
-                  isNotification: false
-                }
-              ],
-              isInline: false,
-              isNotification: false
-            }
-          ],
-          isInline: false,
-          isNotification: false
-        },
-        {
-          type: 'Action',
-          elements: [
-            {
-              type: 'Action',
-              elements: [],
-              isInline: false,
-              isNotification: false
-            },
-            {
-              type: 'Notification',
-              elements: [],
-              isInline: false,
-              isNotification: false
-            }
-          ],
-          isInline: false,
-          isNotification: false
-        },
-      ]
     }
   }
 }

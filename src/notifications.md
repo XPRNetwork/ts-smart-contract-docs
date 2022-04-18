@@ -17,6 +17,7 @@ Users will see two types of transactions in their transaction history on [Proton
 
 By default, token contracts send notifications to both the sender and recipient account.
 
+**Important:** Understand the [Execution Order](./execution-order.md) of smart contracts before using notifications.
 
 ## Sending Notifications
 

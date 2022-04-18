@@ -24,6 +24,7 @@ function getDefaultSidebar() {
       children: [
         { title: "Accounts and Permissions", path: '/accounts-and-permissions' },
         { title: "Storage", path: '/storage' },
+        { title: "Execution Order", path: '/execution-order' },
         { title: "Inline Actions", path: '/inline-actions' },
         { title: "Notifications", path: '/notifications' },
         { title: "Testing", path: '/testing' },

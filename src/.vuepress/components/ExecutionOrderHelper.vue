@@ -9,9 +9,10 @@
   >
     <div class="item-group" :key="el.id" v-for="el in realValue">
       <div class="item" style="display: flex; justify-content: space-between;">
-        <span>{{ el.type }}</span>
+        <span>
+          <span v-if="el.type === 'Action'">{{ el.isRoot ? 'Root' : 'Inline' }}</span> {{ el.type }}
+        </span>
         <div>
-          <span>{{ el.creationOrder }}</span> | 
           <span>{{ el.executionOrder }}</span>
         </div>
       </div>
