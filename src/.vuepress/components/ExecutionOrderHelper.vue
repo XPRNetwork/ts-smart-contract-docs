@@ -7,7 +7,7 @@
     :value="value"
     @input="emitter"
   >
-    <div class="item-group" :key="el.id" v-for="el in realValue">
+    <div class="item-group" :key="el.executionOrder + `${i}`" v-for="(el, i) in realValue">
       <div class="item" style="display: flex; justify-content: space-between;">
         <span>
           <span v-if="el.type === 'Action'">{{ el.isRoot ? 'Root' : 'Inline' }}</span> {{ el.type }}
@@ -16,7 +16,7 @@
           <span>{{ el.executionOrder }}</span>
         </div>
       </div>
-      <nested-test class="item-sub" :list="el.elements" />
+      <nested-test class="item-sub" :list="el.elements" @input="newElements => console.log(newElements)" />
     </div>
   </draggable>
 </template>

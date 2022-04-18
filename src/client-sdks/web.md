@@ -193,10 +193,7 @@ The `memo` value serves as additional details attached to the transaction, but d
 > 
 > For all other transactions including `XPR`, the account must be set to `eosio.tokens`
 
-
-{% hint style="warning" %}
-FOOBAR token is a fake token that can be used for testing purposes on Proton Chain mainnet. This token is dispensed for free at the [Foobar Faucet](https://foobar.protonchain.com). For any transactions with FOOBAR token, please reference the code block below.
-{% endhint %}
+FOOBAR token is a test token that can be used for testing purposes on Proton Chain mainnet. This token is dispensed for free at the [Foobar Faucet](https://foobar.protonchain.com). For any transactions with FOOBAR token, please reference the code block below.
 
 ```ts
 const actions = [{
