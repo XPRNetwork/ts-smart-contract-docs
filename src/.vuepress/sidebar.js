@@ -48,8 +48,8 @@ function getDefaultSidebar() {
       sidebarDepth: 1,
       children: [
         { title: "Web", path: '/client-sdks/web' },
-        { title: "React Native", path: '/client-sdks/react-native'  },
-        { title: "Kotlin", path: '/client-sdks/kotlin'  },
+        { title: "React Native", path: '/client-sdks/react-native' },
+        { title: "Kotlin", path: '/client-sdks/kotlin' },
         { title: "Swift", path: '/client-sdks/swift' },
       ]
     },
@@ -73,6 +73,7 @@ function getDefaultSidebar() {
         { title: 'Cryptography', path: '/api/cryptography' },
         { title: 'Print', path: '/api/print' },
         { title: "Random Number Generator", path: '/random-number-generator' },
+        { title: "Utility", path: '/api/utility' },
       ]
     },
     {
