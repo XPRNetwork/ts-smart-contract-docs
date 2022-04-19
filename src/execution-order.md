@@ -30,9 +30,9 @@ Note that Proton will only process the inline actions queue when the notificatio
 
 ## Basic playground
 
-
+<ClientOnly>
 <ExecutionOrder :rootActions="[
-        {
+  {
           type: 'Action',
           elements: [
             {
@@ -69,9 +69,11 @@ Note that Proton will only process the inline actions queue when the notificatio
           ],
         },
 ]"/>
+</ClientOnly>
 
 ## Advanced playground
 
+<ClientOnly>
 <ExecutionOrder :rootActions="[
         {
           type: 'Action',
@@ -162,3 +164,4 @@ Note that Proton will only process the inline actions queue when the notificatio
           ],
         },
 ]"/>
+</ClientOnly>

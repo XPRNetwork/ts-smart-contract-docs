@@ -1,28 +1,33 @@
 <template>
-  <ExecutionOrderHelper v-model="rootActions"/>
+  <ExecutionOrderHelper :list="elements" />
 </template>
 
 <script>
-import draggable from 'vuedraggable'
 import ExecutionOrderHelper from './ExecutionOrderHelper.vue'
 
 export default {
   components: {
-    draggable,
     ExecutionOrderHelper
   },
   name: 'Editor',
 
   props: ['rootActions'],
 
+  mounted() {
+    this.realActions = [...this.rootActions]
+  },
+  data() {
+    return {
+      realActions: []
+    }
+  },
   watch: {
-    rootActions: {
+    realActions: {
       handler: function (rootActions, oldRootActions) {
-        console.log('handler')
         for (const rootAction of rootActions) {
           rootAction.isRoot = true
           if (rootAction.type === 'Notification') {
-            this.rootActions = oldRootActions
+            this.realActions = oldRootActions
             return
           }
         }
@@ -43,7 +48,7 @@ export default {
           while (RootN.length || RootIA.length) {
             const action = RootN.shift() || RootIA.shift()
             action.executionOrder = ++executionOrder
-            
+
             const { NewIA, NewN } = handleContext(action)
 
             // Concat Notifications
@@ -61,6 +66,16 @@ export default {
       deep: true,
       immediate: true
     }
-  }
+  },
+  computed: {
+    elements: {
+      get() {
+        return this.realActions;
+      },
+      set(value) {
+        this.realActions = value;
+      }
+    }
+  },
 }
 </script>
