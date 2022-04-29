@@ -30,7 +30,7 @@ ProtonScan: [Link](https://www.protonscan.io/account/proton.swaps?loadContract=t
 
 `pool_creator` = `myaccount`
 
-`lt_symbol` = `FOOXPR`
+`lt_symbol` = `8,FOOXPR`
 
 `pool1` = `{"quantity":"1000.000000 FOOBAR", "contract":"xtokens"}`
 
