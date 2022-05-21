@@ -31,7 +31,7 @@ proton account:create <ACCOUNT_NAME>
 1. Run the CLI contract generator:
 
 ```sh
-proton contract:create <ACCOUNT_NAME>
+proton generate:contract <ACCOUNT_NAME>
 cd <ACCOUNT_NAME>
 ```
 
