@@ -78,7 +78,6 @@ export interface LinkStorage {
 | appName            | String | Name of app to display in wallet selector                                                                                                                                                                                                                               |
 | appLogo            | String | Logo image of app to display in wallet selector                                                                                                                                                                                                                         |
 | customStyleOptions | Object | Custom styles for the wallet selector modal for further customization. This is an optional object to pass in. If nothing is passed in, it will default to a white modal. This is particularly useful if you would like to change the background for dark mode websites. |
-
 | enabledWalletTypes | Array | Array of wallet types to show for login: `proton` for Mobile wallet, `webauth` for browser wallet and `anchor` for desktop wallet |
 
 _Custom Styling for Wallet Selector Modal_
