@@ -13,11 +13,11 @@ Actions sent from inside a smart contract are referred to as inline actions.
 ## Sending Inline Action
 
 ```ts
-import { InlineAction, Name, Asset, Contract } from "proton-tsc"
+import { Name, Asset, Contract, ActionData, InlineAction } from "proton-tsc"
 
 // Create packer class for object to send
 @packer
-export class TokenTransfer extends InlineAction {
+export class TokenTransfer extends ActionData {
     constructor (
         public from: Name = new Name(),
         public to: Name = new Name(),
@@ -29,14 +29,15 @@ export class TokenTransfer extends InlineAction {
 }
 
 class SenderContract extends Contract {
-  @action("transfer")
+  @action("sendinline")
   sendinline(): void {
+    // Create transfer action
+    const tokenContract = "xtokens"
+    const transfer = new InlineAction<TokenTransfer>("transfer")
+    const action = transfer.act(tokenContract, new PermissionLevel(this.receiver))
+
     // Create transfer object
     const actionParams = new TokenTransfer(this.receiver, Name.fromString("receiver"), Asset.fromString("1.000000 XUSDC"), "memo")
-
-    // Create transfer action
-    const transfer = ActionWrapper.fromString("transfer")
-    const action = transfer.act("xtokens", new PermissionLevel(this.receiver))
 
     // Send action (add to queue)
     action.send(actionParams)
