@@ -222,7 +222,7 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
   ```
   The same as `getBySecondaryIDX64` but with `f64` type of the secondary value
 
-* ```ts
+<!-- * ```ts
   getBySecondaryIDXLongDouble(secondaryValue: Float128, index: u8): T | null
   ```
-  The same as `getBySecondaryIDX64` but with `Float128` type of the secondary value
+  The same as `getBySecondaryIDX64` but with `Float128` type of the secondary value -->
