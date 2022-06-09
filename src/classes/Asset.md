@@ -30,7 +30,7 @@ It is important to note that smart contracts view token amounts as raw values wi
     ```ts
       import { Asset, Symbol } from 'proton-tsc'
 
-      const symbol = new Symbol(4, "XPR")
+      const symbol = new Symbol("XPR", 4)
       const asset = new Asset(10000, symbol)
     ```
  
@@ -64,7 +64,7 @@ It is important to note that smart contracts view token amounts as raw values wi
 
   <sub>**Example:**</sub>
   ```ts
-  const symbol = new Symbol(6, "XUSDC")
+  const symbol = new Symbol("XUSDC", 6)
   const asset = new Asset(1000000, symbol)
   print(asset.toString()) // 1.000000 XUSDC
   ```
