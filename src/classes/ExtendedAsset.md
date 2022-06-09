@@ -58,7 +58,7 @@ An extended asset is a representation of a token's amount, symbol, precision and
 
   <sub>**Example:**</sub>
   ```ts
-  const symbol = new Symbol(6, "XUSDC");
+  const symbol = new Symbol("XUSDC", 6);
   const asset = new Asset(1000000, symbol);
   const contract = Name.fromString('mycontract');
 
