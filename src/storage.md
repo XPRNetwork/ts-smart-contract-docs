@@ -42,10 +42,6 @@ export class MyRow extends Table {
     get primary(): u64 {
         return this.id;
     }
-
-    static getTable(code: Name): TableStore<MyRow> {
-        return new TableStore<MyRow>(code, code, Name.fromString("myrows"));
-    }
 }
 ```
 
@@ -89,22 +85,6 @@ Let's break down this code:
     }
     ```
 
-5. Create a helper static function for your contracts and others to access the table. 
-   
-   The TableStore class provides functions for storing, getting and deleting rows.
-
-    Note the storage layout we discussed previously, this helper function defines:
-    1. Contract name = `code`
-    2. Table name = `myrows`
-    3. Table scope = `code`
-    4. MyRow primary key = Set based on the row stored later
-   
-    ```ts
-    static getTable(code: Name): TableStore<MyRow> {
-        return new TableStore<MyRow>(code, code, Name.fromString("myrows"));
-    }
-    ```
-
 ## Store Row
 ```ts
 import { Contract, Name, TableStore } from 'proton-tsc'
@@ -113,7 +93,7 @@ import { Contract, Name, TableStore } from 'proton-tsc'
 
 @contract
 class MyContract extends Contract {
-  myTable: TableStore<MyRow> = MyRow.getTable(this.receiver)
+  myTable: TableStore<MyRow> = new TableStore<MyRow>(this.receiver)
 
   @action("action1")
   myAction(): void {
@@ -132,24 +112,23 @@ Let's break down this code:
     class MyContract extends Contract
     ```
 
-2. Initialize your table using the static method we defined earlier and passing in the name of the deployed contract (`this.receiver`)
+2. Initialize your table store using the name of the deployed contract (`this.receiver`).
     ```ts
-    myTable: TableStore<MyRow> = MyRow.getTable(this.receiver)
+    myTable: TableStore<MyRow> = new TableStore(this.receiver)
     ```
 
-
-2. Create an action named "action1"
+3. Create an action named "action1"
     ```ts
     @action("action1")
     myAction(): void
     ```
 
-3. Create a row object with ID 0 from Alice to null
+4. Create a row object with ID 0 from Alice to null
     ```ts
     const row = new MyRow(0, Name.fromString("alice"), null)
     ```
 
-4. Save the row to myTable, with the contract (this.receiver) paying for RAM. 
+5. Save the row to myTable, with the contract (this.receiver) paying for RAM. 
    
    There are two ways to store a row:
 
@@ -158,7 +137,7 @@ Let's break down this code:
     this.myTable.store(row, this.receiver)
     ```
 
-    **set** - upserts row
+    **set** - update if exists, create if does not exist (upsert)
 
     ```ts
     this.myTable.set(row, this.receiver)
@@ -175,7 +154,7 @@ import { Contract, Name, TableStore, check } from 'proton-tsc'
 
 @contract
 class MyContract extends Contract {
-  myTable: TableStore<MyRow> = MyRow.getTable(this.receiver)
+  myTable: TableStore<MyRow> = new TableStore<MyRow>(this.receiver)
 
   @action("action1")
   myAction(): void {
@@ -198,7 +177,7 @@ import { Contract, Name, TableStore, check, print } from 'proton-tsc'
 
 @contract
 class MyContract extends Contract {
-  myTable: TableStore<MyRow> = MyRow.getTable(this.receiver)
+  myTable: TableStore<MyRow> = new TableStore<MyRow>(this.receiver)
 
   @action("action1")
   myAction(): void {
@@ -230,7 +209,7 @@ import { Contract, Name, TableStore, check } from 'proton-tsc'
 
 @contract
 class MyContract extends Contract {
-  myTable: TableStore<MyRow> = MyRow.getTable(this.receiver)
+  myTable: TableStore<MyRow> = new TableStore<MyRow>(this.receiver)
 
   @action("action1")
   myAction(): void {
@@ -261,7 +240,7 @@ import { Contract, Name, TableStore, check } from 'proton-tsc'
 
 @contract
 class MyContract extends Contract {
-  myTable: TableStore<MyRow> = MyRow.getTable(this.receiver)
+  myTable: TableStore<MyRow> = new TableStore<MyRow>(this.receiver)
 
   @action("action1")
   myAction(): void {
