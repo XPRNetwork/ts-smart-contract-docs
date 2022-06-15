@@ -51,6 +51,7 @@ function getDefaultSidebar() {
         { title: "React Native", path: '/client-sdks/react-native' },
         { title: "Kotlin", path: '/client-sdks/kotlin' },
         { title: "Swift", path: '/client-sdks/swift' },
+        { title: "Chain IDs and Endpoints", path: '/client-sdks/endpoints' },
       ]
     },
     {
