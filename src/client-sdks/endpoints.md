@@ -10,8 +10,6 @@ Proton Testnet: `71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3d
 
 ## Proton Mainnet Endpoints
 
-https://bp1.protonnz.com
-
 https://api.protonnz.com
 
 https://proton.eosusa.news
@@ -34,8 +32,6 @@ https://proton.eosphere.io
 
 https://proton.genereos.io
 
-https://proton.eos.barcelona
-
 https://api.proton.alohaeos.com
 
 https://protonapi.ledgerwise.io
@@ -45,8 +41,6 @@ https://proton-api.eosiomadrid.io
 https://api.proton.eossweden.org
 
 https://api.proton.bountyblok.io
-
-https://api.proton-aa.bountyblok.io
 
 https://proton.eosrio.io
 
@@ -78,11 +72,7 @@ https://api.protongroup.info
 
 https://main.proton.kiwi
 
-https://api.protongb.com
-
 https://proton-api.alvosec.com
-
-https://bptestnet.xprasia.com
 
 https://proton.eosvenezuela.io
 
@@ -92,10 +82,11 @@ https://aa-proton.saltant.io
 
 https://api.protonpoland.com
 
+https://proton.eos.barcelona
 
+https://api.protongb.com
 
 ## Proton Testnet Endpoints
-
 
 https://testnet.brotonbp.com
 

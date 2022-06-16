@@ -47,7 +47,7 @@ const blockchain = new Blockchain()
 const [account1, account2] = blockchain.createAccounts('account1', 'account2')
 
 // Contract
-const mycontract = blockchain.createContract('mycontract', 'target/mycontract.contract', true)
+const mycontract = blockchain.createContract('mycontract', 'target/mycontract.contract')
 ```
 
 #### Token contract helper
