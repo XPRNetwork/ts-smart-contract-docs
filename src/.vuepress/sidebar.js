@@ -59,6 +59,13 @@ function getDefaultSidebar() {
       collapsable: true,
       sidebarDepth: 1,
       children: [
+        {
+          title: 'Guides',
+          collapsable: true,
+          children: [
+            { title: "Hello world", path: '/examples/guides/hello-world' },
+          ]
+        },
         { title: 'Contracts', path: '/examples/contracts' },
         { title: 'Built with Proton', path: '/built-with-proton' },
         {
