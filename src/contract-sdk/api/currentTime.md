@@ -28,24 +28,24 @@ description: Current Time
 * ```ts
   function seconds(s: i64): Microseconds
   ```
-  Helper function to create a [Microseconds](./microseconds.md) object from a seconds input
+  Helper function to create a [Microseconds](../classes/time/Microseconds.md) object from a seconds input
 
 * ```ts
   function milliseconds(s: i64): Microseconds
   ```
-  Helper function to create a [Microseconds](./microseconds.md) object from a milliseconds input
+  Helper function to create a [Microseconds](../classes/time/Microseconds.md) object from a milliseconds input
 
 * ```ts
   function minutes(s: i64): Microseconds
   ```
-  Helper function to create a [Microseconds](./microseconds.md) object from a minutes input
+  Helper function to create a [Microseconds](../classes/time/Microseconds.md) object from a minutes input
 
 * ```ts
   function hours(s: i64): Microseconds
   ```
-  Helper function to create a [Microseconds](./microseconds.md) object from a hours input
+  Helper function to create a [Microseconds](../classes/time/Microseconds.md) object from a hours input
 
 * ```ts
   function days(s: i64): Microseconds
   ```
-  Helper function to create a [Microseconds](./microseconds.md) object from a days input
+  Helper function to create a [Microseconds](../classes/time/Microseconds.md) object from a days input

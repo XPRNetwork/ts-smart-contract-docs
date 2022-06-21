@@ -11,7 +11,7 @@ Proton is a layer one proof-of-stake blockchain that leverages cutting-edge [Web
 Proton Smart Contracts use [AssemblyScript](https://www.assemblyscript.org/), a state of the art extension to [Typescript](https://www.typescriptlang.org/) that:
 1. builds to high performance WASM
 2. adds native types like u8, u16, u32, u64
-3. integrates with the existing Web ecosystem
+3. integrates with the existing web ecosystem
 
 ## Basic Smart Contract
 A simple Proton smart contract has the structure:

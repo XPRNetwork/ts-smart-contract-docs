@@ -33,7 +33,7 @@ AtomicAssets - [Github](https://github.com/ProtonProtocol/proton-ts-contracts/bl
 
 Escrow - [Github](https://github.com/ProtonProtocol/proton-ts-contracts/blob/main/assembly/escrow/escrow.contract.ts)
 
-Storage - [Github](https://github.com/ProtonProtocol/proton-ts-contracts/blob/main/assembly/store/store.ts)
+Storage - [Github](https://github.com/ProtonProtocol/proton-ts-contracts/blob/main/assembly/modules/store/store.ts)
 
 ### Examples repository
 

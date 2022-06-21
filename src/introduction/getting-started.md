@@ -73,9 +73,9 @@ proton action <ACCOUNT_NAME> action1 '[]' <ACCOUNT_NAME>
 In this tutorial, we looked at deploying a barebones contract.
 
 The next steps are to:
-1. Read more about how Proton and the Contract SDK work, starting with [Accounts and Permissions](./accounts-and-permissions.html)
-2. Read the different API functions available inside contracts starting with [Authentication](./api/authentication.md)
-3. Read the different classes commonly used starting with [Asset](./classes/asset.md)
-4. Have a look at our extensive [examples](./examples.md)
+1. Read more about how Proton accounts, starting with [Accounts and Permissions](./accounts-and-permissions.md)
+2. Read the different API functions available inside contracts starting with [Authentication](/contract-sdk/api/authentication.md)
+3. Read the different classes commonly used starting with [Asset](/contract-sdk/classes/asset.md)
+4. Have a look at our extensive contract [examples](/contract-sdk/examples.md)
 
 Equipped with these resources, you can create anything on the Proton blockchain!

@@ -73,6 +73,9 @@ module.exports = {
    * Apply plugins，ref：https://v1.vuepress.vuejs.org/zh/plugin/
    */
   plugins: [
+    ['check-md', {
+      ignore: '**/cli'
+    }],
     '@proton/vuepress-plugin-graphviz',
     '@vuepress/plugin-html-redirect',
     ['vuepress-plugin-sitemap', {

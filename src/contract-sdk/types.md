@@ -52,7 +52,7 @@ The compiler will complain when it sees an implicit conversion that might not ac
 
 ### Casting
 
-In AssemblyScript, the type assertions `<T>expression` and `expression as T` known from TypeScript become explicit type conversions, essentially telling the compiler that the conversion is intended. In addition, each of the type names mentioned above, except aliases, also act as portable conversion built-ins that can be used just like `i32(expression)`. Using portable conversions is especially useful where the exact same code is meant to be compiled to JavaScript with the TypeScript compiler \([see](./portability.md)\), that otherwise would require the insertion of asm.js-style type coercions like `expression | 0`.
+In AssemblyScript, the type assertions `<T>expression` and `expression as T` known from TypeScript become explicit type conversions, essentially telling the compiler that the conversion is intended. In addition, each of the type names mentioned above, except aliases, also act as portable conversion built-ins that can be used just like `i32(expression)`. 
 
 ### Inference
 
