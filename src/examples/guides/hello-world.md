@@ -8,7 +8,7 @@ This guide describes how to create your first basic contract and try it with tes
 
 Let's start!
 
-## Pre-requisites
+### Pre-requisites
 
 - NodeJS 16 [Installation Guide](https://github.com/ProtonProtocol/proton-cli#install-nodejs)
 - NPM
