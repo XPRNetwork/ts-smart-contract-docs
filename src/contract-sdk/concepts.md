@@ -102,10 +102,10 @@ function doSomething(foo: Foo): void {
 | 🐤&nbsp;**Functional**
 | OOP                                               | Mostly compatible. Access modifiers like `private` and `protected` are not currently strictly enforced. There is support for interfaces but they must specify getters instead of fields.
 | Standard&nbsp;library                                  | Full Standard library compatability can be seen [here](https://github.com/AssemblyScript/assemblyscript/wiki/Status-and-Roadmap#standard-library-compatibility)
-| Generics                                          | Generics are compiled as monomorphized templates for now and can be specialized with [static type checks](./stdlib/globals.md#static-type-checks). Constraining `extends XY` clauses are not yet enforced.
+| Generics                                          | Generics are compiled as monomorphized templates for now and can be specialized with static type checks. Constraining `extends XY` clauses are not yet enforced.
 ||
 | 🐣&nbsp;**Limited**
-| Union&nbsp;types                                  | Union types are not supported by design, except for nullable class types. There is no `any` type. A viable alternative is to use generics specialized with [static type checks](./stdlib/globals.md#static-type-checks) to achieve a similar effect.
+| Union&nbsp;types                                  | Union types are not supported by design, except for nullable class types. There is no `any` type. A viable alternative is to use generics specialized with static type checks to achieve a similar effect.
 | Symbols                                           | Symbols are implemented in the standard library, but don't have deep compiler integration yet.
 | Object literals                                   | Object literals can be used in places where the current type is a bare class, then corresponding to an instantiation of the class.
 | JSON                                              | No native support for JSON. Suggested library: [assemblyscript-json](https://github.com/nearprotocol/assemblyscript-json)

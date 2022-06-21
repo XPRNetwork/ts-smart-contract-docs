@@ -23,7 +23,7 @@ pageClass: frontpage
   </div>
   <h1>Web3 SDKs for writing and interacting with Proton smart contracts.</h1>
   <p class="action">
-    <a href="/introduction.html" class="docs">
+    <a href="/introduction/overview" class="docs">
       Get Started
     </a>
     <a href="https://github.com/ProtonProtocol/proton-ts-contracts" target="_blank" rel="noopener" class="github">
@@ -48,7 +48,7 @@ pageClass: frontpage
   </div>
   <div class="feature">
     <h2>Right at your fingertips</h2>
-    <p>Integrates with the existing Web ecosystem - no heavy toolchains to set up. Simply <code>npm install</code> it!</p>
+    <p>Integrates with the existing web ecosystem - no heavy toolchains to set up. Simply <code>npm install</code> it!</p>
   </div>
 </div>
 

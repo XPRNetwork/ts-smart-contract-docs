@@ -21,7 +21,7 @@ Therefore, a specific row on the blockchain is addressed through 4 levels:
 1. Contract name
 2. Table name
 3. Table scope (recommended same as contract name)
-4. MyRow primary key
+4. Primary key of row
    
 ## Initialize Table
 
