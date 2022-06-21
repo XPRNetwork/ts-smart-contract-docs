@@ -47,7 +47,8 @@ function getDefaultSidebar() {
             { title: 'Cryptography', path: '/contract-sdk/api/cryptography' },
             { title: 'Print', path: '/contract-sdk/api/print' },
             { title: "Random Number Generator", path: '/contract-sdk/api/random-number-generator' },
-            { title: "Utility", path: '/contract-sdk/api/utility' },
+            { title: "Transaction ID", path: '/contract-sdk/api/transaction-id' },
+            { title: "SafeMath", path: '/contract-sdk/api/safemath' },
           ]
         },
         {
