@@ -108,6 +108,7 @@ function getDefaultSidebar() {
         { title: "Kotlin", path: '/client-sdks/kotlin' },
         { title: "Swift", path: '/client-sdks/swift' },
         { title: "Chain IDs and Endpoints", path: '/client-sdks/endpoints' },
+        { title: "Table Information", path: '/client-sdks/query-tables' },
       ]
     },
     {
