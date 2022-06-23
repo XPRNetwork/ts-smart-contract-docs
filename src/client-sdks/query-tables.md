@@ -49,8 +49,8 @@ The following is a list of acceptable arguments:
 | code              | string    | true     | Contract that we target                            |
 | scope             | string    | true     | Account that owns the data                         |
 | table             | string    | true     | Table name                                         |
-| lower_bound       | any       | false    | Table key value                                    |
-| upper_bound       | any       | false    | Table key value                                    |
+| lower_bound       | any       | false    | Lower limit for key value                          |
+| upper_bound       | any       | false    | Upper limit for key value                          |
 | index_position    | number    | false    | Table index (1: primary, 2: secondary)             |
 | key_type          | any       | false    | Table key type                             |
 | limit             | number    | false    | Maximum number of rows that we want to get         |
