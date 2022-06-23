@@ -62,6 +62,24 @@ The following is a list of acceptable arguments:
 
 A lower_bound parameter can also be passed to the get_table_rows method. This parameter allows you to query for a particular value of the primary key in the table. Using this in conjunction with limit: 1 allows you to query for 1 row of a table.
 
+```ts
+@table("profiles")
+export class Profiles extends Table {
+    constructor (
+       public user: Name = new Name(),
+       public age: u64 = 0,
+       public surname: Name = new Name(),
+    ) {
+        super();
+    }
+
+    @primary
+    get primary(): u64 {
+        return this.user.N;
+    }
+}
+```
+
 In the example shown below, the contract smart contract's table profiles is queried with the scope contract for the row with primary key testacc. The limit is 1 which implies that only 1 row with value testacc will be returned.
 
 ```ts
@@ -94,6 +112,42 @@ An example of an expected response is shown below.
 ### Query By Secondary Index
 
 The lower_bound parameter can be used in conjunction with the index_position parameter to query an index different from the primary key.
+
+```ts
+@table("profiles")
+export class Profiles extends Table {
+    constructor (
+       public user: Name = new Name(),
+       public age: u64 = 0,
+       public surname: Name = new Name(),
+    ) {
+        super();
+    }
+
+    @primary
+    get primary(): u64 {
+        return this.user.N;
+    }
+
+    @secondary
+    get byAge(): u64 {
+        return this.age;
+    }
+
+    set byAge(value: u64) {
+        this.age = value;
+    }
+
+    @secondary
+    get bySurname(): u64 {
+        return this.surname.N;
+    }
+
+    set bySurname(value: u64) {
+        this.surname.N = value;
+    }
+}
+```
 
 In the example shown below, the contract smart contract's table profiles is queried with the scope contract for the rows with secondary index age equal to 21. The limit is 1 which implies that only 1 row with the age 21 will be returned.
 
