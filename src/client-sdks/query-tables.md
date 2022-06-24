@@ -2,6 +2,8 @@
 description: Query Tables
 ---
 
+# Table Information
+
 ## Install
 
 ```

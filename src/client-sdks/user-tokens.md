@@ -2,6 +2,8 @@
 description: Query user tokens
 ---
 
+# User Tokens
+
 ## Install
 
 ```
