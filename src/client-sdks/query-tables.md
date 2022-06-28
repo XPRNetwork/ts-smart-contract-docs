@@ -14,8 +14,11 @@ npm i @proton/api
 
 ```ts
 import { ApiClass } from '@proton/api'
+import { constants as bloksConstants } from '@bloks/constants'
 
-const protonApi = new ApiClass('proton')
+bloksConstants.initialize('proton')
+const protonApi = new ApiClass()
+protonApi.initialize(bloksConstants)
 ```
 
 ## Get Table Rows
