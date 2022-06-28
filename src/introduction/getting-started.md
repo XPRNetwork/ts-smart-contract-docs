@@ -55,7 +55,7 @@ proton ram:buy <ACCOUNT_NAME> <ACCOUNT_NAME> 300000
 
 3. Deploy Contract
 ```
-proton contract:set -i <ACCOUNT_NAME> ./target
+proton contract:set <ACCOUNT_NAME> ./target
 ```
 
 ## Interact with deployed contract
