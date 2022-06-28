@@ -134,6 +134,7 @@ function getDefaultSidebar() {
       sidebarDepth: 1,
       children: [
         { title: "Hello world", path: '/guides/hello-world' },
+        { title: "Key-Value", path: '/guides/key-value' },
       ]
     },
     {
