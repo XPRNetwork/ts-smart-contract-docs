@@ -109,6 +109,7 @@ function getDefaultSidebar() {
         { title: "Swift", path: '/client-sdks/swift' },
         { title: "Chain IDs and Endpoints", path: '/client-sdks/endpoints' },
         { title: "Table Information", path: '/client-sdks/query-tables' },
+        { title: "User Tokens", path: '/client-sdks/user-tokens' },
       ]
     },
     {
