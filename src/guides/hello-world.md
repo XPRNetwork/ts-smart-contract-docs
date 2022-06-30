@@ -14,7 +14,7 @@ Let's start!
 - NPM
 - Git
 - [Proton CLI](https://github.com/ProtonProtocol/proton-cli)
-    ```
+    ``` bash
     npm install -g @proton/cli
     ```
 
@@ -22,14 +22,14 @@ Let's start!
 ### Steps
 
 1. Generate a contract by providing a contract name, as shown here:
-```
+``` bash
 proton generate:contract helloworld
 ```
 
 Note: the contract name must be 1-12 chars, only lowercase a-z and numbers 1-5 are possible.
 
 2. The `proton generate:contract` command prompts you for information about the action of the contact: name and parameters. Let's add action `say` with `text` parameter that is `string`:
-    ```
+    ``` bash
     Let's add some actions to the class
     ? Enter new action name: say
     ? Do you want to add parameters to the action? Yes
@@ -51,7 +51,7 @@ Note: the contract name must be 1-12 chars, only lowercase a-z and numbers 1-5 a
     | `playground.ts`          | The code to try a contract            |
 
 5. Open `helloworld.contract.ts` file. It should look like this:
-    ```
+    ``` ts
     import { Contract } from "proton-tsc";
 
     @contract
@@ -70,7 +70,7 @@ Note: the contract name must be 1-12 chars, only lowercase a-z and numbers 1-5 a
     import { Contract, print } from "proton-tsc";
     ```
 7. And add the call of the function to the `say` method instead of `// Add here a code of your contract` statement:
-    ```
+    ``` ts
     @action("say")
     say(
         text: string
@@ -79,7 +79,7 @@ Note: the contract name must be 1-12 chars, only lowercase a-z and numbers 1-5 a
     }
     ```
 8. Open `playground.ts` file. It should look like this:
-    ```
+    ``` ts
     import { Blockchain } from "@proton/vert";
 
     async function wait(ms: number) {
@@ -100,17 +100,17 @@ Note: the contract name must be 1-12 chars, only lowercase a-z and numbers 1-5 a
     main();
     ```
 9. Let's modify it adding `World!` instead of empty line:
-    ```
+    ``` ts
     await contract.actions.say(['World!']).send('helloworld@active');
     ```
 10. Now we can run the playground and check how it works:
-    ```
+    ``` bash
     npm run playground
     ```
 
     The result should be the following:
 
-    ```
+    ``` bash
     DEBUG:
 
     START ACTION

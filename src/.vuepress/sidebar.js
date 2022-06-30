@@ -116,6 +116,8 @@ function getDefaultSidebar() {
         //     { title: "Accounts", path: '/client-sdks/atomicassets/accounts' },
         //   ]
         // }
+        { title: "Table Information", path: '/client-sdks/query-tables' },
+        { title: "User Tokens", path: '/client-sdks/user-tokens' },
       ]
     },
     {
@@ -141,8 +143,7 @@ function getDefaultSidebar() {
       sidebarDepth: 1,
       children: [
         { title: "Hello world", path: '/guides/hello-world' },
-
-        
+        { title: "Key-Value", path: '/guides/key-value' },
       ]
     },
     {
