@@ -108,6 +108,14 @@ function getDefaultSidebar() {
         { title: "Kotlin", path: '/client-sdks/kotlin' },
         { title: "Swift", path: '/client-sdks/swift' },
         { title: "Chain IDs and Endpoints", path: '/client-sdks/endpoints' },
+        // {
+        //   title: 'NFT APIs',
+        //   collapsable: false,
+        //   sidebarDepth: 1,
+        //   children: [
+        //     { title: "Accounts", path: '/client-sdks/atomicassets/accounts' },
+        //   ]
+        // }
       ]
     },
     {
@@ -120,6 +128,7 @@ function getDefaultSidebar() {
           title: 'Examples',
           collapsable: true,
           children: [
+            { title: "Deploy Token", path: '/cli/examples/deploy-token' },
             { title: "Free New Account", path: '/cli/examples/free-new-account' },
             { title: "Paid New Account", path: '/cli/examples/paid-new-account' },
           ]
@@ -132,6 +141,8 @@ function getDefaultSidebar() {
       sidebarDepth: 1,
       children: [
         { title: "Hello world", path: '/guides/hello-world' },
+
+        
       ]
     },
     {
