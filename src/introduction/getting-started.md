@@ -3,25 +3,24 @@
 
 On your way to your first Proton Smart Contract!
 
-## Pre-requisites
+### Pre-requisites
 
 - NodeJS 16 [Installation Guide](https://github.com/ProtonProtocol/proton-cli#install-nodejs)
 - NPM
 - Git
+- [Proton CLI](https://github.com/ProtonProtocol/proton-cli)
+``` bash
+npm install -g @proton/cli
+```
 
 ## Create Testnet Account
 
-1. Install [Proton CLI](https://github.com/ProtonProtocol/proton-cli)
-```
-npm i -g @proton/cli
-```
-
-2. Change chain to Proton Testnet
+1. Change chain to Proton Testnet
 ```
 proton chain:set proton-test
 ```
 
-3. Create an account (12 characters max using charset a-z and 1-5)
+2. Create an account (12 characters max using charset a-z and 1-5)
 ```
 proton account:create <ACCOUNT_NAME>
 ```

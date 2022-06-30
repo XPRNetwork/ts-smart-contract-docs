@@ -3,24 +3,36 @@
 In this guide, we will go through what deploying a token contract to an example `tokentester` account would like.
 
 ### Pre-requisites
-- Install Proton CLI
-- Create Proton account (`proton account:create`)
+
+- NodeJS 16 [Installation Guide](https://github.com/ProtonProtocol/proton-cli#install-nodejs)
+- NPM
+- Git
+- [Proton CLI](https://github.com/ProtonProtocol/proton-cli)
+``` bash
+npm install -g @proton/cli
+```
 
 ### Steps
+1. Create account
 
-1. Buy RAM
+```
+proton account:create tokentester
+```
+
+
+2. Buy RAM
 
 ```
 proton ram:buy tokentester tokentester 200000
 ```
 
-2. Set token contract
+3. Set token contract
 
 ```
 proton contract:set tokentester https://github.com/ProtonProtocol/proton-ts-contracts/tree/main/external/xtokens
 ```
 
-3. Create token
+4. Create token
 
 maximum_supply is the maximum # of tokens that can ever be minted of your token e.g. 1000000.0000 TOKEN, notice the .0000 means a precision of 4 decimals
 
@@ -31,7 +43,7 @@ proton action tokentester create '{
 }' tokentester@active
 ```
 
-4. Issue token
+5. Issue token
 
 ```
 proton action tokentester issue '{
@@ -42,7 +54,7 @@ proton action tokentester issue '{
 ```
 
 
-5. Add logo to wallet
+6. Add logo to wallet
 
 Ensure that the symbol matches the precision and symbol code you created earlier. "1000000.0000 TOKEN" = "4,TOKEN"
 
