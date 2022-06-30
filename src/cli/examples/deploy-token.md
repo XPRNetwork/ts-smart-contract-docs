@@ -2,11 +2,11 @@
 
 In this guide, we will go through what deploying a token contract to an example `tokentester` account would like.
 
-## Pre-requisites
+### Pre-requisites
 - Install Proton CLI
 - Create Proton account (`proton account:create`)
 
-## Steps
+### Steps
 
 1. Buy RAM
 
