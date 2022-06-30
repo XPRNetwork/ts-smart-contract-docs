@@ -229,12 +229,22 @@ npm install -g @proton/cli
     --------------------
     ```
     As you see in the `AFTER` block, the data was properly saved and we are able to read it.
-12. Now let's try to deploy our contract to the blockchain and check how it will work inside the chain. It is easy to do using Proton CLI:
-    1. Create an account in `proton-test` chain using this [guide](/introduction/getting-started.md#create-testnet-account).
-    2. Deploy the contract using the following [guide](/introduction/getting-started.md#deploy-to-the-blockchain)
+12. Now let's try to deploy our contract to the blockchain and check how it will work inside the chain. It is easy to do using Proton CLI (more detailed info can be found [here](/introduction/getting-started.md#create-testnet-account)):
+    1. Create an account in `proton-test` chain using these commands (account can contain 12 characters max using charset a-z and 1-5):
+        ```bash
+        proton chain:set proton-test
+        proton account:create <ACCOUNT_NAME>
+        ```
+    2. Deploy the contract using the following commands:
+        ```bash
+        proton faucet:claim XPR <ACCOUNT_NAME>
+        proton ram:buy <ACCOUNT_NAME> <ACCOUNT_NAME> 300000
+        proton contract:set <ACCOUNT_NAME> ./target
+        ```
+
 13. After the contract is deployed, we can read the data from `kvs` table using:
     ```bash
-    proton table <ACCOUNT_AME> kvs
+    proton table <ACCOUNT_NAME> kvs
     ```
     The output should be the following:
     ```bash
@@ -250,7 +260,7 @@ npm install -g @proton/cli
     ```
 15. And check that the data was successfully added to the store:
     ```bash
-    proton table <ACCOUNT_AME> kvs
+    proton table <ACCOUNT_NAME> kvs
     ```
     The output should be the following:
     ```bash
