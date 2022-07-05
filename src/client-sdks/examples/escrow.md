@@ -1,5 +1,10 @@
 # Escrow
 
+### Install
+```
+npm i @proton/web-sdk @proton/api
+```
+
 ### Initialize SDK
 
 ```js
