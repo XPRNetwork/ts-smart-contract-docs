@@ -229,17 +229,22 @@ npm install -g @proton/cli
     --------------------
     ```
     As you see in the `AFTER` block, the data was properly saved and we are able to read it.
-12. Now let's try to deploy our contract to the blockchain and check how it will work inside the chain. It is easy to do using Proton CLI:
-    1. Create an account in `proton-test` chain using this [guide](/introduction/getting-started.md#create-testnet-account).
+12. Now let's try to deploy our contract to the blockchain and check how it will work inside the chain. It is easy to do using Proton CLI (more detailed info can be found [here](/introduction/getting-started.md#create-testnet-account)):
+    1. Create an account in `proton-test` chain using these commands (account can contain 12 characters max using charset a-z and 1-5):
+        ```bash
+        proton chain:set proton-test
+        proton account:create <ACCOUNT_NAME>
+        ```
     2. Deploy the contract using the following commands:
         ```bash
         proton faucet:claim XPR <ACCOUNT_NAME>
         proton ram:buy <ACCOUNT_NAME> <ACCOUNT_NAME> 300000
         proton contract:set <ACCOUNT_NAME> ./target
         ```
+
 13. After the contract is deployed, we can read the data from `kvs` table using:
     ```bash
-    proton table <ACCOUNT_AME> kvs
+    proton table <ACCOUNT_NAME> kvs
     ```
     The output should be the following:
     ```bash
@@ -255,7 +260,7 @@ npm install -g @proton/cli
     ```
 15. And check that the data was successfully added to the store:
     ```bash
-    proton table <ACCOUNT_AME> kvs
+    proton table <ACCOUNT_NAME> kvs
     ```
     The output should be the following:
     ```bash
@@ -281,17 +286,10 @@ npm install -g @proton/cli
     2. Create a new file `api.ts` and edit it the following way:
         ```ts
         import { ApiClass } from '@proton/api'
-        import { constants } from '@bloks/constants';
         
-        // initialize constants for proton-test chain
-        constants.initialize('proton-test');
-
-        // Creating new API instance
-        const protonApi = new ApiClass()
+        // Creating new API instance for proton-test chain
+        const protonApi = new ApiClass('proton-test')
         
-        // initialize API instance for proton-test chain
-        protonApi.initialize(constants);
-
         // perform request for data from kvs table from ACCOUNT_NAME contract
         protonApi.rpc.get_table_rows({
             table: 'kvs',
