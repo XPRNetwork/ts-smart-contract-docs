@@ -118,6 +118,14 @@ function getDefaultSidebar() {
         // }
         { title: "Table Information", path: '/client-sdks/query-tables' },
         { title: "User Tokens", path: '/client-sdks/user-tokens' },
+        {
+          title: 'Examples',
+          collapsable: true,
+          children: [
+            { title: "React / Vue / Angular / HTML", path: 'https://github.com/ProtonProtocol/proton-web-sdk/tree/master/examples' },
+            { title: "Escrow", path: '/client-sdks/examples/escrow' },
+          ]
+        }
       ]
     },
     {
