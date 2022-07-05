@@ -10,7 +10,10 @@ const api = new ApiClass('proton') // 'proton-test' for testnet
 
 const { link, session } = await ProtonSDK({
     linkOptions: {
-        endpoints: ['https://api.protonnz.com']
+        endpoints: [
+            'https://api.protonnz.com',
+            'https://proton.eosusa.news'
+        ] // Mainnet endpoints. Replace with your own if needed 
     },
     transportOptions: {
         requestAccount: 'youracc', // Replace with your own account name
