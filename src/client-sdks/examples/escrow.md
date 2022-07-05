@@ -4,9 +4,9 @@
 
 ```js
 import ProtonSDK from '@proton/web-sdk'
-import { Api } from '@proton/api'
+import { ApiClass } from '@proton/api'
 
-const api = new Api('proton') // 'proton-test' for testnet
+const api = new ApiClass('proton') // 'proton-test' for testnet
 
 const { link, session } = await ProtonSDK({
     linkOptions: {
@@ -136,3 +136,41 @@ await session.transact({
 })
 ```
 
+### Cancel Escrow
+
+```js
+// Authorization
+const authorization = [{
+    actor: 'user1',
+    permission: 'active'
+}]
+
+const actions = [
+    {
+        account: 'token.escrow',
+        name: 'cancelescrow',
+        data: {
+            actor: 'user1',
+            id: 1001
+        },
+        authorization
+    }
+]
+
+await session.transact({
+    transaction: {
+        actions
+    }
+})
+```
+
+### Fetch Escrow History
+
+```js
+const history = await api.getActionsFromHyperion("user1", {
+    limit: 10,
+    skip: 0,
+    sort: "desc",
+    filter: "token.escrow:*"
+});
+```
