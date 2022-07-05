@@ -34,7 +34,6 @@ const { link, session } = await ProtonSDK({
 We will assume `user1` wants to escrow 1 XPR for an NFT `user2` owns with ID 1000000000330
 
 ```js
-
 // Expire in 1 hour
 const expiry = new Date()
 expiry.setMinutes(expiry.getMinutes() + 60)
