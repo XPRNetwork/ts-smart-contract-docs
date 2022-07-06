@@ -139,7 +139,7 @@ function getDefaultSidebar() {
           collapsable: true,
           children: [
             { title: "Deploy Token", path: '/cli/examples/deploy-token' },
-            { title: "Transfer Token", path: '/cli/examples/transfer-tokens' },
+            { title: "Transfer Token", path: '/cli/examples/transfer-token' },
             { title: "Free New Account", path: '/cli/examples/free-new-account' },
             { title: "Paid New Account", path: '/cli/examples/paid-new-account' },
           ]
