@@ -154,21 +154,34 @@ describe('Test 1', () => {
 })
 ```
 
-<!-- 
-## Debugging
+### Print Storage Deltas
+```ts
 
-The easiest way to debug your smart contracts is by using `print` statements inside your contract, and running tests using LOG_LEVEL=debug, which will log all data from inside your smart contract to your console. 
+describe('Test 1', () => {
+    blockchain.enableStorageDeltas()
+    await contract.actions.transfer(['trade', 'collector', '0.3333 XPR', 'memo']).send()
+    blockchain.printStorageDeltas()
+    blockchain.disableStorageDeltas()
+})
+```
 
-### Debug symbols
+Example Result:
 
-When compiling with the `--debug` option, the compiler appends a name section to the binary, containing names of functions, globals, locals and so on. These names will show up in stack traces. Note that debug builds are larger in WASM size, and should only be used for testing.
+<img src="../images/storageDeltas.jpg" height="400">
 
-### Source maps
 
-The compiler can generate a source map alongside a binary using the `--sourceMap` option. By default, a relative source map path will be embedded in the binary which browsers can pick up when instantiating a module from a `fetch` response.
+### Print All Table Rows
 
-### Breakpoints (Experimental)
+Use printStorage inside the contract and run your tests with LOG_LEVEL=debug
 
-> **Note: There is currently no support for DWARF, so breakpoints will not show variable names**
+```ts
+import { printStorage } from 'proton-tsc'
 
-Some JavaScript engines also support adding break points directly in WebAssembly code. Please consult your engine's documentation: [Chrome](https://developers.google.com/web/tools/chrome-devtools/javascript/breakpoints), [Firefox](https://developer.mozilla.org/en-US/docs/Tools/Debugger/How_to/Set_a_breakpoint), [Node.js](https://nodejs.org/api/debugger.html), [Safari](https://support.apple.com/de-de/guide/safari-developer/dev5e4caf347/mac). -->
+@contract
+export class TestContract extends Contract {
+    @action("test")
+    test(): void {
+        printStorage()
+    }
+}
+```
