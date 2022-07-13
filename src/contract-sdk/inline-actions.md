@@ -32,7 +32,7 @@ class SenderContract extends Contract {
   @action("sendinline")
   sendinline(): void {
     // Create transfer action
-    const tokenContract = "xtokens"
+    const tokenContract = Name.fromString("xtokens")
     const transfer = new InlineAction<TokenTransfer>("transfer")
     const action = transfer.act(tokenContract, new PermissionLevel(this.receiver))
 
