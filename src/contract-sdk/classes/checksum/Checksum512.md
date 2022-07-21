@@ -10,9 +10,12 @@ Represents a 512 bit checksum (64 bytes)
 ## Constructor
 
 * ```ts
-  constructor()
+  constructor(
+    data: u8[] | null = null
+  )
   ```
-  Creates an empty checksum, data is added through `unpack` function.
+
+  `data` - byte array for initial value of checksum
 
 ## Fields
 * ```ts
