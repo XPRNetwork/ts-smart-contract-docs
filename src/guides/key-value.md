@@ -54,11 +54,19 @@ npm install -g @proton/cli
     | ------------------------ | ------------------------------------- |
     | `kv.contract.ts`         | The contract code, written in Proton  |
     | `playground.ts`          | The code to try a contract            |
-5. Now let's add a table to our contract using `proton generate:table` command. The table will be used to store data related to the actor we will pass to the contract. The table will have name `kvs`. Proton class name will be `AccountKV`. Also the table will have 2 parameters:
+5. Now let's add a table to our contract using `proton generate:table` command. The table will be used to store data related to the actor we will pass to the contract. 
+    ``` bash
+    proton generate:table kvs --class=AccountKV
+    ```
+    The table will have name `kvs`. Proton class name will be `AccountKV`. 
+
+    Also the table will have 2 parameters:
     1. Primary `account` that is `Name`
     2. `values` that is `string` array
     The command prompt should look like this:
     ``` bash
+    proton generate:table kvs --class=AccountKV
+
     ? Is the table singleton? No
     Let's add a primary parameter for the table
     ? Enter new primary parameter name: account
