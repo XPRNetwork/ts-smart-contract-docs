@@ -1,66 +1,47 @@
 NFT API
 ==================
 
-
 ### Table of Contents
 
-#### [Accounts](#Accounts)
+* [Accounts](#accounts)
+  * [`get /atomicassets/v1/accounts/{account}/{collection_name}`](#get-atomicassets-v1-accounts-account-collection-name)
+  * [`get /atomicassets/v1/accounts/{account}`](#get-atomicassets-v1-accounts-account)
+  * [`get /atomicassets/v1/accounts`](#get-accounts-which-own-atomicassets-nfts-atomicassetsv1accountsget)
+* [Assets](#assets)
+  * [`get /atomicassets/v1/assets/{asset_id}`](#fetch-asset-by-id-atomicassetsv1assetsassetidget)
+  * [`get /atomicassets/v1/assets/{asset_id}/logs`](#get-atomicassets-v1-assets-asset-id-logs)
+  * [`get /atomicassets/v1/assets/{asset_id}/stats`](#get-atomicassets-v1-assets-asset-id-stats)
+  * [`get /atomicassets/v1/assets`](#get-atomicassets-v1-assets)
+* [Burns](#burns)
+  * [`get /atomicassets/v1/burns/{account}`](#get-atomicassets-v1-burns-account)
+  * [`get /atomicassets/v1/burns`](#get-nft-burns)
+* [Collections](#collections)
+  * [`get /atomicassets/v1/collections/{collection_name}`](#get-atomicassets-v1-collections-collection-name)
+  * [`get /atomicassets/v1/collections/{collection_name}/logs`](#get-atomicassets-v1-collections-collection-name-logs)
+  * [`get /atomicassets/v1/collections/{collection_name}/stats`](#get-atomicassets-v1-collections-collection-name-stats)
+  * [`get /atomicassets/v1/collections`](#get-atomicassets-v1-collections)
+* [Config](#config)
+  * [`get /atomicassets/v1/config`](#get-atomicassets-v1-config)
+* [Offers](#offers)
+  * [`get /atomicassets/v1/offers`](#get-atomicassets-v1-offers)
+  * [`get /atomicassets/v1/offers/{offer_id}`](#get-atomicassets-v1-offers-offer-id)
+  * [`get /atomicassets/v1/offers/{offer_id}/logs`](#get-atomicassets-v1-offers-offer-id-logs)
+* [Schemas](#schemas)
+  * [`get /atomicassets/v1/schemas/{collection_name}/{schema_name}`](#get-schema-name)
+  * [`get /atomicassets/v1/schemas/{collection_name}/{schema_name}/logs`](#get-schema-logs)
+  * [`get /atomicassets/v1/schemas/{collection_name}/{schema_name}/stats`](#get-schema-stats)
+  * [`get /atomicassets/v1/schemas`](#get-schemas)
+* [Templates](#templates)
+  * [`get /atomicassets/v1/templates/{collection_name}/{template_id}`](#get-template)
+  * [`get /atomicassets/v1/templates/{collection_name}/{template_id}/logs`](#get-template-logs)
+  * [`get /atomicassets/v1/templates/{collection_name}/{template_id}/stats`](#get-template-stats)
+  * [`get /atomicassets/v1/templates`](#get-templates)
+* [Transfers](#transfers)
+  * [`get /atomicassets/v1/transfers`](#get-atomicassets-v1-transfers)
 
-* [`get /atomicassets/v1/accounts/{account}/{collection_name}`](#atomicassetsV1AccountsAccountCollectionNameGet)
-* [`get /atomicassets/v1/accounts/{account}`](#atomicassetsV1AccountsAccountGet)
-* [`get /atomicassets/v1/accounts`](#atomicassetsV1AccountsGet)
+# Accounts
 
-#### [Assets](#Assets)
-
-* [`get /atomicassets/v1/assets/{asset_id}`](#atomicassetsV1AssetsAssetIdGet)
-* [`get /atomicassets/v1/assets/{asset_id}/logs`](#atomicassetsV1AssetsAssetIdLogsGet)
-* [`get /atomicassets/v1/assets/{asset_id}/stats`](#atomicassetsV1AssetsAssetIdStatsGet)
-* [`get /atomicassets/v1/assets`](#atomicassetsV1AssetsGet)
-
-#### [Burns](#Burns)
-
-* [`get /atomicassets/v1/burns/{account}`](#atomicassetsV1BurnsAccountGet)
-* [`get /atomicassets/v1/burns`](#atomicassetsV1BurnsGet)
-
-#### [Collections](#Collections)
-
-* [`get /atomicassets/v1/collections/{collection_name}`](#atomicassetsV1CollectionsCollectionNameGet)
-* [`get /atomicassets/v1/collections/{collection_name}/logs`](#atomicassetsV1CollectionsCollectionNameLogsGet)
-* [`get /atomicassets/v1/collections/{collection_name}/stats`](#atomicassetsV1CollectionsCollectionNameStatsGet)
-* [`get /atomicassets/v1/collections`](#atomicassetsV1CollectionsGet)
-
-#### [Config](#Config)
-
-* [`get /atomicassets/v1/config`](#atomicassetsV1ConfigGet)
-
-#### [Offers](#Offers)
-
-* [`get /atomicassets/v1/offers`](#atomicassetsV1OffersGet)
-* [`get /atomicassets/v1/offers/{offer_id}`](#atomicassetsV1OffersOfferIdGet)
-* [`get /atomicassets/v1/offers/{offer_id}/logs`](#atomicassetsV1OffersOfferIdLogsGet)
-
-#### [Schemas](#Schemas)
-
-* [`get /atomicassets/v1/schemas/{collection_name}/{schema_name}`](#atomicassetsV1SchemasCollectionNameSchemaNameGet)
-* [`get /atomicassets/v1/schemas/{collection_name}/{schema_name}/logs`](#atomicassetsV1SchemasCollectionNameSchemaNameLogsGet)
-* [`get /atomicassets/v1/schemas/{collection_name}/{schema_name}/stats`](#atomicassetsV1SchemasCollectionNameSchemaNameStatsGet)
-* [`get /atomicassets/v1/schemas`](#atomicassetsV1SchemasGet)
-
-#### [Templates](#Templates)
-
-* [`get /atomicassets/v1/templates/{collection_name}/{template_id}`](#atomicassetsV1TemplatesCollectionNameTemplateIdGet)
-* [`get /atomicassets/v1/templates/{collection_name}/{template_id}/logs`](#atomicassetsV1TemplatesCollectionNameTemplateIdLogsGet)
-* [`get /atomicassets/v1/templates/{collection_name}/{template_id}/stats`](#atomicassetsV1TemplatesCollectionNameTemplateIdStatsGet)
-* [`get /atomicassets/v1/templates`](#atomicassetsV1TemplatesGet)
-
-#### [Transfers](#Transfers)
-
-* [`get /atomicassets/v1/transfers`](#atomicassetsV1TransfersGet)
-
-Accounts
-========
-
-# get /atomicassets/v1/accounts/{account}/{collection_name}
+## get /atomicassets/v1/accounts/{account}/{collection_name}
 
 Retrieves the template and schema count for the given account and collection name (atomicassetsV1AccountsAccountCollectionNameGet)
 
@@ -129,7 +110,7 @@ Internal Server Error
 
 * * *
 
-# get /atomicassets/v1/accounts/{account}
+## get /atomicassets/v1/accounts/{account}
 
 Get a specific account stats (atomicassetsV1AccountsAccountGet)
 
@@ -351,8 +332,7 @@ Internal Server Error
 
 * * *
 
-Assets
-======
+# Assets
 
 ## Fetch asset by id - atomicassetsV1AssetsAssetIdGet
 
@@ -457,7 +437,7 @@ Internal Server Error
 
 * * *
 
-# get /atomicassets/v1/assets/{asset_id}/logs
+## get /atomicassets/v1/assets/{asset_id}/logs
 
 Fetch asset logs (atomicassetsV1AssetsAssetIdLogsGet)
 
@@ -528,7 +508,7 @@ Internal Server Error
 
 * * *
 
-# get /atomicassets/v1/assets/{asset_id}/stats
+## get /atomicassets/v1/assets/{asset_id}/stats
 
 Fetch asset stats (atomicassetsV1AssetsAssetIdStatsGet)
 
@@ -565,7 +545,7 @@ Internal Server Error
 
 * * *
 
-# get /atomicassets/v1/assets
+## get /atomicassets/v1/assets
 
 Fetch assets. (atomicassetsV1AssetsGet)
 
@@ -850,10 +830,9 @@ Internal Server Error
 
 * * *
 
-Burns
-=====
+# Burns
 
-# get /atomicassets/v1/burns/{account}
+## get /atomicassets/v1/burns/{account}
 
 Get a specific account (atomicassetsV1BurnsAccountGet)
 
@@ -1019,8 +998,6 @@ Content-Type: application/json
       "query_time" : 0
     }
 
-
-
 ### Responses
 
 #### 200
@@ -1033,10 +1010,9 @@ Internal Server Error
 
 * * *
 
-Collections
-===========
+# Collections
 
-# get /atomicassets/v1/collections/{collection_name}
+## get /atomicassets/v1/collections/{collection_name}
 
 Find collection by its name (atomicassetsV1CollectionsCollectionNameGet)
 
@@ -1087,7 +1063,7 @@ Internal Server Error
 
 * * *
 
-# get /atomicassets/v1/collections/{collection_name}/logs
+## get /atomicassets/v1/collections/{collection_name}/logs
 
 Fetch collection logs (atomicassetsV1CollectionsCollectionNameLogsGet)
 
@@ -1158,7 +1134,7 @@ Internal Server Error
 
 * * *
 
-# get /atomicassets/v1/collections/{collection_name}/stats
+## get /atomicassets/v1/collections/{collection_name}/stats
 
 Get stats about collection (atomicassetsV1CollectionsCollectionNameStatsGet)
 
@@ -1198,7 +1174,7 @@ Internal Server Error
 
 * * *
 
-# get /atomicassets/v1/collections
+## get /atomicassets/v1/collections
 
 Fetch collections (atomicassetsV1CollectionsGet)
 
@@ -1313,10 +1289,9 @@ Internal Server Error
 
 * * *
 
-Config
-======
+# Config
 
-# get /atomicassets/v1/config
+## get /atomicassets/v1/config
 
 Get general information about the API and the connected contract (atomicassetsV1ConfigGet)
 
@@ -1364,10 +1339,9 @@ Internal Server Error
 
 * * *
 
-Offers
-======
+# Offers
 
-# get /atomicassets/v1/offers
+## get /atomicassets/v1/offers
 
 Fetch offers (atomicassetsV1OffersGet)
 
@@ -1804,7 +1778,7 @@ Internal Server Error
 
 * * *
 
-# get /atomicassets/v1/offers/{offer_id}
+## get /atomicassets/v1/offers/{offer_id}
 
 Find offer by id (atomicassetsV1OffersOfferIdGet)
 
@@ -1986,7 +1960,7 @@ Internal Server Error
 
 * * *
 
-# get /atomicassets/v1/offers/{offer_id}/logs
+## get /atomicassets/v1/offers/{offer_id}/logs
 
 Fetch offer logs (atomicassetsV1OffersOfferIdLogsGet)
 
@@ -2057,10 +2031,10 @@ Internal Server Error
 
 * * *
 
-Schemas
-=======
+# Schemas
 
-# get /atomicassets/v1/schemas/{collection_name}/{schema_name}
+## Get schema name
+get /atomicassets/v1/schemas/{collection_name}/{schema_name}
 
 Find schema by schema_name (atomicassetsV1SchemasCollectionNameSchemaNameGet)
 
@@ -2126,7 +2100,8 @@ Internal Server Error
 
 * * *
 
-# get /atomicassets/v1/schemas/{collection_name}/{schema_name}/logs
+## Get schema logs
+get /atomicassets/v1/schemas/{collection_name}/{schema_name}/logs
 
 Fetch schema logs (atomicassetsV1SchemasCollectionNameSchemaNameLogsGet)
 
@@ -2201,7 +2176,8 @@ Internal Server Error
 
 * * *
 
-# get /atomicassets/v1/schemas/{collection_name}/{schema_name}/stats
+## Get schema stats
+get /atomicassets/v1/schemas/{collection_name}/{schema_name}/stats
 
 Get stats about a specific schema (atomicassetsV1SchemasCollectionNameSchemaNameStatsGet)
 
@@ -2214,7 +2190,6 @@ Path Parameter — Collection name of schema
 schema_name (required)
 
 Path Parameter — Name of schema
-
 
 ### Example return data
 
@@ -2244,8 +2219,8 @@ Internal Server Error
 
 * * *
 
-# get /atomicassets/v1/schemas
-
+## Get schemas
+get /atomicassets/v1/schemas
 Fetch schemas (atomicassetsV1SchemasGet)
 
 ### Query parameters
@@ -2381,11 +2356,10 @@ Internal Server Error
 
 * * *
 
-Templates
-=========
+# Templates
 
-# get /atomicassets/v1/templates/{collection_name}/{template_id}
-
+## Get template
+get /atomicassets/v1/templates/{collection_name}/{template_id}
 Find template by id (atomicassetsV1TemplatesCollectionNameTemplateIdGet)
 
 ### Path parameters
@@ -2460,8 +2434,8 @@ Internal Server Error
 
 * * *
 
-# get /atomicassets/v1/templates/{collection_name}/{template_id}/logs
-
+## Get template logs
+get /atomicassets/v1/templates/{collection_name}/{template_id}/logs
 Fetch template logs (atomicassetsV1TemplatesCollectionNameTemplateIdLogsGet)
 
 ### Path parameters
@@ -2535,8 +2509,8 @@ Internal Server Error
 
 * * *
 
-# get /atomicassets/v1/templates/{collection_name}/{template_id}/stats
-
+## Get template stats
+get /atomicassets/v1/templates/{collection_name}/{template_id}/stats
 Get stats about a specific template (atomicassetsV1TemplatesCollectionNameTemplateIdStatsGet)
 
 ### Path parameters
@@ -2577,7 +2551,8 @@ Internal Server Error
 
 * * *
 
-# get /atomicassets/v1/templates
+## Get templates
+get /atomicassets/v1/templates
 
 Fetch templates. (atomicassetsV1TemplatesGet)
 
@@ -2764,10 +2739,9 @@ Internal Server Error
 
 * * *
 
-Transfers
-=========
+# Transfers
 
-# get /atomicassets/v1/transfers
+## get /atomicassets/v1/transfers
 
 Fetch transfers (atomicassetsV1TransfersGet)
 
