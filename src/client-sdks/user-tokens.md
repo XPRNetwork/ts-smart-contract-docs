@@ -49,7 +49,7 @@ An example of an expected response is shown below.
 ]
 ```
 
-### Fetch Single Token Balance for User
+## Fetch Single Token Balance for User
 
 A token balance can be retrieved using the getTokenBalance method.
 This method takes an account which is a smart contract storing the tokens, an account who has a balance in the token table of the specified smart contract, and the symbol of the token to retrieve the currency balance for.

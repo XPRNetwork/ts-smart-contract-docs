@@ -108,8 +108,24 @@ function getDefaultSidebar() {
         { title: "Kotlin", path: '/client-sdks/kotlin' },
         { title: "Swift", path: '/client-sdks/swift' },
         { title: "Chain IDs and Endpoints", path: '/client-sdks/endpoints' },
+        // {
+        //   title: 'NFT APIs',
+        //   collapsable: false,
+        //   sidebarDepth: 1,
+        //   children: [
+        //     { title: "Accounts", path: '/client-sdks/atomicassets/accounts' },
+        //   ]
+        // }
         { title: "Table Information", path: '/client-sdks/query-tables' },
         { title: "User Tokens", path: '/client-sdks/user-tokens' },
+        {
+          title: 'Examples',
+          collapsable: true,
+          children: [
+            { title: "React / Vue / Angular / HTML", path: 'https://github.com/ProtonProtocol/proton-web-sdk/tree/master/examples' },
+            { title: "Escrow", path: '/client-sdks/examples/escrow' },
+          ]
+        }
       ]
     },
     {
@@ -122,6 +138,8 @@ function getDefaultSidebar() {
           title: 'Examples',
           collapsable: true,
           children: [
+            { title: "Deploy Token", path: '/cli/examples/deploy-token' },
+            { title: "Transfer Token", path: '/cli/examples/transfer-token' },
             { title: "Free New Account", path: '/cli/examples/free-new-account' },
             { title: "Paid New Account", path: '/cli/examples/paid-new-account' },
           ]
