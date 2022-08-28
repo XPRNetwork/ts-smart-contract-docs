@@ -50,12 +50,12 @@ class ReceiverContract extends Contract {
   @action("transfer", notify)
   ondeposit(from: Name, to: Name, quantity: Asset, memo: string): void {
     // Skip if outgoing
-    if (t.from == this.contract) {
+    if (from == this.receiver) {
         return;
     }
 
     // Ensure it is incoming
-    check(t.to == this.contract, "Invalid Deposit");
+    check(to == this.receiver, "Invalid Deposit");
 
     // Create ExtendedAsset from parameters
     const received = new ExtendedAsset(t.quantity, this.firstReceiver)
@@ -88,11 +88,20 @@ Here is a list of common contracts, actions and their notifications
 **Token Contracts (e.g. xtokens)**
 
 <u>transfer</u>
-
+Transfer tokens from a wallet to another
 Parameters: `(from: Name, to: Name, quantity: Asset, memo: string)`
 
-Notifies: from and to
+- `from: Name`   
+*REQUIRED: The transfer wallet that originated from, as [Name class](https://docs.protonchain.com/contract-sdk/classes/Name.html)*   
+- `to: Name`           
+*REQUIRED: The desitnation wallet,as [Name class](https://docs.protonchain.com/contract-sdk/classes/Name.html)*   
+- `quantity: Asset`  
+*REQUIRED: The quantity of transfered tokens, as [Asset class](https://docs.protonchain.com/contract-sdk/classes/Asset.html#constructors)*     
+- `memo: string`  
+*REQUIRED: An arbitrary message, most of time used to describe the transfer reason.*
 
+
+Notifies: `from` and `to` accounts
 <br/>
 
 **NFT Contract (atomicassets)**
@@ -101,28 +110,64 @@ Note that all notified accounts (ANA) is specified by a collection's `notify_acc
 
 <u>transfer</u>
 
+Transfer NFTs from a wallet to another
 Parameters: `(from: Name, to: Name, assetIds: u64[], memo: string)`
 
-Notifies: from and to
+- `from: Name`   
+*REQUIRED: The transfer wallet that originated from, as [Name class](https://docs.protonchain.com/contract-sdk/classes/Name.html)*   
+- `to: Name`           
+*REQUIRED: The desitnation wallet,as [Name class](https://docs.protonchain.com/contract-sdk/classes/Name.html)*   
+- `assetIds: u64[]`  
+*REQUIRED: A list of assets ID*     
+- `memo: string`  
+*REQUIRED: An arbitrary message, most of time used to describe the transfer reason.*
+
+**Notifies: `from` and `to` accounts**
 
 
 <u>logtransfer</u>
-
+**Notifcation only** Called when the NFTs transfer is complete. Params are passed from the `transfer` action to `logtransfer`.
 Parameters: `(collection: Name, from: Name, to: Name, assetIds: u64[], memo: string)`
 
-Notifies: ANA
+- `from: Name`   
+*REQUIRED: The transfer wallet that originated from, as [Name class](https://docs.protonchain.com/contract-sdk/classes/Name.html)*   
+- `to: Name`           
+*REQUIRED: The desitnation wallet,as [Name class](https://docs.protonchain.com/contract-sdk/classes/Name.html)*   
+- `assetIds: u64[]`  
+*REQUIRED: A list of assets ID*     
+- `memo: string`  
+*REQUIRED: An arbitrary message, most of time used to describe the transfer reason.*
+
+**Notifies: All involved accounts**
 
 <u>lognewtempl</u>
-
+**Notifcation only** Called when the creation of a new NFT template is complete. Params are passed from the `createtempl` action to `lognewtempl`.
 Parameters: `(templateId: i32, creator: Name, collection: Name, schema: Name, transferable: boolean, burnable: boolean, maxSupply: u32, immutableData: AtomicAttribute[])`
 
-Notifies: ANA
+- `templateId: Name`   
+*REQUIRED: The ID of the newly created template*   
+- `creator: Name`           
+*REQUIRED: The creator account,as [Name class](https://docs.protonchain.com/contract-sdk/classes/Name.html)*   
+- `collection: Name`  
+*REQUIRED: The name of the collection where the template belong, as [Name class](https://docs.protonchain.com/contract-sdk/classes/Name.html)*   
+- `schema: Name`  
+*REQUIRED: The name of the schema where the schema applyed to the collection, as [Name class](https://docs.protonchain.com/contract-sdk/classes/Name.html)*   
+- `transferable: boolean`  
+*REQUIRED: Set the minted asset from the template to be transferable or not*
+- `burnable: boolean`  
+*REQUIRED: Set the minted asset from the template to be burned or not*      
+- `maxSupply: u32`  
+*REQUIRED: Defined the maximum asset that could be minted from the template*
+- `immutableData: AtomicAttribute[]`  
+*REQUIRED: A list of atomic attributes that describe the immutable schema that belong to the template as [{"name":"field_name","type":"string"}] 
+
+**Notifies: All involved accounts**
 
 <u>logsetdata</u>
 
 Parameters: `(owner: Name, assetId: u64, oldData: AtomicAttribute[], newData: AtomicAttribute[])`
 
-Notifies: ANA
+**Notifies: All involved accounts**
 
 <u>logburnasset</u>
 
