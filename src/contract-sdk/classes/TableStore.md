@@ -1,5 +1,5 @@
 ---
-description: Stores code and precision.
+description: Storage for multiple rows of data in block chain
 ---
 
 # TableStore
@@ -15,28 +15,17 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
 
 * ```ts
   constructor(
-    code: Name, 
-    scope: Name, 
-    table: Name, 
-    indexes: Array<IDXDB>
+    contract: Name,
+    scope: Name
   )
   ```
-    `code` -  The `Name` object with for the contract
+    `contract` -  The `Name` object with for the contract
   
       Example: `Name.fromString('mycontract')`
 
     `scope` - The `Name` object with for the scope of the table. Recommended same as contract name
     
       Example: `Name.fromString('mycontract')`
-    
-    `table` - The `Name` object with for the table name
-    
-      Example: `Name.fromString('mytable')`
-    
-    `indexes` - An optional array of `IDXDB` objects to get quick access to the data
-    
-      Example: `[ new IDX64(code.N, scope.N, 0, 0) ]`
-    
 
     <sub>**Example:**</sub>
     ```ts
@@ -44,14 +33,22 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
 
       const contract = Name.fromString('mycontract');
       const scope = Name.fromString('mycontract');
-      const table = Name.fromString('mytable');
 
-      const tablestore = new TableStore(contract, scope, table);
+      const tablestore = new TableStore(contract, scope);
     ```
  
 ----------------------------------------------------------------
 
 ### Instance Methods
+* ```ts
+  set(value: T, payer: Name): void
+  ```
+  Creates new record or updates the existing one in the storage for the provided value and account passed as `payer` argument.
+
+  <sub>**Example:**</sub>
+  ```ts
+  tablestore.set(value, contract)
+  ```
 
 * ```ts
   store(value: T, payer: Name): void
@@ -64,16 +61,6 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
   <sub>**Example:**</sub>
   ```ts
   tablestore.store(value, contract)
-  ```
-
-* ```ts
-  set(value: T, payer: Name): void
-  ```
-  Creates new record or updates the existing one in the storage for the provided value and account passed as `payer` argument.
-
-  <sub>**Example:**</sub>
-  ```ts
-  tablestore.set(value, contract)
   ```
 
 * ```ts
@@ -129,12 +116,12 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
 * ```ts
   exists(pk: u64): bool
   ```
-  Checks if the record for provided primary key exist or not.
+  Checks if the record for provided primary key exist in the table or not.
 
 * ```ts
   existsValue(value: T): bool
   ```
-  Checks if the record for provided value exist or not.
+  Checks if the record for provided value exist in the table or not.
 
 * ```ts
   next(value: T): T | null
@@ -147,7 +134,6 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
   previous(value: T): T | null
   ```
   Returns the record that is the previous to the provided value
-
   **Throws if:**
    - If no record for the provided value is the first in the storage
 
@@ -195,34 +181,48 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
   ```
 
 * ```ts
-  get availablePrimaryKey(): u64
+  availablePrimaryKey: u64
   ```
   Returns the available primary key that can be used to save data.
+  Read-only field
 
 * ```ts
-  getBySecondaryIDX64(secondaryValue: u64, index: u8): T | null
+  getBySecondaryU64(secondaryValue: u64, index: u8): T | null
   ```
   Utility method.
-  Find the first table element that matches secondary value.
+  Find the first table element that matches secondary value or `null` if there is no such value in the table
   `secondaryValue` is the secondary value to search for.
   `index` is the index to search in.
 
 * ```ts
-  getBySecondaryIDX128(secondaryValue: U128, index: u8): T | null
+  nextBySecondaryU64(value: T, index: u8): T | null
   ```
-  The same as `getBySecondaryIDX64` but with extended size of the secondary value
+  Utility method.
+  Returns the record that is the next after the provided secondary value.
+  Returns `null` if there is no such value or the value is the last in the table.
+  `value` is the secondary value to search for.
+  `index` is the index to search in.
 
 * ```ts
-  getBySecondaryIDX256(secondaryValue: U256, index: u8): T | null
+  previousBySecondaryU64(value: T, index: u8): T | null
   ```
-  The same as `getBySecondaryIDX64` but with extended size of the secondary value
+  Utility method.
+  Returns the record that is the next after the provided secondary value.
+  Returns `null` if there is no such value or the value is the first in the table.
+  `value` is the secondary value to search for.
+  `index` is the index to search in.
 
 * ```ts
-  getBySecondaryIDXDouble(secondaryValue: f64, index: u8): T | null
+  getBySecondaryU128(secondaryValue: U128, index: u8): T | null
   ```
-  The same as `getBySecondaryIDX64` but with `f64` type of the secondary value
+  The same as `getBySecondaryU64` but with extended size of the secondary value
 
-<!-- * ```ts
-  getBySecondaryIDXLongDouble(secondaryValue: Float128, index: u8): T | null
+* ```ts
+  getBySecondaryU256(secondaryValue: U256, index: u8): T | null
   ```
-  The same as `getBySecondaryIDX64` but with `Float128` type of the secondary value -->
+  The same as `getBySecondaryU64` but with extended size of the secondary value
+
+* ```ts
+  getBySecondaryF64(secondaryValue: f64, index: u8): T | null
+  ```
+  The same as `getBySecondaryU64` but with `f64` type of the secondary value
