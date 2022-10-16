@@ -50,15 +50,15 @@ class ReceiverContract extends Contract {
   @action("transfer", notify)
   ondeposit(from: Name, to: Name, quantity: Asset, memo: string): void {
     // Skip if outgoing
-    if (t.from == this.contract) {
+    if (from == this.contract) {
         return;
     }
 
     // Ensure it is incoming
-    check(t.to == this.contract, "Invalid Deposit");
+    check(to == this.contract, "Invalid Deposit");
 
     // Create ExtendedAsset from parameters
-    const received = new ExtendedAsset(t.quantity, this.firstReceiver)
+    const received = new ExtendedAsset(quantity, this.firstReceiver)
 
     // ...
   }
