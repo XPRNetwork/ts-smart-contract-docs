@@ -131,7 +131,7 @@ login = async () => {
       });
       this.link = link;
       this.session = session;
-      return { auth: session.auth, accountData: session.accountData[0] };
+      return { auth: session.auth };
     } catch (e) {
       return e;
     }
@@ -140,8 +140,8 @@ login = async () => {
 
 The session information should be stored to call other ProtonWebSDK methods.&#x20;
 
-`session.auth` contains authentication information required to approve a transaction and other ProtonWebSDK methods.\
-`session.accountData`contains the user's information including name and avatar. This object also contains information about identity verification. With every `login` and `restoreSession`, the SDK is checking the identity information users have previously sent up against a list of valid KYC providers. The flag `isLightKYCVerified` will be added to the accountData information as a boolean if users have their first name, last name, date of birth and address verified.
+`session.auth` contains `actor` and ` permission` information required to approve a transaction and other ProtonWebSDK methods.\
+
 
 ### Transaction
 
@@ -244,9 +244,9 @@ restoreSession = async () => {
       this.session = session;
 
       if (session) {
-        return { auth: this.session.auth, accountData: this.session.accountData[0] };
+        return { auth: this.session.auth };
       } else {
-        return { auth: { actor: '', permission: '' }, accountData: {}};
+        return { auth: { actor: '', permission: '' }};
       }
     } catch(e) {
       return e;
