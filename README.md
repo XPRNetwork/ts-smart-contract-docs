@@ -38,6 +38,10 @@ Serve distribution files with:
 npm run serve
 ```
 
+Merge
+```sh
+npx merge-markdown -m src
+```
 
 Credits
 --------
