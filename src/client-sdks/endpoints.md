@@ -12,118 +12,85 @@ Proton Testnet: `71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3d
 
 https://api.protonnz.com
 
-https://proton.eosusa.news
+https://proton.protonuk.io
 
-https://sbp.proton.cryptolions.io
+https://proton.eosusa.io
 
 https://hyperion.quantumblok.com
 
-https://proton.protonuk.io
+https://main.proton.kiwi
 
 https://proton.eoscafeblock.com
 
-https://bp1.protonmt.com
+https://proton.cryptolions.io
 
 https://proton.eu.eosamsterdam.net
 
-https://proton.greymass.com
+https://proton-api.alvosec.com
 
-https://proton.eosphere.io
+https://api.protonmt.com
 
-https://proton.genereos.io
-
-https://api.proton.alohaeos.com
-
-https://protonapi.ledgerwise.io
-
-https://proton-api.eosiomadrid.io
-
-https://api.proton.eossweden.org
-
-https://api.proton.bountyblok.io
-
-https://proton.eosrio.io
-
-https://api.proton.detroitledger.tech
-
-https://hyperion.proton.detroitledger.tech
-
-https://proton.eoscannon.io
-
-https://proton.eosargentina.io
-
-https://apiproton.blockside.io
-
-https://api.protoneastern.cn
-
-https://proton.eoseoul.io
-
-https://api-proton.eosarabia.net
+https://api.totalproton.tech
 
 https://mainnet.brotonbp.com
 
-https://bp1.protonind.com
+https://api.proton.bountyblok.io
 
-http://bp1-mainnet.euproton.com
+https://proton.eu.eosamsterdam.net
 
-https://proton.edenia.cloud
+https://protonapi.blocksindia.com/
 
-https://api.protongroup.info
-
-https://main.proton.kiwi
-
-https://proton-api.alvosec.com
-
-https://proton.eosvenezuela.io
+https://protonapi.ledgerwise.io
 
 https://api-proton.saltant.io
 
-https://aa-proton.saltant.io
+https://proton.pink.gg
 
-https://api.protonpoland.com
+https://proton-api.eosiomadrid.io
 
-https://proton.eos.barcelona
+https://proton.genereos.io
 
-https://api.protongb.com
+https://proton.edenia.cloud
+
+https://xpr.eosdublin.io
+
+https://proton.eoseoul.io
+
+https://proton-public.neftyblocks.com
+
+https://proton.cryptotribe.io
+
 
 ## Proton Testnet Endpoints
 
-https://testnet.brotonbp.com
-
-https://api-protontest.saltant.io
-
-https://api.testnet.protongb.com
-
-https://testnet-api.protongroup.info
-
-https://test.proton.kiwi
-
-https://bptestnet.xprasia.com
-
-https://proton.testnet.protonuk.io
+https://proton-public-testnet.neftyblocks.com
 
 https://tn1.protonnz.com
 
-https://test.proton.eosusa.news
-
-https://api.protontest.alohaeos.com
-
-https://mainnet.eosamsterdam.net
-
 https://proton-api-testnet.eosiomadrid.io
 
-https://proton-test.eos.barcelona
+https://proton-testnet.genereos.io
+
+https://proton-testnet.edenia.cloud
+
+https://testnet-api.alvosec.com
+
+https://testnet.proton.pink.gg
+
+https://test.proton.eosusa.news
 
 https://api-testnet-proton.eosarabia.net
 
+https://mainnet.eosamsterdam.net
+
+https://api.test.protonmt.com
+
+https://api-protontest.saltant.io
+
+https://api.testnet.totalproton.tech
+
+https://xpr.testnet.eosdublin.io
+
+https://api-protontest.nodeone.network:8344
+
 https://protontestnet.ledgerwise.io
-
-https://proton-testnet.eosphere.io
-
-https://testnet.proton.eosrio.io
-
-https://testnet.proton.eosdetroit.io
-
-https://proton-api.alvosec.com
-
-https://apiproton.blockside.io
