@@ -1,4 +1,4 @@
-Proton Smart Contract Docs
+XPR Network Smart Contract Docs
 ========================
 
 The site is built with [VuePress](https://vuepress.vuejs.org/) and reuses its default theme to ease upgrading to newer versions.
