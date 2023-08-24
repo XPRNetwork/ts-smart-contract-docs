@@ -53,7 +53,7 @@ pageClass: frontpage
   margin-top: 2rem;
   text-align: center;
   height: 400px;
-  background: #7543E3;
+  background: #020ECB;
 }
 #hero:before {
   content: '';
@@ -63,7 +63,7 @@ pageClass: frontpage
   left: 0;
   width: 100%;
   height: 520px;
-  background: #7543E3 url(/images/header.svg) center bottom no-repeat;
+  background: #020ECB url(/images/header.svg) center bottom no-repeat;
   background-size: 1440px;
 }
 #hero > * {
@@ -121,7 +121,7 @@ pageClass: frontpage
   display: inline-block;
   font-size: 1.2rem;
   color: #fff;
-  background-color: #7543E3;
+  background-color: #020ECB;
   padding: .8rem 1.6rem;
   border-radius: 4px;
   transition: background-color .1s ease;
