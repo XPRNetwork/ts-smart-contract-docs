@@ -4,7 +4,7 @@ description: A guide for Hello world contract
 
 # Hello World!
 
-This guide describes how to create your first basic contract and try it with test blockchain using Proton.
+This guide describes how to create your first basic contract and try it with test blockchain using XPR Network.
 
 Let's start!
 
@@ -13,7 +13,7 @@ Let's start!
 - NodeJS 16 [Installation Guide](https://github.com/ProtonProtocol/proton-cli#install-nodejs)
 - NPM
 - Git
-- [Proton CLI](https://github.com/ProtonProtocol/proton-cli)
+- [XPR Network CLI](https://github.com/ProtonProtocol/proton-cli)
     ``` bash
     npm install -g @proton/cli
     ```
@@ -47,7 +47,7 @@ Note: the contract name must be 1-12 chars, only lowercase a-z and numbers 1-5 a
 4. After the contract is ready navigate to `helloworld` folder. The folder will have the following structure:
     | Files                    | Details                               |
     | ------------------------ | ------------------------------------- |
-    | `helloworld.contract.ts` | The contract code, written in Proton  |
+    | `helloworld.contract.ts` | The contract code, written in XPR Network  |
     | `playground.ts`          | The code to try a contract            |
 
 5. Open `helloworld.contract.ts` file. It should look like this:

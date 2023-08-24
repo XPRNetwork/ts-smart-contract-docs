@@ -8,7 +8,7 @@ description: Accounts and Permissions
 
 ## Overview
 
-**Account** - A registered user on the Proton blockchain, that can send transactions to interact with smart contracts.
+**Account** - A registered user on the XPR Network blockchain, that can send transactions to interact with smart contracts.
 
 **Contract** - An account with a smart contract (WASM + ABI) deployed to it.
 
@@ -35,9 +35,9 @@ description: Accounts and Permissions
 
 
 ## Default Account
-New Proton accounts start with 2 permissions, the `owner` permission and it's child `active`. 
+New XPR Network accounts start with 2 permissions, the `owner` permission and it's child `active`. 
 
-Let's have a look at the permission structure of a brand new Proton account, alice:
+Let's have a look at the permission structure of a brand new XPR Network account, alice:
 
 ```graphviz
 digraph {
@@ -159,7 +159,7 @@ digraph {
 
 Bob's active permission has 2 keys and 1 account and the threshold of the active permission is 2. 
 
-To submit a TX to the Proton blockchain using bob@active permission, the TX must be signed using by either:
+To submit a TX to the XPR Network blockchain using bob@active permission, the TX must be signed using by either:
 - The `PUB_K1_1...` key
 
   OR 
@@ -171,7 +171,7 @@ In the latter case, the blockchain would recursively require signing by the keys
 ## Linked Account
 By utilizing permission links, we can limit the actions a specific permission can take.
 
-The 2 types of permission linking possible on Proton are:
+The 2 types of permission linking possible on XPR Network are:
 1. Link to a specific contract
    - e.g. link to `xtokens` to perform any action on the xtokens contract
 2. Link to a specific contract and action

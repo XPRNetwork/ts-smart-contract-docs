@@ -4,7 +4,7 @@ description: A guide for Key-Value contract
 
 # Key-Value
 
-This guide describes how to create contract that allows to store, add, modify and remove data in blockchain using Proton
+This guide describes how to create contract that allows to store, add, modify and remove data in blockchain using XPR Network
 
 Let's start!
 
@@ -13,7 +13,7 @@ Let's start!
 - NodeJS 16 [Installation Guide](https://github.com/ProtonProtocol/proton-cli#install-nodejs)
 - NPM
 - Git
-- [Proton CLI](https://github.com/ProtonProtocol/proton-cli)
+- [XPR Network CLI](https://github.com/ProtonProtocol/proton-cli)
 ``` bash
 npm install -g @proton/cli
 ```
@@ -52,13 +52,13 @@ npm install -g @proton/cli
 4. After the contract is ready navigate to `kv` folder. The folder will have the following structure:
     | Files                    | Details                               |
     | ------------------------ | ------------------------------------- |
-    | `kv.contract.ts`         | The contract code, written in Proton  |
+    | `kv.contract.ts`         | The contract code, written in XPR Network  |
     | `playground.ts`          | The code to try a contract            |
 5. Now let's add a table to our contract using `proton generate:table` command. The table will be used to store data related to the actor we will pass to the contract. 
     ``` bash
     proton generate:table kvs --class=AccountKV
     ```
-    The table will have name `kvs`. Proton class name will be `AccountKV`. 
+    The table will have name `kvs`. XPR Network class name will be `AccountKV`. 
 
     Also the table will have 2 parameters:
     1. Primary `account` that is `Name`
@@ -237,7 +237,7 @@ npm install -g @proton/cli
     --------------------
     ```
     As you see in the `AFTER` block, the data was properly saved and we are able to read it.
-12. Now let's try to deploy our contract to the blockchain and check how it will work inside the chain. It is easy to do using Proton CLI (more detailed info can be found [here](/introduction/getting-started.md#create-testnet-account)):
+12. Now let's try to deploy our contract to the blockchain and check how it will work inside the chain. It is easy to do using XPR Network CLI (more detailed info can be found [here](/introduction/getting-started.md#create-testnet-account)):
     1. Create an account in `proton-test` chain using these commands (account can contain 12 characters max using charset a-z and 1-5):
         ```bash
         proton chain:set proton-test
@@ -288,9 +288,9 @@ npm install -g @proton/cli
         "next_key": ""
     }
     ```
-16. There is one more way how you can get access to the data inside the blockchain - using Proton API for this.
+16. There is one more way how you can get access to the data inside the blockchain - using XPR Network API for this.
     Let's try it.
-    1. Install Proton Api package using NPM - `npm install --save @proton/api`
+    1. Install XPR Network Api package using NPM - `npm install --save @proton/api`
     2. Create a new file `api.ts` and edit it the following way:
         ```ts
         import { ApiClass } from '@proton/api'

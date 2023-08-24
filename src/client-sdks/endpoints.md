@@ -4,11 +4,11 @@ description: Chain IDs and Endpoints
 
 ## Chain IDs
 
-Proton Mainnet: `384da888112027f0321850a169f737c33e53b388aad48b5adace4bab97f437e0`
+XPR Network Mainnet: `384da888112027f0321850a169f737c33e53b388aad48b5adace4bab97f437e0`
  
-Proton Testnet: `71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3dd`
+XPR Network Testnet: `71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3dd`
 
-## Proton Mainnet Endpoints
+## XPR Network Mainnet Endpoints
 
 https://api.protonnz.com
 
@@ -86,7 +86,7 @@ https://proton.eos.barcelona
 
 https://api.protongb.com
 
-## Proton Testnet Endpoints
+## XPR Network Testnet Endpoints
 
 https://testnet.brotonbp.com
 

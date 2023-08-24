@@ -2,7 +2,7 @@
 description: Kotlin SDK
 ---
 
-# Proton Kotlin SDK
+# XPR Network Kotlin SDK
 
 Package: [https://github.com/ProtonProtocol/ProtonKotlin](https://github.com/ProtonProtocol/ProtonKotlin)
 

@@ -7,7 +7,7 @@ In this guide, we will go through what deploying a token contract to an example 
 - NodeJS 16 [Installation Guide](https://github.com/ProtonProtocol/proton-cli#install-nodejs)
 - NPM
 - Git
-- [Proton CLI](https://github.com/ProtonProtocol/proton-cli)
+- [XPR Network CLI](https://github.com/ProtonProtocol/proton-cli)
 ``` bash
 npm install -g @proton/cli
 ```

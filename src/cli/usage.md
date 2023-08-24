@@ -1,7 +1,7 @@
 @proton/cli
 ===================
 
-Proton CLI
+XPR Network CLI
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![Version](https://img.shields.io/npm/v/@proton/cli.svg)](https://npmjs.org/package/@proton/cli)
@@ -191,7 +191,7 @@ _See code: [lib/commands/block/get.js](https://github.com/ProtonProtocol/proton-
 
 ## `proton boilerplate [FOLDER]`
 
-Boilerplate a new Proton Project with contract, frontend and tests
+Boilerplate a new XPR Network Project with contract, frontend and tests
 
 ```
 USAGE
@@ -201,7 +201,7 @@ FLAGS
   -h, --help  show CLI help
 
 DESCRIPTION
-  Boilerplate a new Proton Project with contract, frontend and tests
+  Boilerplate a new XPR Network Project with contract, frontend and tests
 ```
 
 _See code: [lib/commands/boilerplate.js](https://github.com/ProtonProtocol/proton-cli/blob/v0.1.88/lib/commands/boilerplate.js)_

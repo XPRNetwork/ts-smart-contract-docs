@@ -4,7 +4,7 @@ description: RNG
 
 # Random Number Generator (RNG)
 
-Proton provides an easy to use way to get random numbers on the blockchain. 
+XPR Network provides an easy to use way to get random numbers on the blockchain. 
 
 ## Request Random Number
 

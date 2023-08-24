@@ -6,7 +6,7 @@ module.exports = {
   locales: {
     '/': {
       lang: 'en-US',
-      title: 'Proton Web3',
+      title: 'XPR Network Web3',
       description: 'Writing blockchain smart contracts using TS/AS semantics',
     }
   },
@@ -14,7 +14,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Proton Web3',
+  title: 'XPR Network Web3',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -104,11 +104,11 @@ function extendMarkdown(md) {
     'Uint16Array', 'Uint32Array', 'Float32Array', 'Float64Array', 'DataView', 'String', 'Map', 'Set',
     'Promise', 'Math', 'Number', 'Boolean', 'Error', 'Date',
 
-    // Proton types
+    // XPR Network types
     'i8', 'i16', 'i32', 'i64', 'isize', 'u8', 'u16', 'u32', 'u64', 'usize', 'bool', 'f32', 'f64', 'v128',
     'externref', 'auto',
 
-    // Proton names
+    // XPR Network names
     'heap', 'memory', 'table', 'atomic', 'i8x16', 'i16x8', 'i32x4', 'i64x2', 'f32x4', 'f64x2', 'v32x2',
     'Int64Array', 'Uint64Array', 'Mathf', 'Bool', 'I8', 'I16', 'I32', 'I64', 'U8', 'U16', 'U32', 'U64',
     'F32', 'F64', 'idof', 'sizeof', 'alignof', 'offsetof', 'nameof'

@@ -2,7 +2,7 @@
 description: Swift SDK
 ---
 
-# Proton Swift SDK
+# XPR Network Swift SDK
 
 Package: [https://github.com/ProtonProtocol/ProtonSwift](https://github.com/ProtonProtocol/ProtonSwift)
 

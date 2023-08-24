@@ -12,7 +12,7 @@ One of WebAssembly's unique features is that a module cannot access external res
 
 ## Language
 
-Proton uses AssemblyScript which is very similar to TypeScript with largely compatible syntax and semantics. As such, many of the concepts known from TypeScript apply to Proton as well, but not all TypeScript features map well to ahead of time compilation or WebAssembly's so far supported feature set. 
+XPR Network uses AssemblyScript which is very similar to TypeScript with largely compatible syntax and semantics. As such, many of the concepts known from TypeScript apply to XPR Network as well, but not all TypeScript features map well to ahead of time compilation or WebAssembly's so far supported feature set. 
 
 ## Strictly typed
 

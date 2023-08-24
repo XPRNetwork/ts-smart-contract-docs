@@ -7,14 +7,14 @@ In this guide, we will go through managing private keys.
 - NodeJS 16 [Installation Guide](https://github.com/ProtonProtocol/proton-cli#install-nodejs)
 - NPM
 - Git
-- [Proton CLI](https://github.com/ProtonProtocol/proton-cli)
+- [XPR Network CLI](https://github.com/ProtonProtocol/proton-cli)
 ``` bash
 npm install -g @proton/cli
 ```
 
-Many commands in Proton CLI interact with blockchain: transaction, contract:set etc. And to do it right, the CLI needs to store private keys somewhere for one or several accounts you work with. Otherwise, it would be necessary to provide private key for every use of the command.
+Many commands in XPR Network CLI interact with blockchain: transaction, contract:set etc. And to do it right, the CLI needs to store private keys somewhere for one or several accounts you work with. Otherwise, it would be necessary to provide private key for every use of the command.
 
-Proton CLI has a Key Manager to work work with private keys. And there is a set of commands to work with this manager.
+XPR Network CLI has a Key Manager to work work with private keys. And there is a set of commands to work with this manager.
 These commands have `key:` prefix. Let's try all of them.
 
 1. Generation a new private key: `proton key:generate`

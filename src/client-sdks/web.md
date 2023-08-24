@@ -3,7 +3,7 @@ description: Web SDK
 ---
 
 
-# Proton Web SDK
+# XPR Network Web SDK
 
 ::: tip Contribute
 If you would like to contribute to our open source code, you can do so [here](https://github.com/ProtonProtocol/ProtonWeb)
@@ -194,7 +194,7 @@ The `memo` value serves as additional details attached to the transaction, but d
 > 
 > For all other transactions including `XPR`, the account must be set to `eosio.tokens`
 
-FOOBAR token is a test token that can be used for testing purposes on Proton Chain mainnet. This token is dispensed for free at the [Foobar Faucet](https://foobar.protonchain.com). For any transactions with FOOBAR token, please reference the code block below.
+FOOBAR token is a test token that can be used for testing purposes on XPR Network mainnet. This token is dispensed for free at the [Foobar Faucet](https://foobar.protonchain.com). For any transactions with FOOBAR token, please reference the code block below.
 
 ```ts
 const actions = [{

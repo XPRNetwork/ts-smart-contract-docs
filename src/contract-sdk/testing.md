@@ -6,7 +6,7 @@ description: Testing
 
 ## Overview
 
-For testing, Proton smart contracts use `VeRT`, a blockchain virtual machine emulator. 
+For testing, XPR Network smart contracts use `VeRT`, a blockchain virtual machine emulator. 
 
 It uses the built-in WebAssembly object in JavaScript, so can be executed on any modern browsers or runtime environments without additional dependencies. The focus of VeRT is on the better compatibility than the performance, so it can be integrated with development pipelines.
 

@@ -1,6 +1,6 @@
 ---
-metaTitle: Proton Smart Contracts
-description: Build Proton Smart Contracts with Typescript
+metaTitle: XPR Network Smart Contracts
+description: Build XPR Network Smart Contracts with Typescript
 navbar: false
 sidebar: false
 editLink: false
@@ -21,7 +21,7 @@ pageClass: frontpage
     </svg>
 
   </div>
-  <h1>Web3 SDKs for writing and interacting with Proton smart contracts.</h1>
+  <h1>Web3 SDKs for writing and interacting with XPR Network smart contracts.</h1>
   <p class="action">
     <a href="/introduction/overview" class="docs">
       Get Started
@@ -40,7 +40,7 @@ pageClass: frontpage
 <div id="features">
   <div class="feature">
     <h2>Designed for WebAssembly</h2>
-    <p>Proton smart contracts compile to WASM for maximum performance at 4000 TPS.</p>
+    <p>XPR Network smart contracts compile to WASM for maximum performance at 4000 TPS.</p>
   </div>
   <div class="feature">
     <h2>Familiar TypeScript syntax</h2>

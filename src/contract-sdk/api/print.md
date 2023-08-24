@@ -4,7 +4,7 @@ description: Debug
 
 # Print
 
-Print functions are the Proton equivalent of `console.log` and will be visible in console when you run tests with LOG_LEVEL=debug
+Print functions are the XPR Network equivalent of `console.log` and will be visible in console when you run tests with LOG_LEVEL=debug
 
 ## print
 

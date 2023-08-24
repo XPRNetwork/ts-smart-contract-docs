@@ -2,7 +2,7 @@
 description: RN SDK
 ---
 
-# Proton React Native SDK
+# XPR Network React Native SDK
 
 ::: tip Contribute
 If you would like to contribute to our open source code, you can do so [here](https://github.com/ProtonProtocol/proton-web-sdk/tree/master/packages/proton-react-native-sdk)
@@ -46,7 +46,7 @@ class ProtonSDK {
 
 #### Login
 
-Using the return value from the default call, call the `login` method with the `chainId`, `endpoints`, the `requestAccount` and the `getReturnUrl` function. The `getRetunUrl` function returns the url scheme of the app that the user will be redirected to after an interaction with the Proton App. Default call will return the user session (`LinkSession`) and a link (`ProtonLink`).
+Using the return value from the default call, call the `login` method with the `chainId`, `endpoints`, the `requestAccount` and the `getReturnUrl` function. The `getRetunUrl` function returns the url scheme of the app that the user will be redirected to after an interaction with the WebAuth App. Default call will return the user session (`LinkSession`) and a link (`ProtonLink`).
 
 ```ts
 login = async () => {

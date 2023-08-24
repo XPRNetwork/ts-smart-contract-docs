@@ -4,11 +4,11 @@ description: Name
 
 # Name
 
-A Name is the core representation of addresses on the Proton blockchain.
+A Name is the core representation of addresses on the XPR Network blockchain.
 
 For maximum performance, every Name can be serialized into an 8 byte u64. Thus, the possible character set in a Name are lowercase a-z characters, dots and number 1-5. A regex for this is `/^[a-zA-Z12345.]+$`. Additionally, the max length of a Name is 12 characters.
 
-On Proton, users can freely register names with a minimum of 4 characters. Names with 3 characters or less are reserved by the protocol. Additionally, if a user owns an address like `account`, they can freely create `ab.account`, `1.account`, `a.v.account` and so on.
+On XPR Network, users can freely register names with a minimum of 4 characters. Names with 3 characters or less are reserved by the protocol. Additionally, if a user owns an address like `account`, they can freely create `ab.account`, `1.account`, `a.v.account` and so on.
 
 ## Constructors
 

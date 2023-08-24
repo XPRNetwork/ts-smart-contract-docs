@@ -1,20 +1,20 @@
 ---
-description: Introduction to Proton
+description: Introduction to XPR Network
 ---
 
 # Introduction
 
-## What is Proton?
+## What is XPR Network?
 
-Proton is a layer one proof-of-stake blockchain that leverages cutting-edge [WebAssembly (WASM)](https://webassembly.org) smart contracts to enable high-performant, scalable and sustainable computation. Developers can leverage Proton to easily and securely build tokens, NFTs, exchanges, lending markets and much more.
+XPR Network is a layer one proof-of-stake blockchain that leverages cutting-edge [WebAssembly (WASM)](https://webassembly.org) smart contracts to enable high-performant, scalable and sustainable computation. Developers can leverage XPR Network to easily and securely build tokens, NFTs, exchanges, lending markets and much more.
 
-Proton Smart Contracts use [AssemblyScript](https://www.assemblyscript.org/), a state of the art extension to [Typescript](https://www.typescriptlang.org/) that:
+XPR Network Smart Contracts use [AssemblyScript](https://www.assemblyscript.org/), a state of the art extension to [Typescript](https://www.typescriptlang.org/) that:
 1. builds to high performance WASM
 2. adds native types like u8, u16, u32, u64
 3. integrates with the existing web ecosystem
 
 ## Basic Smart Contract
-A simple Proton smart contract has the structure:
+A simple XPR Network smart contract has the structure:
 
 ```ts
 import { Contract, print } from 'proton-tsc'
@@ -28,7 +28,7 @@ class HelloContract extends Contract {
 }
 ```
 
-To generate the WASM and ABI that you can upload to the Proton blockchain, simply run:
+To generate the WASM and ABI that you can upload to the XPR Network blockchain, simply run:
 ```sh
 npx proton-asc hello.ts
 ```

@@ -3,7 +3,7 @@
     <div slot="page-bottom" class="footer">
       <p>
         <span class="item">Copyright © {{ new Date().getFullYear() }}</span> 
-        <span class="item">Proton</span>
+        <span class="item">XPR Network</span>
       </p>
     </div>
   </Layout>

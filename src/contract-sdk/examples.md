@@ -1,10 +1,10 @@
 ---
-description: A collection of Proton examples
+description: A collection of XPR Network examples
 ---
 
 # Example Contracts
 
-A collection of Proton Smart Contract examples
+A collection of XPR Network Smart Contract examples
 
 ## Beginner examples
 

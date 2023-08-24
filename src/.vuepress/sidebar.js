@@ -157,8 +157,8 @@ function getDefaultSidebar() {
       ]
     },
     {
-      title: 'Built with Proton',
-      path: '/built-with-proton',
+      title: 'Built with XPR Network',
+      path: '/built-with-xpr-network',
     }
   ]
 }
@@ -171,7 +171,7 @@ function getExamplesSidebar() {
       sidebarDepth: 0,
       children: [
         ['/examples', 'Overview'],
-        '/built-with-proton'
+        '/built-with-xpr-network'
       ]
     }
   ]
