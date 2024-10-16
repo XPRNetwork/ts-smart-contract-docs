@@ -8,5 +8,5 @@ Use XPR Network CLI to programatically create a new account with the email verif
 
 
 ```sh
-proton account:create <NEW_ACCOUNT>
+proton account:create <neymarjr>
 ```
