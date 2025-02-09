@@ -1,18 +1,35 @@
+html,body, .navbar, .sidebar {
+  background-color:#000000
+  color:#adadad
+}
+
+h1,h2,h3{
+  color:#ffffff
+}
+
+pre[class*="language-"] {
+  border:none;
+}
+
 .sidebar::-webkit-scrollbar {
   width: 0.1em;
 }
  
 .sidebar::-webkit-scrollbar-track {
-  background-color: #eaecef;
+  background-color: #111111;
 }
  
 .sidebar::-webkit-scrollbar-thumb {
-  background-color: #020ECB;
+  background-color: #6f8eff;
 }
 
 .sidebar-group:is(.collapsable) .sidebar-heading {
   opacity: 1 !important;
   cursor: pointer !important;
+}
+
+.navbar .links {
+  background-color:transparent!important
 }
 
 // Nav drop-down categories
@@ -24,8 +41,28 @@
 
 @import "~prism-themes/themes/prism-vs.css"
 
+.theme-default-content pre[class*="language-"] code {
+  color:#829bb4!important
+}
+
 .token.builtin {
   color: #36acaa;
+}
+
+.token.keyword {
+  color: #6262ec;
+}
+
+.token.literal-property{
+  color:#6f8eff
+}
+
+.token.literal-property{
+  color:#6f8eff
+}
+
+.token.string{
+  color:#7ec699
 }
 
 .token.comment {

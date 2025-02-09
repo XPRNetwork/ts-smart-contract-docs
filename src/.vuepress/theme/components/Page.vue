@@ -77,8 +77,10 @@ export default Page
 </script>
 
 <style scoped>
+
 .page {
   padding-bottom: 0;
+
 }
 </style>
 
