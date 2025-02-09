@@ -9,3 +9,4 @@ src/.vuepress/public/sponsors.svg
 .netlify
 abc
 .env
+.vercel
