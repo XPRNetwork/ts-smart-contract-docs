@@ -28,13 +28,13 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref } from 'vue'
+<script>
+import { ref } from 'vue'
 import { TroisCanvas, TroisRenderer, TroisScene, TroisPerspectiveCamera, TroisOrbitControls } from 'trois'
 import { Vector3 } from 'three'
 import VertexDotsObject from './VertexDotsObject.vue'
 
-export default defineComponent({
+export default {
   name: 'HeaderWave',
   components: {
     TroisCanvas,
@@ -80,7 +80,7 @@ export default defineComponent({
     const cameraPosition = new Vector3(-0.5903648502060375, 0.0002967409222046913, 1.3418267086872022)
     const cameraRotation = new Vector3(0.18199447226318785, -0.418235369534331, 0.0746051170159521)
 
-    const handleControlsChange = (event: any) => {
+    const handleControlsChange = (event) => {
       console.log('Camera position:', event.target.camera.position)
       console.log('Camera rotation:', event.target.camera.rotation)
     }
@@ -92,5 +92,5 @@ export default defineComponent({
       handleControlsChange
     }
   }
-})
+}
 </script>

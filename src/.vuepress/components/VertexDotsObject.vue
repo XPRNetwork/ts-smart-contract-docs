@@ -3,8 +3,8 @@
   </TroisPoints>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref, onMounted, watch } from 'vue'
+<script>
+import { ref, onMounted, watch } from 'vue'
 import { TroisPoints } from 'trois'
 import { ShaderMaterial, PlaneGeometry, Vector2, Vector3 } from 'three'
 
@@ -140,7 +140,7 @@ const fragmentShader = `
   }
 `
 
-export default defineComponent({
+export default {
   name: 'VertexDotsObject',
   components: {
     TroisPoints
@@ -233,5 +233,5 @@ export default defineComponent({
       rotation
     }
   }
-})
+}
 </script>
