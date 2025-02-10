@@ -1,58 +1,82 @@
 <template>
-  <div class="scene-container">
-    <TroisCanvas>
-      <TroisRenderer>
-        <TroisScene>
-          <TroisPerspectiveCamera :position="{ z: 10 }" />
-          <TroisAmbientLight :intensity="0.5" />
-          <TroisDirectionalLight :position="{ x: 0, y: 1, z: 0 }" :intensity="1" />
-          <TroisBox :rotation="boxRotation" :position="{ x: 0, y: 0, z: 0 }" :size="2" :material="material" />
-          <TroisOrbitControls />
-        </TroisScene>
-      </TroisRenderer>
-    </TroisCanvas>
-  </div>
+  <div class="scene-container" ref="container"></div>
 </template>
 
 <script>
-import { ref, onMounted } from 'vue'
-import { TroisCanvas, TroisRenderer, TroisScene, TroisPerspectiveCamera, TroisBox, TroisAmbientLight, TroisDirectionalLight, TroisOrbitControls } from 'trois'
-import { MeshStandardMaterial } from 'three'
+import { onMounted, onBeforeUnmount } from 'vue'
+import * as THREE from 'three'
+import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 
 export default {
   name: 'HeaderWave',
-  components: {
-    TroisCanvas,
-    TroisRenderer,
-    TroisScene,
-    TroisPerspectiveCamera,
-    TroisBox,
-    TroisAmbientLight,
-    TroisDirectionalLight,
-    TroisOrbitControls
-  },
   setup() {
-    const boxRotation = ref({ x: 0, y: 0, z: 0 })
-    const material = new MeshStandardMaterial({ 
-      color: 0x2196f3,
-      metalness: 0.5,
-      roughness: 0.5
-    })
+    let scene, camera, renderer, cube, controls
+
+    const init = (container) => {
+      // Scene setup
+      scene = new THREE.Scene()
+      camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000)
+      renderer = new THREE.WebGLRenderer({ antialias: true })
+      renderer.setSize(container.clientWidth, container.clientHeight)
+      container.appendChild(renderer.domElement)
+
+      // Add cube
+      const geometry = new THREE.BoxGeometry(2, 2, 2)
+      const material = new THREE.MeshPhongMaterial({ 
+        color: 0x2196f3,
+        shininess: 60
+      })
+      cube = new THREE.Mesh(geometry, material)
+      scene.add(cube)
+
+      // Add lights
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.5)
+      scene.add(ambientLight)
+
+      const directionalLight = new THREE.DirectionalLight(0xffffff, 1)
+      directionalLight.position.set(0, 1, 0)
+      scene.add(directionalLight)
+
+      // Camera position
+      camera.position.z = 5
+
+      // Add controls
+      controls = new OrbitControls(camera, renderer.domElement)
+      controls.enableDamping = true
+      controls.dampingFactor = 0.05
+    }
 
     const animate = () => {
-      boxRotation.value.y += 0.01
-      boxRotation.value.x += 0.005
       requestAnimationFrame(animate)
+      cube.rotation.x += 0.005
+      cube.rotation.y += 0.01
+      controls.update()
+      renderer.render(scene, camera)
+    }
+
+    const handleResize = () => {
+      const container = renderer.domElement.parentElement
+      camera.aspect = container.clientWidth / container.clientHeight
+      camera.updateProjectionMatrix()
+      renderer.setSize(container.clientWidth, container.clientHeight)
     }
 
     onMounted(() => {
+      const container = document.querySelector('.scene-container')
+      init(container)
       animate()
+      window.addEventListener('resize', handleResize)
     })
 
-    return {
-      boxRotation,
-      material
-    }
+    onBeforeUnmount(() => {
+      window.removeEventListener('resize', handleResize)
+      if (renderer) {
+        renderer.dispose()
+      }
+      if (controls) {
+        controls.dispose()
+      }
+    })
   }
 }
 </script>
