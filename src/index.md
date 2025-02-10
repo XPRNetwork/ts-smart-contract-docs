@@ -8,6 +8,7 @@ pageClass: frontpage
 ---
 
 <div id="hero">
+  <HeaderWave></HeaderWave>
   <div id="logo">
 
   </div>
