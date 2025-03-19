@@ -6,47 +6,42 @@ module.exports = {
 function getDefaultSidebar() {
   return [
     {
-      title: "Getting started",
+      title: "What's XPRNetwork",
+      path: "/getting-started/introduction",
       collapsable: true,
-      sidebarDepth: 1,
-      children: [
-        {
-          title: "What's XPRNetwork",
-          path: "/getting-started/introduction",
-          collapsable: true,
-        },
-        {
-          title: "Mainnet vs Testnet",
-          path: "/getting-started/mainnet-vs-testnet",
-          collapsable: true,
-        },
-        {
-          title: "Terminology you need to know",
-          path: "/getting-started/terminology",
-          collapsable: true,
-        },
-        {
-          title: "Quick notes on data types",
-          path: "/getting-started/data-types",
-          collapsable: true,
-        },
-        {
-          title: "Action, Transactions and execution order",
-          path: "/getting-started/action-transactions-executions-order",
-          collapsable: true,
-        },
-        {
-          title: "Account and permissions",
-          path: "/getting-started/accounts-and-permissions",
-          collapsable: true,
-        },
-      ],
     },
+    {
+      title: "Mainnet vs Testnet",
+      path: "/getting-started/mainnet-vs-testnet",
+      collapsable: true,
+    },
+    {
+      title: "Terminology you need to know",
+      path: "/getting-started/terminology",
+      collapsable: true,
+    },
+    {
+      title: "Quick notes on data types",
+      path: "/getting-started/data-types",
+      collapsable: true,
+    },
+    {
+      title: "Action, Transactions and execution order",
+      path: "/getting-started/action-transactions-executions-order",
+      collapsable: true,
+    },
+    {
+      title: "Account and permissions",
+      path: "/getting-started/accounts-and-permissions",
+      collapsable: true,
+    },
+
     {
       title: "XPRNetwork command line interface",
       collapsable: true,
       sidebarDepth: 1,
       path: "/cli-101/cli-crash-course",
+      children: [],
     },
     {
       title: "Reading data from the chain",
@@ -68,12 +63,31 @@ function getDefaultSidebar() {
     },
     {
       title: "Documentation",
-      collapsable: false,
+      collapsable: true,
       sidebarDepth: 1,
       children: [
         {
+          title: "@proton/web-sdk",
+          collapsable: true,
+          children: [
+            {
+              title: "WalletConnect",
+              path: "/documentations/proton-web-sdk/connect.md",
+            },
+            {
+              title: "Storage",
+              path: "/documentations/proton-web-sdk/storage.md",
+            },
+            {
+              title: "Storage",
+              path: "/documentations/proton-web-sdk/walletTypeSelector.md",
+            },
+          ],
+        },
+        {
           title: "@proton/cli",
           collapsable: true,
+          sidebarDepth: 2,
           children: [
             {
               title: "Account Commands",
@@ -149,6 +163,139 @@ function getDefaultSidebar() {
             },
           ],
         },
+        {
+          title: "Contract SDK",
+          collapsable: true,
+          sidebarDepth: 1,
+          children: [
+            {title: "Storage", path: "/contract-sdk/storage"},
+            {title: "Execution Order", path: "/contract-sdk/execution-order"},
+            {title: "Inline Actions", path: "/contract-sdk/inline-actions"},
+            {title: "Notifications", path: "/contract-sdk/notifications"},
+            {title: "Testing", path: "/contract-sdk/testing"},
+            {title: "Security", path: "/contract-sdk/security"},
+            {
+              title: "Language Specifics",
+              collapsable: true,
+              sidebarDepth: 0,
+              children: [
+                {title: "Concepts", path: "/contract-sdk/concepts"},
+                {title: "Number Types", path: "/contract-sdk/types"},
+                {title: "Globals", path: "/contract-sdk/globals"},
+              ],
+            },
+            {
+              title: "API",
+              collapsable: true,
+              sidebarDepth: 1,
+              children: [
+                {
+                  title: "Authentication",
+                  path: "/contract-sdk/api/authentication",
+                },
+                {title: "Assert", path: "/contract-sdk/api/assert"},
+                {
+                  title: "Blockchain Time",
+                  path: "/contract-sdk/api/currentTime",
+                },
+                {title: "Cryptography", path: "/contract-sdk/api/cryptography"},
+                {title: "Print", path: "/contract-sdk/api/print"},
+                {
+                  title: "Random Number Generator",
+                  path: "/contract-sdk/api/random-number-generator",
+                },
+                {
+                  title: "Transaction ID",
+                  path: "/contract-sdk/api/transaction-id",
+                },
+                {title: "SafeMath", path: "/contract-sdk/api/safemath"},
+              ],
+            },
+            {
+              title: "Classes",
+              collapsable: true,
+              sidebarDepth: 1,
+              children: [
+                {title: "Name", path: "/contract-sdk/classes/Name"},
+                {title: "Symbol", path: "/contract-sdk/classes/Symbol"},
+                {
+                  title: "ExtendedSymbol",
+                  path: "/contract-sdk/classes/ExtendedSymbol",
+                },
+                {title: "Asset", path: "/contract-sdk/classes/Asset"},
+                {
+                  title: "ExtendedAsset",
+                  path: "/contract-sdk/classes/ExtendedAsset",
+                },
+                {title: "Action", path: "/contract-sdk/classes/Action"},
+                {
+                  title: "PermissionLevel",
+                  path: "/contract-sdk/classes/PermissionLevel",
+                },
+                {title: "TableStore", path: "/contract-sdk/classes/TableStore"},
+                {
+                  title: "Keys",
+                  collapsable: true,
+                  children: [
+                    {
+                      title: "PublicKey",
+                      path: "/contract-sdk/classes/keys/PublicKey",
+                    },
+                    {
+                      title: "ECCPublicKey",
+                      path: "/contract-sdk/classes/keys/ECCPublicKey",
+                    },
+                    {
+                      title: "WebAuthNPublicKey",
+                      path: "/contract-sdk/classes/keys/WebauthNPublicKey",
+                    },
+                  ],
+                },
+                {title: "Signature", path: "/contract-sdk/classes/Signature"},
+                {
+                  title: "Time",
+                  collapsable: true,
+                  children: [
+                    {
+                      title: "Microseconds",
+                      path: "/contract-sdk/classes/time/Microseconds",
+                    },
+                    {
+                      title: "TimePoint",
+                      path: "/contract-sdk/classes/time/TimePoint",
+                    },
+                    {
+                      title: "TimePointSec",
+                      path: "/contract-sdk/classes/time/TimePointSec",
+                    },
+                    {
+                      title: "BlockTimestamp",
+                      path: "/contract-sdk/classes/time/BlockTimestamp",
+                    },
+                  ],
+                },
+                {
+                  title: "Checksum",
+                  collapsable: true,
+                  children: [
+                    {
+                      title: "Checksum160",
+                      path: "/contract-sdk/classes/checksum/Checksum160",
+                    },
+                    {
+                      title: "Checksum256",
+                      path: "/contract-sdk/classes/checksum/Checksum256",
+                    },
+                    {
+                      title: "Checksum512",
+                      path: "/contract-sdk/classes/checksum/Checksum512",
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
       ],
     },
 
@@ -165,131 +312,7 @@ function getDefaultSidebar() {
     //     },
     //   ],
     // },
-    // {
-    //   title: "Contract SDK",
-    //   collapsable: false,
-    //   sidebarDepth: 1,
-    //   children: [
-    //     {title: "Storage", path: "/contract-sdk/storage"},
-    //     {title: "Execution Order", path: "/contract-sdk/execution-order"},
-    //     {title: "Inline Actions", path: "/contract-sdk/inline-actions"},
-    //     {title: "Notifications", path: "/contract-sdk/notifications"},
-    //     {title: "Testing", path: "/contract-sdk/testing"},
-    //     {title: "Security", path: "/contract-sdk/security"},
-    //     {
-    //       title: "Language Specifics",
-    //       collapsable: true,
-    //       sidebarDepth: 0,
-    //       children: [
-    //         {title: "Concepts", path: "/contract-sdk/concepts"},
-    //         {title: "Number Types", path: "/contract-sdk/types"},
-    //         {title: "Globals", path: "/contract-sdk/globals"},
-    //       ],
-    //     },
-    //     {
-    //       title: "API",
-    //       collapsable: true,
-    //       sidebarDepth: 1,
-    //       children: [
-    //         {title: "Authentication", path: "/contract-sdk/api/authentication"},
-    //         {title: "Assert", path: "/contract-sdk/api/assert"},
-    //         {title: "Blockchain Time", path: "/contract-sdk/api/currentTime"},
-    //         {title: "Cryptography", path: "/contract-sdk/api/cryptography"},
-    //         {title: "Print", path: "/contract-sdk/api/print"},
-    //         {
-    //           title: "Random Number Generator",
-    //           path: "/contract-sdk/api/random-number-generator",
-    //         },
-    //         {title: "Transaction ID", path: "/contract-sdk/api/transaction-id"},
-    //         {title: "SafeMath", path: "/contract-sdk/api/safemath"},
-    //       ],
-    //     },
-    //     {
-    //       title: "Classes",
-    //       collapsable: true,
-    //       sidebarDepth: 1,
-    //       children: [
-    //         {title: "Name", path: "/contract-sdk/classes/Name"},
-    //         {title: "Symbol", path: "/contract-sdk/classes/Symbol"},
-    //         {
-    //           title: "ExtendedSymbol",
-    //           path: "/contract-sdk/classes/ExtendedSymbol",
-    //         },
-    //         {title: "Asset", path: "/contract-sdk/classes/Asset"},
-    //         {
-    //           title: "ExtendedAsset",
-    //           path: "/contract-sdk/classes/ExtendedAsset",
-    //         },
-    //         {title: "Action", path: "/contract-sdk/classes/Action"},
-    //         {
-    //           title: "PermissionLevel",
-    //           path: "/contract-sdk/classes/PermissionLevel",
-    //         },
-    //         {title: "TableStore", path: "/contract-sdk/classes/TableStore"},
-    //         {
-    //           title: "Keys",
-    //           collapsable: true,
-    //           children: [
-    //             {
-    //               title: "PublicKey",
-    //               path: "/contract-sdk/classes/keys/PublicKey",
-    //             },
-    //             {
-    //               title: "ECCPublicKey",
-    //               path: "/contract-sdk/classes/keys/ECCPublicKey",
-    //             },
-    //             {
-    //               title: "WebAuthNPublicKey",
-    //               path: "/contract-sdk/classes/keys/WebauthNPublicKey",
-    //             },
-    //           ],
-    //         },
-    //         {title: "Signature", path: "/contract-sdk/classes/Signature"},
-    //         {
-    //           title: "Time",
-    //           collapsable: true,
-    //           children: [
-    //             {
-    //               title: "Microseconds",
-    //               path: "/contract-sdk/classes/time/Microseconds",
-    //             },
-    //             {
-    //               title: "TimePoint",
-    //               path: "/contract-sdk/classes/time/TimePoint",
-    //             },
-    //             {
-    //               title: "TimePointSec",
-    //               path: "/contract-sdk/classes/time/TimePointSec",
-    //             },
-    //             {
-    //               title: "BlockTimestamp",
-    //               path: "/contract-sdk/classes/time/BlockTimestamp",
-    //             },
-    //           ],
-    //         },
-    //         {
-    //           title: "Checksum",
-    //           collapsable: true,
-    //           children: [
-    //             {
-    //               title: "Checksum160",
-    //               path: "/contract-sdk/classes/checksum/Checksum160",
-    //             },
-    //             {
-    //               title: "Checksum256",
-    //               path: "/contract-sdk/classes/checksum/Checksum256",
-    //             },
-    //             {
-    //               title: "Checksum512",
-    //               path: "/contract-sdk/classes/checksum/Checksum512",
-    //             },
-    //           ],
-    //         },
-    //       ],
-    //     },
-    //     {title: "Examples", path: "/contract-sdk/examples"},
-    //   ],
-    // },
+    //
     // {
     //   title: "Client SDKs",
     //   collapsable: false,

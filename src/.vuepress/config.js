@@ -6,7 +6,7 @@ module.exports = {
   locales: {
     "/": {
       lang: "en-US",
-      title: "XPRNetwork Developer Documentation",
+      title: "",
       description: "Writing blockchain smart contracts using TS/AS semantics",
     },
   },
@@ -14,7 +14,7 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: "XPRNetwork Developer Documentation",
+  title: "",
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
@@ -25,6 +25,7 @@ module.exports = {
    *
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
+
   head: [
     [
       "link",
@@ -87,7 +88,7 @@ module.exports = {
     docsRepo: "ProtonProtocol/proton-ts-sc-docs",
     docsDir: "src",
     docsBranch: "master",
-    editLinks: true,
+    editLinks: false,
     editLinkText: "Edit this page on GitHub",
     // algolia: {
     //   apiKey: '5055511efcf6b0b257029437f9544075',
