@@ -1,76 +1,256 @@
 ---
 metaTitle: XPR Network Smart Contracts
 description: Build XPR Network Smart Contracts with Typescript
-navbar: false
+navbar: true
 sidebar: false
 editLink: false
 pageClass: frontpage
 ---
 
 <div id="hero">
-  <HeaderWave></HeaderWave>
-  <div id="logo">
+  
+  <div class="hero_content">
+  <h1>
+    Blockchain is better<br/>
+    with developers.
 
-  </div>
-  <h1>Web3 SDKs for writing and interacting with XPR Network smart contracts.</h1>
-  <p class="action">
-    <a href="/getting-started/introduction.html#what-s-xpr-network" class="docs">
+  </h1>
+  <div class="action">
+    <a href="/getting-started/introduction.html" class="docs">
       Get Started
     </a>
     <a href="https://github.com/ProtonProtocol/proton-ts-contracts" target="_blank" rel="noopener" class="github">
-      <svg viewBox="0 0 24 24"><path fill="#fff" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path></svg>
       <span class="title">GitHub</span>
+      <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
     </a>
     <!-- <a href="https://www.npmjs.com/package/proton" target="_blank" rel="noopener" class="npm">
       <svg viewBox="0 0 24 24"><path fill="#fff" d="M2 22h9.913V7.043h5.044V22H22V2H2z"/></svg>
       <span class="title">npm</span>
     </a> -->
-  </p>
+  </div>
+  </div>
+  <HeaderWave></HeaderWave>
 </div>
-
-<div id="features">
-  <div class="feature">
-    <h2>Designed for WebAssembly</h2>
-    <p>XPR Network smart contracts compile to WASM for maximum performance at 4000 TPS.</p>
-  </div>
-  <div class="feature">
-    <h2>Familiar TypeScript syntax</h2>
-    <p>Its similarity with TypeScript makes it easy to compile to WebAssembly without learning a new language.</p>
-  </div>
-  <div class="feature">
-    <h2>Right at your fingertips</h2>
-    <p>Integrates with the existing web ecosystem - no heavy toolchains to set up. Simply <code>npm install</code> it!</p>
-  </div>
+<div class="content-layout" >
+<div>
+  <h2>Develop on XPRNetwork</h2>
+  <div class="sub-topics_grid">
+  <a class="learn-topics header" href="/getting-started/introduction.html">
+  <div class="inner">
+    <div class="pills">XPRNetwork 101</div>
+    <h3 class="head">Learn the basics of XPRNetwork </h3>
+    <div class="title">
+    <p>Start your learning journey by learning the most important concept of XPRNetwork</p>
+      <div class="block-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </div>
+    </div>
+    </div>
+  </a>
+  <a class="learn-topics" href="/reading-onchain-data/reading-onchain-data.html">
+  <div class="inner">
+    <div class="pills">Full stack</div>
+    <div class="title">
+      <h3 class="head">Read data from the chain</h3>
+      <div class="block-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </div>
+    </div>
+    </div>
+  </a>
+  <a class="learn-topics" href="/signing-and-pushing-transactions/signing-and-pushing-transactions.html">
+  <div class="inner">
+    <div class="pills">Backend</div>
+    <div class="title">
+      <h3 class="head">Sign and push data to the chain</h3>
+      <div class="block-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </div>
+    </div>
+    </div>
+  </a>
+  <a class="learn-topics" href="/your-first-dapp-with-the-web-sdk/your-first-dapp-with-the-web-sdk.html">
+  <div class="inner">
+    <div class="pills">dApp</div>
+    <div class="title">
+      <h3 class="head">Build your first dApp with the web SDK</h3>
+      <div class="block-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </div>
+    </div>
+    </div>
+  </a>
+  
+  <a class="learn-topics coming-soon" href="/your-first-dapp-with-the-web-sdk/your-first-dapp-with-the-web-sdk.html">
+  <div class="inner">
+    <div class="pills">Coming soon</div>
+    <div class="title">
+      <h3 class="head">Write your first smart contract</h3>
+      <div class="block-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </div>
+    </div>
+    </div>
+  </a>
+  <a class="learn-topics coming-soon" href="/your-first-dapp-with-the-web-sdk/your-first-dapp-with-the-web-sdk.html">
+  <div class="inner">
+    <div class="pills">Coming soon</div>
+    <div class="title">
+      <h3 class="head">React dApp development with XPRNKit </h3>
+      <div class="block-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </div>
+    </div>
+    </div>
+  </a>
 </div>
+<div>
+  <h2>Useful tools</h2>
+  <div class="tools_grid">
+  
+  <div class="resources">
+    <h3 class="head">
+      Get WebAuth
+    </h3>
+    <p>Get the last wallet you ever need. WebAuth is our wallet that come with super power!</p>
+    <a href="https://webauth.com/getStarted" target="_blank" rel="noopener" class="external-link">
+        <span class="title">Get Webauth</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+    </a>
+  </div>
+  <div class="resources">
+    <h3 class="head">
+      XPRNetwork explorer
+    </h3>
+    <p>Track transactions, manage account and interact with the chain with our Explorer</p>
+    <a href="https://explorer.xprnetwork.org/" target="_blank" rel="noopener" class="external-link">
+        <span class="title">Access the explorer</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+    </a>
+  </div>
+  <div class="resources">
+    <h3 class="head">
+      Resources for your smart contract
+    </h3>
+    <p>Get more resources for your smart contract account and scale up your project to the moon!</p>
+    <a href="https://resources.xprnetwork.org/" target="_blank" rel="noopener" class="external-link">
+        <span class="title">Get resources plan</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+    </a>
+  </div>
+ 
+  <div class="resources">
+    <h3 class="head">
+      Get more RAM bytes
+    </h3>
+    <p>Get more storage for your smart contract account and scale up your project to the moon!</p>
+    <a href="https://resources.xprnetwork.org/storage" target="_blank" rel="noopener" class="external-link">
+        <span class="title">Buy RAM</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+    </a>
+  </div>
+  
+  <div class="resources">
+    <h3 class="head">
+      Get faucet
+    </h3>
+    <p>Get Foobar faucet token to test your dApp and smart contract on mainnet.</p>
+    <a href="https://resources.xprnetwork.org/faucet" target="_blank" rel="noopener" class="external-link">
+        <span class="title">Claim faucet</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+    </a>
+  </div>
+  
+  <div class="resources">
+    <h3 class="head">
+      NPM Package
+    </h3>
+    <p>XPRNetwork NPM account is full of useful package that covers the broad development spectrum.</p>
+    <a href="https://www.npmjs.com/org/proton" target="_blank" rel="noopener" class="external-link">
+        <span class="title">Browse packages</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
+    </a>
+  </div>
 
-<Editor/>
+  </div>
+  </div>
+<!-- <div>
+  <h2>Built on XPRNetwork</h2>
+  <div class="sub-topics_grid">
+  <div class="learn-topics">
+  <div class="illustration"></div>
+    <div class="pills">Social</div>
+    <h3 class="head">Snipverse</h3>
+  </div>
+  <div class="learn-topics">
+    <div class="pills">NFT Marketplace</div>
+    <h3 class="head">Soon Market</h3>
+  </div>
+  <div class="learn-topics">
+    <div class="pills">DeFi</div>
+    <h3 class="head">Blastpad</h3>
+  </div>
+  <div class="learn-topics">
+    <div class="pills">Travel</div>
+    <h3 class="head">Crypto Travel Deal</h3>
+  </div>
+  </div> -->
+  </div> 
+  </div>
+  </div>
+
+</div>
 
 <style scoped>
 #hero {
-  margin-top: 2rem;
-  text-align: center;
-  height: 400px;
-  background: #020ECB;
+  height:600px;
+  width:100vw;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+   @media (max-width:640px) {
+    height: 320px;
+    margin-top:80px!important;
+  }
+  
 }
-#hero:before {
-  content: '';
-  position: absolute;
-  z-index: 0;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 520px;
-  background: #020ECB ;
-  background-size: 1440px;
+
+#hero .hero_content {
+  width:100%;
+  max-width:70vw;
+  display:flex;
+  flex-direction:column;
+  position:relative;
+  z-index:2;
+  @media (min-width:1601px) {
+    max-width:60vw;
+  }
+  @media (max-width:640px) {
+    max-width:100vw;
+    padding:20px
+  }
 }
-#hero > * {
-  position: relative;
-}
+
 #hero h1 {
   color: #fff;
-  margin: 1.3rem auto 1.8rem;
-  font-size: 2rem;
-  font-weight: 200;
+  text-align:left;
+  line-height:100%;
+  letter-spacing:-4px;
+  font-size: 4.8rem;
+  font-weight: 600;
+
+ @media (max-width:640px) {
+    font-size: 2.4rem;
+    font-weight:700;
+    letter-spacing:-2px;
+  }
+
+}
+
+#hero h1 .words {
+  color: #7d0fde;
+  font-weight: 600;
+  
 }
 #logo {
   display: inline-block;
@@ -82,103 +262,7 @@ pageClass: frontpage
   max-height: 240px;
   fill: #fff;
 }
-@media only screen and (max-width: 740px) {
-  #logo {
-    width: 100%;
-  }
-  #logo svg {
-    max-height: 213px;
-  }
-}
-#features {
-  padding: 1.2rem 0;
-  margin-top: 2.5rem;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  align-content: stretch;
-  justify-content: space-between;
-}
-#features .feature {
-  flex-grow: 1;
-  flex-basis: 30%;
-  max-width: 30%;
-}
-#features h2 {
-  font-size: 1.4rem;
-  border-bottom: none;
-  padding-bottom: 0;
-  color: #3a5169;
-}
-.action {
-  text-align: center;
-  user-select: none;
-}
-.action a {
-  display: inline-block;
-  font-size: 1.2rem;
-  color: #fff;
-  background-color: #020ECB;
-  padding: .8rem 1.6rem;
-  border-radius: 4px;
-  transition: background-color .1s ease;
-  box-sizing: border-box;
-  border-bottom: 1px solid #006eb8;
-  text-decoration: none !important;
-  margin: 0.1rem 0;
-}
-.action a:hover {
-  background-color: #1a8ae7;
-}
-.action a svg {
-  width: 2em;
-  position: relative;
-  left: -10px;
-  float: left;
-  height: 32px;
-}
-.action a.docs {
-  color: #111;
-  background: #fff;
-  border-bottom-color: #aaa;
-  margin-right: 10px;
-}
-.action a.docs:hover {
-  background: #eee;
-}
-.action a.github {
-  color: #fff;
-  background: #24292e;
-  border-bottom-color: #101214;
-}
-.action a.github:hover {
-  background: #3e464f;
-}
-.action a.npm {
-  color: #fff;
-  background: #cb3837;
-  border-bottom-color: #ba3232;
-}
-.action a.npm:hover {
-  background: #eb3f3f;
-}
-@media only screen and (max-width: 720px) {
-  .action a.github svg {
-    float: none;
-    left: 0;
-    margin-bottom: -0.5rem;
-  }
-  .action a.npm {
-    display: none;
-  }
-  .action a.github .title {
-    display: none;
-  }
-  #features .feature {
-    flex-basis: 100%;
-    max-width: 100%;
-  }
-}
+
 @media only screen and (max-width: 640px) {
   #try {
     display: none;
