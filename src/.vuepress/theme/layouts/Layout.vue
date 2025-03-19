@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    
     <div slot="page-bottom" class="footer">
       <p>
         <span class="item">Copyright © {{ new Date().getFullYear() }}</span> 

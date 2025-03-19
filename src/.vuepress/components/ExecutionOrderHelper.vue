@@ -47,13 +47,14 @@ export default {
 
 <style scoped>
 .item-container {
-  max-width: 500px;
+
   margin: 0;
 }
 
 .item {
   padding: 1rem;
-  border: 1px solid black;
+  border: 1px solid #333333;
+  margin-bottom:-1px;
 }
 
 .item-sub {
