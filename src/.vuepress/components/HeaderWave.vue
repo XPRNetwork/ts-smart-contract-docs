@@ -179,9 +179,9 @@ export default {
         uniforms: {
           uTime: { value: 0 },
           uColors: { value: [
-            new THREE.Vector3(1.0, 0.0, 0.0),
-            new THREE.Vector3(1.0, 1.0, 0.0),
-            new THREE.Vector3(0.0, 1.0, 0.0),
+            new THREE.Vector3(1.0, 0.0, 1.0),
+            new THREE.Vector3(1.0, 0.0, 1.0),
+            new THREE.Vector3(1.0, 0.0, 1.0),
             new THREE.Vector3(0.0, 0.0, 1.0),
             new THREE.Vector3(1.0, 0.0, 1.0)
           ]},
@@ -209,7 +209,7 @@ export default {
       camera.rotation.set(0.18199447226318785, -0.418235369534331, 0.0746051170159521)
 
       controls = new OrbitControls(camera, renderer.domElement)
-      controls.enableDamping = true
+      controls.enabled = false;
       controls.dampingFactor = 0.05
       controls.addEventListener('change', (e) => {
         console.log('Camera position:', camera.position)
@@ -221,7 +221,7 @@ export default {
       if (!points) return
 
       const material = points.material
-      material.uniforms.uTime.value += params.value.animationSpeed
+      material.uniforms.uTime.value += 0.002
 
       // Update uniforms
       material.uniforms.uNoiseScale1.value = params.value.noiseScale1
@@ -288,8 +288,14 @@ export default {
 
 <style>
 .scene-container {
+  z-index: 1;
+  left:0;
+  top: 0;
+  position: absolute;
   width: 100%;
-  height: 400px;
-  background: #020ECB;
+  height: 600px;
+  @media (max-width:640px) {
+    height: 320px;
+  }
 }
 </style>
