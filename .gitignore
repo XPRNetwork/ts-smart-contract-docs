@@ -10,3 +10,5 @@ src/.vuepress/public/sponsors.svg
 abc
 .env
 .vercel
+
+.DS_Store
