@@ -1,4 +1,4 @@
-# XPR Network 101:  1 Reading data from XPRNetwork
+# Reading data from XPRNetwork
 
 You can explore the [code examples on github](https://github.com/XPRNetwork/developer-examples/tree/main/1_reading_from_xprnetwork_tables) 
 
@@ -52,7 +52,7 @@ jsonRpc
 
 Now lets run this code. \`node index.ts\` This snippet should print, it’s time to explain the code. 
 
-By using `code:eosio.token`, we're instructing the `eosio.token` contract to retrieve data from the `account` table, using the `eosio.token` scope. 
+By using **`code:eosio.token`**, we're instructing the **`eosio.token`** contract to retrieve data from the **`account`** table, using the **`eosio.token`** scope. 
 
 What exactly is a scope? A scope is a key concept in XPRNetwork’s table, it represents a distinct subset of data within a table. Scoping helps keep data organized and simplifies queries. While not all tables utilize multiple scopes, the default scope is always the name of the contract. 
 
@@ -72,7 +72,7 @@ What exactly is a scope? A scope is a key concept in XPRNetwork’s table, it re
 
 Great but this is probably not your balance 🙂. In fact, this is the balance of the current contract, \`eosio.token\`. Let’s explain the returned data:
 
-**`` `Rows` ``** contains an array of objects, the data fetched from the table. The structure of this object is defined by the table structure, so from a table to another the object structure is different. The **`` `more` ``** field is set to **`` `false` ``**, that means there is no more data to fetch, you reach the last available row for this table. If you receive **`` `more:true` ``** the **`` `next_key` ``** should contain a number value that can be used to fetch the next set of rows in the next request. Here, the **`` `more` ``** field value is **`` `false` ``**, so **`` `next_key` ``** is empty.
+**`Rows`** contains an array of objects, the data fetched from the table. The structure of this object is defined by the table structure, so from a table to another the object structure is different. The **`more`** field is set to **`false`**, that means there is no more data to fetch, you reach the last available row for this table. If you receive **`more:true`** the **`next_key`** should contain a number value that can be used to fetch the next set of rows in the next request. Here, the **`more`** field value is **`false`**, so **`next_key`** is empty.
 
 So to target your own account: 
 
@@ -108,7 +108,7 @@ This change should print
 }
 ```
 
-So far so good \! Let’s see another example with the \`atomicassets\` contract, the NFT protocol on XPRNetwork and get the list of available NFTs collections.
+So far so good \! Let’s see another example with the **`atomicassets`** contract, the NFT protocol on XPRNetwork and get the list of available NFTs collections.
 
 ```javascript
 import {JsonRpc} from "@proton/js";
@@ -166,7 +166,7 @@ Run this snippet and you should see the following in your console, we got a way 
 
 ### Query limit
 
-Now we received 10 rows, and the **`` `more` ``** field value is **`` `true` ``** because we have more than 10 rows in this **`` `collections` ``** table. Why do we receive only 10 rows ? Because this is the default **`` `limit` ``** on the JSONRpc. Let’s crank it up a bit up to 100 rows by adding a field **`` `limit`:100 ``**.  As you can see the structure inside the **`` `rows` ``** array has changed, according to the **`` `collections` ``** table from the **`` `atomicassets` ``** contract. 
+Now we received 10 rows, and the **`more`** field value is **`true`** because we have more than 10 rows in this **`collections`** table. Why do we receive only 10 rows ? Because this is the default **`limit`** on the JSONRpc. Let’s crank it up a bit up to 100 rows by adding a field **`limit:100`**.  As you can see the structure inside the **`rows`** array has changed, according to the **`collections`** table from the **`atomicassets`** contract. 
 
 For performance reasons, the maximum rows set size you can query is 1000 rows per request.
 
@@ -225,11 +225,11 @@ And here are our 100 rows, it starts to look good.
 }
 ```
 
-Take a look at the **`` `next_key` ``** we receive from the previous example… Yes it’s different, it’s because in the previous example, we received the primary key (the “id” of the row, a unique identifier)  that next to the last rows received in the array, means the primary key of the 11th row. And in this snippet return, we receive the primary key of the 101th. What can we do with this ? Let’s see… please be focused 🙂
+Take a look at the **`next_key`** we receive from the previous example… Yes it’s different, it’s because in the previous example, we received the primary key (the “id” of the row, a unique identifier)  that next to the last rows received in the array, means the primary key of the 11th row. And in this snippet return, we receive the primary key of the 101th. What can we do with this ? Let’s see… please be focused 🙂
 
 ## Crawling down the rows
 
-Most of the time, primary keys are numbers (u64 in fact but let’s call it number for now), even if it’s a Name (like an account name), it’s a u64 in reality (see the ”A quick note on data type”). To get a more specific set of results, as we previously saw,  we can use scope, but we also have **bounds**: **`` `lower_bound` ``** and **`` `upper_bound` ``** to be precise. Bounds are a way to target a set of from a starting primary key (**`` `lower_bound` ``**) to an ending primary key (**`` `upper_bound` ``**) let’s see from pseudo code perspective
+Most of the time, primary keys are numbers (u64 in fact but let’s call it number for now), even if it’s a Name (like an account name), it’s a u64 in reality (see the ”A quick note on data type”). To get a more specific set of results, as we previously saw,  we can use scope, but we also have **`bounds`**: **`lower_bound`** and **`upper_bound`** to be precise. Bounds are a way to target a set of from a starting primary key (**`lower_bound`**) to an ending primary key (**`upper_bound`**) let’s see from pseudo code perspective
 
 ```javascript
 // Rows asbtracted here as an array of numbers
@@ -251,9 +251,9 @@ Most of the time, primary keys are numbers (u64 in fact but let’s call it numb
 ]
 ```
 
-By defining **`` `lower_bound` ``** and **`` `upper_bound` ``** in our table, we are requesting the following set of rows: \[20,21,22,23,24,25,26,27,28,29,30\]. You get it ? Cool, let's move on…   
+By defining **`lower_bound`** and **`upper_bound`** in our table, we are requesting the following set of rows: \[20,21,22,23,24,25,26,27,28,29,30\]. You get it ? Cool, let's move on…   
 
-That allows us to use our \`next\_key\` value received from the previous request as **`` `lower_bound` ``**. So it should get the 101th row in our table, check out on the  how it’s implemented in the next example :
+That allows us to use our \`next\_key\` value received from the previous request as **`lower_bound`**. So it should get the 101th row in our table, check out on the  how it’s implemented in the next example :
 
 ```javascript
 import {JsonRpc} from "@proton/js";
@@ -347,14 +347,14 @@ You can see that the 2 successive requests have 6 results. That is what we want,
 
 ```
 
-Great, now we know how to crawl our table rows by jumping from a batch to the next using **`` `next_key` ``** in conjunction with the **`` `lower_bound` ``** params in the JSONRpc. But what about this **`` `upper_bound` ``** field ? That’s what we will discover next. 
+Great, now we know how to crawl our table rows by jumping from a batch to the next using **`next_key`** in conjunction with the **`lower_bound`** params in the JSONRpc. But what about this **`upper_bound`** field ? That’s what we will discover next. 
 
 ## Search through the primary key 
 
 Well some time you need to search for a primary key, no matter the use case. And of course it’s hard to guess how many rows your request will return. And that what bounds is all about: searching through primary keys\! How does it works? Here is a simple, yet comprehensive breakthrough:   
-As we saw before, Name are string that could be expressed as number, and primary keys are numbers. Lower\_bound and upper\_bound can define a range where we “capture” a set of rows by their primary key within this lower and upper range, so we can easily search a set of rows by “capturing” them within `` `lower_bound` `` and **`` `upper_bound` ``**, like the next example.
+As we saw before, Name are string that could be expressed as number, and primary keys are numbers. Lower\_bound and upper\_bound can define a range where we “capture” a set of rows by their primary key within this lower and upper range, so we can easily search a set of rows by “capturing” them within **`lower_bound`** and **`upper_bound`**, like the next example.
 
-Let’s say, i want to get the all stakers of XPR tokens with a account name that start with \`test\`: 
+Let’s say, i want to get the all stakers of XPR tokens with a account name that start with **`test`**: 
 
 ```javascript
 import {JsonRpc} from "@proton/js";
@@ -461,7 +461,7 @@ And here are our guys and girls
 
 ```
 
-You can see here from the result that the \`more\` field’s value is false, so there are no more rows to fetch, that means we retrieve all possible results for stakers accounts that match our \`lower\_bound\` and \`upper\_bound\` range. 
+You can see here from the result that the **`more`** field’s value is false, so there are no more rows to fetch, that means we retrieve all possible results for stakers accounts that match our **`lower_bound`** and **`upper_bound`** range. 
 
 ## Advanced search with secondary keys
 
@@ -496,7 +496,7 @@ jsonRpc
 
 A little explanation on the request of the atomicassets offers table we just wrote: Basically it’s the same as the previous example, except the **`index_position`** and the **`key_type.`**
 
-* **`Index_position:`** this is the way you target the key, by default the value is one for primary, here the value is 2 for secondary. As you can guess, 3 target the ternary and so on … This fields works in addition with the **`lower_bound`** and **`upper_bound`**, it defines on which key the bound range should be applied.  
+**`Index_position:`** this is the way you target the key, by default the value is one for primary, here the value is 2 for secondary. As you can guess, 3 target the ternary and so on … This fields works in addition with the **`lower_bound`** and **`upper_bound`**, it defines on which key the bound range should be applied.  
 * **`Key_type:`** It’s the type expected for the secondary (in this example), here we are looking for a name (but it could be i64, i128, i256, float64, float128). This is the value type expected by **`lower_bound`** and **`upper_bound.`** 
 
 In short, we are requesting on the table offers from **`atomicassets`** contract, searching for the **`sender`** key where the send name start with solid and everything after.
@@ -540,10 +540,15 @@ There is the output:
 
 Yeah\! So we received all senders that have a name starting with solid, no more result remains \!
 
----
-
-## Session **1, Reading the on-chain data** complete
-
-You can now query data from XPRNetwork tables smart contract \!   
-**\>\> Next, we’ll see how to push and sign transactions**  
+<a class="learn-topics footer" href="/signing-and-pushing-transactions/signing-and-pushing-transactions.html">
+    <div class="inner">
+    <h2 class="head">Session complete</h2>
+    <div class="title">
+    <p>Next: Signing and pushing transactions</p>
+      <div class="block-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </div>
+    </div>
+    </div>
+  </a>
 

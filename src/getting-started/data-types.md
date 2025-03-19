@@ -1,4 +1,4 @@
-# XPR Network 101: A quick note on data types 
+# A quick note on data types 
 
 Understanding data type is a quite advanced topic, and becomes more important when you dive into smart contracts. At this level just have to know few basic types:
 

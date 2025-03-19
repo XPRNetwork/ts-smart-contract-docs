@@ -1,4 +1,4 @@
-# XPR Network 101: Testnet vs mainnet 
+# Testnet vs mainnet 
 
 Like many other blockchains, XPRNetwork has two chains, the testnet and the mainnet. As you can guess, testnet is a version of XPRNetwork where you can test things. Testnet is a fabulous playground, it allows you to perform the exact same operation as mainnet with a little less power but you will not notice it 🙂.
 
@@ -17,7 +17,3 @@ Switching between mainnet or testnet is made by selecting the node in most cases
 ```
 71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3dd
 ```
-
----
-
-### Let’s continue with the important concepts you need to know

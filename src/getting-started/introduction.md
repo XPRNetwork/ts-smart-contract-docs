@@ -1,4 +1,4 @@
-# XPR Network 101: Getting started with XPR Network 
+# Getting started with XPR Network 
 
 ## What’s XPR Network ?
 
@@ -18,12 +18,11 @@ On XPR Network, you can dream big and build ANY use case, thanks to the zero gas
 No prior experience with blockchain or C++ is required to learn XPR Network\! However, you will need the following:
 
 * A computer running Linux, macOS, or Windows.  
-  * For Windows, ensure Windows Terminal.  
+  * For Windows, ensure Windows Terminal is installed.  
 * Node.js 20 installed.  
 * Basic knowledge of TypeScript programming.  
 * Familiarity with using the command line.  
-* Basic understanding of Git, whether via the command line or a preferred GUI tool.  
-* 
+* Basic understanding of Git, whether via the command line or your preferred GUI tool.  
 
 ## Grab the code from this documentation
 
@@ -38,9 +37,3 @@ As a developer, you should be aware of some important considerations:
 * **XPRNetwork storage is not a hard drive**: You should always be scarce about how much data you store on-chain. Keep in mind that every operation should be optimized as possible on execution time, and data storage. Computation intensive tasks should be done outside smart contracts (like on a webserver), and stored data should occupy the smallest amount possible of bytes. It may sound lame, but trust me, optimizing is most of the time a fun engineering challenge.  
 * **Take time to understand the underlying concept:** You may have a hard time if you don’t fully understand the foundation concepts (like resources or transaction execution order). It's easy to read something and think, "Yeah, I understand," only to realize later that you didn't fully grasp it. Be harsh with yourself as you go through each topic.  Read it carefully.   
 * **BUILD DESTROY REPEAT:** Try to start small and iterate. Don’t hesitate to fork some projects available on the XPRNetwork github account and break things\! 
-
----
-
-## Let’s dive in the important concepts you need to know
-
-**\>\> Next: Let’s discover about testnet and mainnet**

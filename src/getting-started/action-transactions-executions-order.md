@@ -1,4 +1,4 @@
-# XPR Network 101: Actions, transactions, and execution order
+# Actions, transactions, and execution order
 
 ## What’s a transaction ?
 
@@ -60,45 +60,140 @@ New notifications (NewN) and new inline actions (NewIA) are added at the end of 
 
 Note that XPR Network will only process the inline actions queue when the notifications queue is empty.
 
-### Basic example 
+<ClientOnly>
+<ExecutionOrder :rootActions="[
+  {
+          type: 'Action',
+          elements: [
+            {
+              type: 'Notification',
+              elements: [
+                {
+                  type: 'Action',
+                  elements: [
+                    {
+                      type: 'Action',
+                      elements: [],
+                    },
+                    {
+                      type: 'Notification',
+                      elements: [],
+                    }
+                  ],
+                }
+              ],
+            },
+          ],
+        },
+        {
+          type: 'Action',
+          elements: [
+            {
+              type: 'Action',
+              elements: [],
+            },
+            {
+              type: 'Notification',
+              elements: [],
+            }
+          ],
+        },
+]"/>
+</ClientOnly>
 
-**Root User action							1**  
-**Notification				 			2**  
-**Inline action						3**  
-**Inline action					4**  
-**Notification					3**  
-**Root User action							6**  
-**Inline action				 			8**  
-**Notification							7**
+## Advanced playground
 
-### Complex 
-
-**Root Action								1**  
-**Inline Action							7**  
-**Notification						8**  
-**Inline Action						9**  
-**Notification							2**  
-**Inline Action						13**  
-**Inline Action					15**  
-**Notification					14**  
-**Notification						4**  
-**Notification					6**  
-**Inline Action					17**  
-**Notification							3**  
-**Inline Action						16**  
-**Notification						5**  
-**Inline Action							10**  
-**Inline Action						12**  
-**Notification						11**  
-**Root Action								18**  
-**Inline Action							20**  
-**Notification							19**
+<ClientOnly>
+<ExecutionOrder :rootActions="[
+        {
+          type: 'Action',
+          elements: [
+            {
+              type: 'Action',
+              elements: [
+                {
+                  type: 'Notification',
+                  elements: [],
+                },
+                {
+                  type: 'Action',
+                  elements: [],
+                }
+              ],
+            },
+            {
+              type: 'Notification',
+              elements: [
+                {
+                  type: 'Action',
+                  elements: [
+                    {
+                      type: 'Action',
+                      elements: [],
+                    },
+                    {
+                      type: 'Notification',
+                      elements: [],
+                    }
+                  ],
+                },
+                {
+                  type: 'Notification',
+                  elements: [
+                    {
+                      type: 'Notification',
+                      elements: [],
+                    },
+                    {
+                      type: 'Action',
+                      elements: [],
+                    }
+                  ],
+                }
+              ],
+            },
+            {
+              type: 'Notification',
+              elements: [
+                {
+                  type: 'Action',
+                  elements: [],
+                },
+                {
+                  type: 'Notification',
+                  elements: [],
+                }
+              ],
+            },
+            {
+              type: 'Action',
+              elements: [
+                {
+                  type: 'Action',
+                  elements: [],
+                },
+                {
+                  type: 'Notification',
+                  elements: [],
+                }
+              ],
+            }
+          ],
+        },
+        {
+          type: 'Action',
+          elements: [
+            {
+              type: 'Action',
+              elements: [],
+            },
+            {
+              type: 'Notification',
+              elements: [],
+            }
+          ],
+        },
+]"/>
+</ClientOnly>
 
 As you can see, the notification for the current context occurs before inline actions are performed. It run as it until all notification queues are empty, then it processes the inline actions queues, then it moves to the next action. On the explorer you can see the [execution of action](https://explorer.xprnetwork.org/transaction/edc47ae6978b25e400cbecdadcf5e8a0574adb0a97debc2a61746eec776857ec?tab=traces) 
-
----
-
-## **Session complete**
-
-Congratulation, now you have all the basics you need to understand XPRNetwork developement.  
-**\>\> Next, we’ll see how to read the on-chain data**

@@ -30,7 +30,7 @@ Ok let move on
 
 ## Command syntax and structure 
 
-Every commands starts with … **`` `proton` ``** followed by the “main topic”, then a column (:) with the actual action to perform, and finally arguments. Some command have 0,1 or more arguments. 
+Every commands starts with … **`proton`** followed by the “main topic”, then a column (:) with the actual action to perform, and finally arguments. Some command have 0,1 or more arguments. 
 
 This is look like this, you can type the enter command
 
@@ -65,7 +65,7 @@ And you will get something like
 }
 ```
 
-Great you’ve exectured your first command with the @proton/cli
+Great you’ve executed your first command with the @proton/cli
 
 ## Switching between testnet and mainnet
 
@@ -112,7 +112,7 @@ Great\! Now let’s create a new XPRNetwork account\!  Because we are devs, and 
 proton create:account devcourse > devcourse.json
 ```
 
-As you can see, the command follows the structure I mentioned above, so we create a new account on testnet, and the account name argument is **`` `devcourse`. ``** The last part after the arguments **`` `> devcourse.json` ``** is not a part of the @proton/cli. If you are familiar with terminal, it means “send everything that the command outputs in a file, a json file in this case”. It will allow us to store keys generated during the process. Now hit the enter key and the process begins\! 
+As you can see, the command follows the structure I mentioned above, so we create a new account on testnet, and the account name argument is **`devcourse`**. The last part after the arguments **`> devcourse.json`** is not a part of the @proton/cli. If you are familiar with terminal, it means “send everything that the command outputs in a file, a json file in this case”. It will allow us to store keys generated during the process. Now hit the enter key and the process begins\! 
 
 ```javascript
 Enter private key for new account (leave empty to generate new key):
@@ -249,7 +249,14 @@ And the return response shows us how rich this account is \! As you can see the 
 
 ---
 
-## Session complete
-
-You now have the basic of @proton/cli on XPRNetwork.  
-**\>\> Next, we’ll see how to read the on-chain data**
+<a class="learn-topics footer">
+    <div class="inner">
+    <h2 class="head">Session complete</h2>
+    <div class="title">
+    <p>Next: Write your first dApp</p>
+      <div class="block-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </div>
+    </div>
+    </div>
+  </a>

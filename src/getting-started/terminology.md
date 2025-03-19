@@ -1,10 +1,11 @@
-# XPR Network 101: Terminology
+# Terminology
 
 ## Some terms you need to be familiar with
 
 Here is some technical terminology you will find across XPR Network documentation, chat and post. 
 
 * **Account:** An account is a wallet, defined by a readable name. Say good bye to the old and ugly hexadecimal key like 0xae54g4781b45c54….. but hello to @bob or @alice.  
+
 * **WebAuth:** The amazing wallet made by our awesome team that allows you to sign transactions, manage your tokens and more on XPR Network. WebAuth comes in three flavors: Mobile app, desktop app, browser app. The best thing is that you can use all of this version to manage your account and interact with the chain the exact same way.   
 * **Mnemonic**: Some call it “passphrase”, it’s a set of 12 random words provided only once at the account creation, remember to write it down on a piece of paper and secure it. The mnemonic is the most important piece of your account. It allows you to recover your account in case of emergency. **The mnemonic is private and should remain always private, never share it.**      
 * **Private key:** Private as your mnemonic. The private key is a cryptographic key “derived” from the mnemonic. This key always starts with \`PVT\_K1\_\` and look like   \`PVT\_K1\_UFfHbU8FUm9wmf7dmETYUUoFvdYkanFTjZxALiC1NxG6nNxuF\`. **Never share it.**  
@@ -25,8 +26,5 @@ Here is some technical terminology you will find across XPR Network documentatio
   The difference between the block producer and nodes is:   
   * **Block producers** are servers that mutate the chain state, they are the “brain” that process actions, write data, and validate what that could eventually lead to a new block and broadcast this newly mutated state to all block producers nodes  to keep it short.   
   * **Nodes** are “only” relays that send transactions to the block producers. Each node keeps an entire copy of the blockchain state.   
-* **Endpoints:**Endpoints are the gateway for your interaction with XPRNetwork. What we call an endpoint is the url to a node .
-
----
-
-### Let’s continue with the important concepts you need to know
+* **Endpoints**: Endpoints are the gateway for your interaction with XPRNetwork. What we call an endpoint is the url to a node .
+  
