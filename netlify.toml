@@ -20,4 +20,4 @@
   ## more info on configuring this file: https://www.netlify.com/docs/netlify-toml-reference/
 
 [build.environment]
-  NODE_VERSION = "16.14.0"
+  NODE_VERSION = "22.6.0"
