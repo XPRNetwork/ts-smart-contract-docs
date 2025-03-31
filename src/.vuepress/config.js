@@ -7,7 +7,7 @@ module.exports = {
     "/": {
       lang: "en-US",
       title: "",
-      description: "Writing blockchain smart contracts using TS/AS semantics",
+      description: "Learn the XPR Network stack",
     },
   },
 
@@ -80,6 +80,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
+    shouldShowNavbar: false,
     logo: "/images/icon.svg",
     nav: require("./nav"),
     sidebar: require("./sidebar"),
@@ -129,6 +130,7 @@ function extendMarkdown(md) {
   // Extend TypeScript grammar
 
   require("prismjs/components/prism-typescript");
+
   prism.languages.typescript.builtin = new RegExp(
     "\\b(?:" +
       [

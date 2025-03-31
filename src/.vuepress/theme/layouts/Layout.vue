@@ -1,4 +1,5 @@
 <template>
+  
   <Layout>
     
     <div slot="page-bottom" class="footer">
@@ -11,11 +12,15 @@
 </template>
 
 <script>
+
 import Layout from '@vuepress/theme-default/layouts/Layout.vue'
+
+
 
 export default {
   components: {
-    Layout
+    Layout,
+    
   }
 }
 </script>
@@ -30,3 +35,4 @@ export default {
   white-space: nowrap;
 }
 </style>
+
