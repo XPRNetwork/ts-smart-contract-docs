@@ -31,18 +31,19 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
 <sub>**Example:**</sub>
 ```ts
   import { TableStore } from 'proton-tsc'
-
+  import {MyTable} from './tables'
   const contract = Name.fromString('mycontract');
   const scope = Name.fromString('mycontract');
 
-  const tablestore = new TableStore(contract, scope);
-
+  const tablestore = new TableStore<MyTable>(contract, scope);
+```
  
-----------------------------------------------------------------
+
 
 ### Instance Methods
+#### Set
 ```ts
-  set(value: T, payer: Name): void
+set(value: T, payer: Name): void
   ```
   Creates new record or updates the existing one in the storage for the provided value and account passed as `payer` argument.
 
@@ -51,6 +52,7 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
   tablestore.set(value, contract)
   ```
 
+#### Store
 ```ts
   store(value: T, payer: Name): void
   ```
@@ -63,7 +65,7 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
   ```ts
   tablestore.store(value, contract)
   ```
-
+#### Update
 ```ts
   update(value: T, payer: Name): void
   ```
@@ -76,7 +78,7 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
   ```ts
   tablestore.update(value, contract)
   ```
-
+#### Remove
 ```ts
   remove(value: T): void
   ```
@@ -90,6 +92,7 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
   tablestore.remove(value)
   ```
 
+#### Get
 ```ts
   get(key: u64): T | null
   ```
@@ -100,6 +103,7 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
   tablestore.get(key)
   ```
 
+#### RequireGet
 ```ts
   requireGet(key: u64, errorMsg: string): T 
   ```
@@ -114,45 +118,48 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
   tablestore.requireGet(id, `no recored with ID ${id} found.`)
   ```
 
+#### Exists
 ```ts
   exists(pk: u64): bool
   ```
   Checks if the record for provided primary key exist in the table or not.
 
+#### ExistsValue
 ```ts
   existsValue(value: T): bool
   ```
   Checks if the record for provided value exist in the table or not.
 
+#### Next
 ```ts
   next(value: T): T | null
   ```
   Returns the record that is the next after the provided value
   **Throws if:**
    - If the record for the provided value is the last in the storage
-
+#### Previous
 ```ts
   previous(value: T): T | null
   ```
   Returns the record that is the previous to the provided value
   **Throws if:**
    - If no record for the provided value is the first in the storage
-
+#### First
 ```ts
   first(): T | null
   ```
   Returns the first record in the storage. Or `null` if no records yet.
-
+#### Last
 ```ts
   last(): T | null
   ```
   Returns the last record in the storage. Or `null` if no records yet.
-
+#### Empty
 ```ts
   isEmpty(): bool
   ```
   Checks if there is any record in the storage
-
+#### LowerBound
 ```ts
   lowerBound(id: u64): T | null
   ```
@@ -166,7 +173,7 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
   const record = tablestore.lowerBound(3)
   // will return record with id 3.
   ```
-
+#### UpperBound
 ```ts
   upperBound(id: u64): T | null
   ```
@@ -181,12 +188,14 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
   // will return record with id 5.
   ```
 
+#### AvailablePrimaryKey
 ```ts
   availablePrimaryKey: u64
   ```
   Returns the available primary key that can be used to save data.
   Read-only field
 
+#### GetBySecondaryU64
 ```ts
   getBySecondaryU64(secondaryValue: u64, index: u8): T | null
   ```
@@ -195,6 +204,7 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
   `secondaryValue` is the secondary value to search for.
   `index` is the index to search in.
 
+#### NextBySecondaryU64
 ```ts
   nextBySecondaryU64(value: T, index: u8): T | null
   ```
@@ -204,6 +214,7 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
   `value` is the secondary value to search for.
   `index` is the index to search in.
 
+#### PreviousBySecondaryU64
 ```ts
   previousBySecondaryU64(value: T, index: u8): T | null
   ```
@@ -213,16 +224,19 @@ The second is to pass a value inherited from `Table` class. The method `getPrima
   `value` is the secondary value to search for.
   `index` is the index to search in.
 
+#### GetBySecondaryU128
 ```ts
   getBySecondaryU128(secondaryValue: U128, index: u8): T | null
   ```
   The same as `getBySecondaryU64` but with extended size of the secondary value
 
+#### GetBySecondaryU256
 ```ts
   getBySecondaryU256(secondaryValue: U256, index: u8): T | null
   ```
   The same as `getBySecondaryU64` but with extended size of the secondary value
 
+#### GetBySecondaryF64
 ```ts
   getBySecondaryF64(secondaryValue: f64, index: u8): T | null
   ```
