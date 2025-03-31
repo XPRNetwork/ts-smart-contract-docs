@@ -9,7 +9,7 @@ description: Storage
 
 A good mental model for storage in XPR Network is that of a standard table with rows and columns. As a developer, you start off by defining the columns of data to store, and each entry is stored as a row. Every row is uniquely identified by a u64 primary key, which you specify using the @primary decorator.
 
-Blockchain storage capacity (RAM) is purchased using XPR, either through the CLI or on [XPR Network Resources.](https://protonresources.com) Each row will consume a variable amount of RAM, depending on the size of your columns and the specific row data (for variable length types like strings).
+Blockchain storage capacity (RAM) is purchased using XPR, either through the CLI or on [XPR Network Resources.](https://resources.xprnetwork.org/) Each row will consume a variable amount of RAM, depending on the size of your columns and the specific row data (for variable length types like strings).
 
 It is important to note that once rows have been inserted to a table, the columns cannot be safely modified. Modifying the columns requires migrating all rows to a temporary migration table, modifying the old empty table columns and then migrating the rows back to the modified table.
 
