@@ -9,7 +9,7 @@ Represents a 512 bit checksum (64 bytes)
 
 ## Constructor
 
-* ```ts
+```ts
   constructor(
     data: u8[] | null = null
   )
@@ -18,35 +18,35 @@ Represents a 512 bit checksum (64 bytes)
   `data` - byte array for initial value of checksum
 
 ## Fields
-* ```ts
+```ts
   var data: u8[] = undefined;
   ```
   The bytes in the checksum
 
 ## Instance Methods
-* ```ts
+```ts
   static function pack(): u8[]
   ```
 
   Returns serialized data bytes in the checksum
 
-* ```ts
+```ts
   static function unpack(data: u8[]): usize
   ```
   Tries to place the first 64 bytes from `data` into the checksum. Returns how many bytes were unpacked from data.
 
-* ```ts
+```ts
   static function toString(): string
   ```
   Prints the hex representation of the bytes in the checksum
 
 ## Static Equality methods
-* ```ts
+```ts
   static function eq(a: Checksum512, b: Checksum512): bool
   ```
   Checks that the two checksum bytes are equal
 
-* ```ts
+```ts
   static function neq(a: Checksum512, b: Checksum512): bool
   ```
   Checks that the checksum bytes are not equal

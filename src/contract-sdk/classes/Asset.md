@@ -10,7 +10,7 @@ It is important to note that smart contracts view token amounts as raw values wi
 
 ## Constructors
 
-* ```ts
+```ts
   constructor(
     public amount: i64 = 0,
     public symbol: Symbol = new Symbol()
@@ -36,7 +36,7 @@ It is important to note that smart contracts view token amounts as raw values wi
  
 ----------------------------------------------------------------
 
-* ```ts
+```ts
   static fromString(assetStr: string): Asset
   ```
 
@@ -47,17 +47,17 @@ It is important to note that smart contracts view token amounts as raw values wi
 
 ### Instance Methods
 
-* ```ts
+```ts
   function isAmountWithinRange(): bool
   ```
   Checks that the asset has not overflown or underflown
 
-* ```ts
+```ts
   function isValid(): bool
   ```
   Checks the Asset's isAmountWithinRange and that the symbol is valid
 
-* ```ts
+```ts
   function toString(): string
   ```
   Converts an asset to string.
@@ -70,7 +70,7 @@ It is important to note that smart contracts view token amounts as raw values wi
   ```
 
 ## Static Methods
-* ```ts
+```ts
   static function add(a: Asset, b: Asset): Asset
   ```
   Adds two assets with the same symbol and returns a new asset with amount a + b
@@ -80,7 +80,7 @@ It is important to note that smart contracts view token amounts as raw values wi
     - (a + b) underflows i64
     - (a + b) overflows i64
 
-* ```ts
+```ts
   static function sub(a: Asset, b: Asset): Asset
   ```
   Substracts two assets with the same symbol and returns a new asset with amount a - b
@@ -90,7 +90,7 @@ It is important to note that smart contracts view token amounts as raw values wi
     - (a - b) underflows i64
     - (a - b) overflows i64
 
-* ```ts
+```ts
   static function mul(a: Asset, b: Asset): Asset
   ```
   Multiplies two positive assets with the same symbol and returns a new asset with amount a * b
@@ -101,7 +101,7 @@ It is important to note that smart contracts view token amounts as raw values wi
     - (a * b) overflows i64
     - (a - b) overflows
 
-* ```ts
+```ts
   static function div(a: Asset, b: Asset): Asset
   ```
   Divides two positive assets with the same symbol and returns a new asset with amount a / b
@@ -110,7 +110,7 @@ It is important to note that smart contracts view token amounts as raw values wi
     - Asset symbols do not match
     - a or b are negative
 
-* ```ts
+```ts
   static function eq(a: Asset, b: Asset): bool
   ```
   Checks that the amounts of two assets are equal
@@ -118,7 +118,7 @@ It is important to note that smart contracts view token amounts as raw values wi
   **Throws if:**
     - Asset symbols do not match
 
-* ```ts
+```ts
   static function neq(a: Asset, b: Asset): bool
   ```
   Checks that the amounts of two assets are not equal
@@ -126,7 +126,7 @@ It is important to note that smart contracts view token amounts as raw values wi
   **Throws if:**
     - Asset symbols do not match
   
-* ```ts
+```ts
   static function lt(a: Asset, b: Asset): bool
   ```
   Checks that the amounts of a is less than b
@@ -134,7 +134,7 @@ It is important to note that smart contracts view token amounts as raw values wi
   **Throws if:**
     - Asset symbols do not match
 
-* ```ts
+```ts
   static function gt(a: Asset, b: Asset): bool
   ```
   Checks that the amounts of a is greater than b
@@ -142,7 +142,7 @@ It is important to note that smart contracts view token amounts as raw values wi
   **Throws if:**
     - Asset symbols do not match
 
-* ```ts
+```ts
   static function lte(a: Asset, b: Asset): bool
   ```
   Checks that the amounts of a is less than or equal to b
@@ -150,7 +150,7 @@ It is important to note that smart contracts view token amounts as raw values wi
   **Throws if:**
     - Asset symbols do not match
 
-* ```ts
+```ts
   static function gte(a: Asset, b: Asset): bool
   ```
   Checks that the amounts of a is greater than or equal to b

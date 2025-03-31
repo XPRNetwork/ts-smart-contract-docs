@@ -12,7 +12,7 @@ This object can be used to check account authentication or/and permission.
 
 ## Constructor
 
-* ```ts
+```ts
   constructor(
     public actor: Name = new Name(),
     public permission: Name = Name.fromString("active")

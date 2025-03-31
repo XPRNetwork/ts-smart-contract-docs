@@ -8,7 +8,7 @@ Creates object for action that can be performed in blockchain.
 
 ## Constructor
 
-* ```ts
+```ts
   constructor(
     public authorization: PermissionLevel[] = [],
     public account: Name = new Name(),

@@ -8,34 +8,34 @@ The following global constants and functions are present alongside the standard 
 
 ## Constants
 
-* ```ts
+ ```ts
   const NaN: auto // f32 or f64
   ```
   Not a number as a 32-bit or 64-bit float depending on context. Compiles to a constant.
 
-* ```ts
+ ```ts
   const Infinity: auto // f32 or f64
   ```
   Positive infinity as a 32-bit or 64-bit float depending on context. Compiles to a constant.
 
 ## Functions
 
-* ```ts
+```ts
   function isNaN<T>(value: T): bool
   ```
   Tests if a 32-bit or 64-bit float is `NaN`.
 
-* ```ts
+```ts
   function isFinite<T>(value: T): bool
   ```
   Tests if a 32-bit or 64-bit float is finite, that is not `NaN` or +/-`Infinity`.
 
-* ```ts
+```ts
   function parseInt(str: string, radix?: i32): i64
   ```
   Parses a string to a 64-bit integer. Returns `0` on invalid inputs.
 
-* ```ts
+```ts
   function parseFloat(str: string): f64
   ```
   Parses a string to a 64-bit float. Returns `NaN` on invalid inputs.
@@ -48,57 +48,57 @@ The following builtins provide direct access to WebAssembly and compiler feature
 
 By making use of the following special type checks, especially in generic contexts, untaken branches can be eliminated statically, leading to concrete WebAssembly functions that handle one type specificially.
 
-* ```ts
+```ts
   function isInteger<T>(value?: T): bool
   ```
   Tests if the specified type _or_ expression is of an integer type and not a reference. Compiles to a constant.
 
-* ```ts
+```ts
   function isFloat<T>(value?: T): bool
   ```
   Tests if the specified type _or_ expression is of a float type. Compiles to a constant.
 
-* ```ts
+```ts
   function isSigned<T>(value?: T): bool
   ```
   Tests if the specified type _or_ expression can represent negative numbers. Compiles to a constant.
 
-* ```ts
+```ts
   function isReference<T>(value?: T): bool
   ```
   Tests if the specified type _or_ expression is of a reference type. Compiles to a constant.
 
-* ```ts
+```ts
   function isString<T>(value?: T): bool
   ```
   Tests if the specified type _or_ expression can be used as a string. Compiles to a constant.
 
-* ```ts
+```ts
   function isArray<T>(value?: T): bool
   ```
   Tests if the specified type _or_ expression can be used as an array. Compiles to a constant.
 
-* ```ts
+```ts
   function isFunction<T>(value?: T): bool
   ```
   Tests if the specified type _or_ expression is of a function type. Compiles to a constant.
 
-* ```ts
+```ts
   function isNullable<T>(value?: T): bool
   ```
   Tests if the specified type _or_ expression is of a nullable reference type. Compiles to a constant.
 
-* ```ts
+```ts
   function isDefined(expression: auto): bool
   ```
   Tests if the specified expression resolves to a defined element. Compiles to a constant.
 
-* ```ts
+```ts
   function isConstant(expression: auto): bool
   ```
   Tests if the specified expression evaluates to a constant value. Compiles to a constant.
 
-* ```ts
+```ts
   function isManaged<T>(expression: auto): bool
   ```
   Tests if the specified type _or_ expression is of a managed type. Compiles to a constant. Usually only relevant when implementing custom collection-like classes.
@@ -125,52 +125,52 @@ If you are not going to use low-level WebAssembly in the foreseeable future, fee
 
 ### Utilities
 
-* ```ts
+```ts
   function sizeof<T>(): usize
   ```
   Determines the byte size of the respective _basic type_. Means: If `T` is a class type, the size of `usize`, the pointer type, is returned. To obtain the size of a class in memory, use `offsetof<T>()` instead. Compiles to a constant.
 
-* ```ts
+```ts
   function offsetof<T>(fieldName?: string): usize
   ```
   Determines the offset of the specified field within the given class type. If `fieldName` is omitted, this returns what could be interpreted as either the size of the class, or the offset where the next field would be located, before alignment. Compiles to a constant. The `fieldName` argument must be a compile-time constant `string` because there is no information about field names anymore at runtime. Therefore, the field's name must be known at the time the returned constant is computed.
 
-* ```ts
+```ts
   function alignof<T>(): usize
   ```
   Determines the alignment \(log2\) of the specified underlying _basic type_; i.e. If `T` is a class type, the alignment of `usize` is returned. Compiles to a constant.
 
-* ```ts
+```ts
   function assert<T>(isTrueish: T, message?: string): T
   ```
   Traps if the specified value is not true-ish, otherwise returns the non-nullable value. Like assertions in C, aborting the entire program if the expectation fails. Where desired, the `--noAssert` compiler option can be used to disable assertions in production.
 
-* ```ts
+```ts
   function instantiate<T>(...args: auto[]): T
   ```
   Instantiates a new instance of `T` using the specified constructor arguments.
 
-* ```ts
+```ts
   function changetype<T>(value: auto): T
   ```
   Changes the type of a value to another one. Useful for casting class instances to their pointer values and vice-versa.
 
-* ```ts
+```ts
   function idof<T>(): u32
   ```
   Obtains the computed unique id of a class type. Usually only relevant when allocating objects or dealing with RTTI externally.
 
-* ```ts
+```ts
   function nameof<T>(value?: T): string
   ```
   Returns the name of a given type.
 
-* ```ts
+```ts
   function bswap<T>(value: T): T
   ```
   Reverses the byte order of the specified integer.
 
-* ```ts
+```ts
   function bswap16<T>(value: T): T
   ```
   Reverses only the last 2 bytes regardless of the type argument.
@@ -181,7 +181,7 @@ If you are not going to use low-level WebAssembly in the foreseeable future, fee
 
 The following generic built-ins compile to WebAssembly instructions directly.
 
-* ```ts
+```ts
   function clz<T>(value: T): T
   ```
   <details><summary>Performs the sign-agnostic count leading zero bits operation on a 32-bit or 64-bit integer. All zero bits are considered leading if the value is zero.</summary>
@@ -192,7 +192,7 @@ The following generic built-ins compile to WebAssembly instructions directly.
   | i64, u64                         | i64.clz
   </details>
 
-* ```ts
+```ts
   function ctz<T>(value: T): T
   ```
   <details><summary>Performs the sign-agnostic count tailing zero bits operation on a 32-bit or 64-bit integer. All zero bits are considered trailing if the value is zero.</summary>
@@ -203,7 +203,7 @@ The following generic built-ins compile to WebAssembly instructions directly.
   | i64, u64                         | i64.ctz
   </details>
 
-* ```ts
+```ts
   function popcnt<T>(value: T): T
   ```
   <details><summary>Performs the sign-agnostic count number of one bits operation on a 32-bit or 64-bit integer.</summary>
@@ -215,7 +215,7 @@ The following generic built-ins compile to WebAssembly instructions directly.
   | bool                       | *none*
   </details>
 
-* ```ts
+```ts
   function rotl<T>(value: T, shift: T): T
   ```
   <details><summary>Performs the sign-agnostic rotate left operation on a 32-bit or 64-bit integer.</summary>
@@ -228,7 +228,7 @@ The following generic built-ins compile to WebAssembly instructions directly.
   | bool             | *none*
   </details>
 
-* ```ts
+```ts
   function rotr<T>(value: T, shift: T): T
   ```
   <details><summary>Performs the sign-agnostic rotate right operation on a 32-bit or 64-bit integer.</summary>
@@ -241,7 +241,7 @@ The following generic built-ins compile to WebAssembly instructions directly.
   | bool             | *none*
   </details>
 
-* ```ts
+```ts
   function abs<T>(value: T): T
   ```
   <details><summary>Computes the absolute value of an integer or float.</summary>
@@ -254,7 +254,7 @@ The following generic built-ins compile to WebAssembly instructions directly.
   | u8, u16, u32, u64, bool | *none*
   </details>
 
-* ```ts
+```ts
   function max<T>(left: T, right: T): T
   ```
   <details><summary>Determines the maximum of two integers or floats. If either operand is <code>NaN</code>, returns <code>NaN</code>.</summary>
@@ -266,7 +266,7 @@ The following generic built-ins compile to WebAssembly instructions directly.
   | i8, u8, i16, u16, i32, u32, i64, u64, bool | *emulated*
   </details>
 
-* ```ts
+```ts
   function min<T>(left: T, right: T): T
   ```
   <details><summary>Determines the minimum of two integers or floats. If either operand is <code>NaN</code>, returns <code>NaN</code>.</summary>
@@ -278,7 +278,7 @@ The following generic built-ins compile to WebAssembly instructions directly.
   | i8, u8, i16, u16, i32, u32, i64, u64, bool | *emulated*
   </details>
 
-* ```ts
+```ts
   function ceil<T>(value: T): T
   ```
   <details><summary>Performs the ceiling operation on a 32-bit or 64-bit float.</summary>
@@ -290,7 +290,7 @@ The following generic built-ins compile to WebAssembly instructions directly.
   | i8, u8, i16, u16, i32, u32, i64, u64, bool | *none*
   </details>
 
-* ```ts
+```ts
   function floor<T>(value: T): T
   ```
   <details><summary>Performs the floor operation on a 32-bit or 64-bit float.</summary>
@@ -302,7 +302,7 @@ The following generic built-ins compile to WebAssembly instructions directly.
   | i8, u8, i16, u16, i32, u32, i64, u64, bool | *none*
   </details>
 
-* ```ts
+```ts
   function copysign<T>(x: T , y: T): T
   ```
   <details><summary>Composes a 32-bit or 64-bit float from the magnitude of <code>x</code> and the sign of <code>y</code>.</summary>
@@ -313,7 +313,7 @@ The following generic built-ins compile to WebAssembly instructions directly.
   | f64 | f64.copysign
   </details>
 
-* ```ts
+```ts
   function nearest<T>(value: T): T
   ```
   <details><summary>Rounds to the nearest integer <a href="https://en.wikipedia.org/wiki/Rounding#Round_half_to_even" target="_blank" rel="noopener noreferrer">half to even</a> of a 32-bit or 64-bit float.</summary>
@@ -325,7 +325,7 @@ The following generic built-ins compile to WebAssembly instructions directly.
   | i8, u8, i16, u16, i32, u32, i64, u64, bool | *none*
   </details>
 
-* ```ts
+```ts
   function reinterpret<TTo>(value: auto): TTo
   ```
   <details><summary>Reinterprets the bits of the specified value as type <code>T</code>.</summary>
@@ -338,7 +338,7 @@ The following generic built-ins compile to WebAssembly instructions directly.
   | f64      | f64.reinterpret_i64
   </details>
 
-* ```ts
+```ts
   function sqrt<T>(value: T): T
   ```
   <details><summary>Calculates the square root of a 32-bit or 64-bit float.</summary>
@@ -349,7 +349,7 @@ The following generic built-ins compile to WebAssembly instructions directly.
   | f64 | f64.sqrt
   </details>
 
-* ```ts
+```ts
   function trunc<T>(value: T): T
   ```
   <details><summary>Rounds to the nearest integer towards zero of a 32-bit or 64-bit float.</summary>
@@ -369,7 +369,7 @@ Similarly, the following built-ins emit WebAssembly instructions accessing or ot
 The `immOffset` and `immAlign` arguments, if provided, must be compile time constant values.
 :::
 
-* ```ts
+```ts
   function load<T>(ptr: usize, immOffset?: usize): T
   ```
   <details><summary>Loads a value of the specified type from memory. Equivalent to dereferencing a pointer in other languages.</summary>
@@ -388,7 +388,7 @@ The `immOffset` and `immAlign` arguments, if provided, must be compile time cons
   | \<ref>   | i32/i64.load | *n/a*
   </details>
 
-* ```ts
+```ts
   function store<T>(ptr: usize, value: auto, immOffset?: usize): void
   ```
   <details><summary>Stores a value of the specified type to memory. Equivalent to dereferencing a pointer in other languages and assigning a value.</summary>
@@ -404,12 +404,12 @@ The `immOffset` and `immAlign` arguments, if provided, must be compile time cons
   | \<ref>   | i32/i64.store | *n/a*
   </details>
 
-* ```ts
+```ts
   function memory.size(): i32
   ```
   Returns the current size of the memory in units of pages. One page is 64kb.
 
-* ```ts
+```ts
   function memory.grow(value: i32): i32
   ```
   Grows linear memory by a given unsigned delta of pages. One page is 64kb. Returns the previous size of the memory in units of pages or `-1` on failure.
@@ -418,22 +418,22 @@ The `immOffset` and `immAlign` arguments, if provided, must be compile time cons
   Calling `memory.grow` where a memory manager is present might break it.
   :::
 
-* ```ts
+```ts
   function memory.copy(dst: usize, src: usize, n: usize): void
   ```
   Copies `n` bytes from `src` to `dst` . Regions may overlap. Emits the respective instruction if bulk-memory is enabled, otherwise ships a polyfill.
 
-* ```ts
+```ts
   function memory.fill(dst: usize, value: u8, n: usize): void
   ```
   Fills `n` bytes at `dst` with the given byte `value`. Emits the respective instruction if bulk-memory is enabled, otherwise ships a polyfill.
 
-* ```ts
+```ts
   function memory.repeat(dst: usize, src: usize, srcLength: usize, count: usize): void
   ```
   Repeats a sequence of bytes given as `src` with `srcLength` `count` times into destination `dst`.
 
-* ```ts
+```ts
   function memory.compare(lhs: usize, rhs: usize, n: usize): i32
   ```
   Compares the first `n` bytes of `left` and `right` and returns a value that indicates their relationship:
@@ -441,24 +441,24 @@ The `immOffset` and `immAlign` arguments, if provided, must be compile time cons
   - **Positive** value if the first differing byte in `lhs` is greater than the corresponding byte in `rhs`.
   - **Zero​** if all `n` bytes of `lhs` and `rhs` are equal.
 
-* ```ts
+```ts
   function memory.data(size: i32, align?: i32): usize
   ```
   Gets a pointer to a zeroed static chunk of memory of the given size. Alignment defaults to `16`. Arguments must be compile-time constants.
 
-* ```ts
+```ts
   function memory.data<T>(values: T[], align?: i32): usize
   ```
   Gets a pointer to a pre-initialized static chunk of memory. Alignment defaults to the size of `T`. Arguments must be compile-time constants.
 
 #### Control flow
 
-* ```ts
+```ts
   function select<T>(ifTrue: T, ifFalse: T, condition: bool): T
   ```
   Selects one of two pre-evaluated values depending on the condition. Differs from an `if/else` in that both arms are always executed and the final value is picked based on the condition afterwards. Performs better than an `if/else` only if the condition is random \(means: branch prediction is not going to perform well\) and both alternatives are cheap. It is also worth to note that Binaryen will do relevant optimizations like switching to a `select` automatically, so simply using a ternary `? :` may be preferable.
 
-* ```ts
+```ts
   function unreachable(): auto
   ```
   Emits an unreachable instruction that results in a runtime error \(trap\) when executed. Both a statement and an expression of any type. Beware that trapping in managed code will most likely lead to memory leaks or even break the program because it ends execution prematurely.
@@ -466,32 +466,32 @@ The `immOffset` and `immAlign` arguments, if provided, must be compile time cons
 
 #### Constructing constant vectors
 
-* ```ts
+```ts
   function i8x16(a: i8, ... , p: i8): v128
   ```
   Initializes a 128-bit vector from sixteen 8-bit integer values. Arguments must be compile-time constants.
 
-* ```ts
+```ts
   function i16x8(a: i16, ..., h: i16): v128
   ```
   Initializes a 128-bit vector from eight 16-bit integer values. Arguments must be compile-time constants.
 
-* ```ts
+```ts
   function i32x4(a: i32, b: i32, c: i32, d: i32): v128
   ```
   Initializes a 128-bit vector from four 32-bit integer values. Arguments must be compile-time constants.
 
-* ```ts
+```ts
   function i64x2(a: i64, b: i64): v128
   ```
   Initializes a 128-bit vector from two 64-bit integer values. Arguments must be compile-time constants.
 
-* ```ts
+```ts
   function f32x4(a: f32, b: f32, c: f32, d: f32): v128
   ```
   Initializes a 128-bit vector from four 32-bit float values. Arguments must be compile-time constants.
 
-* ```ts
+```ts
   function f64x2(a: f64, b: f64): v128
   ```
   Initializes a 128-bit vector from two 64-bit float values. Arguments must be compile-time constants.

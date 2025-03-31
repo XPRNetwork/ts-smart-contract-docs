@@ -6,7 +6,7 @@ description: Authentication
 
 ## requireAuth
 
-* ```ts
+```ts
   function requireAuth(name: Name): void
   ```
   This function verifies that the action caller has the permission of name@active. An error is thrown if the action caller does not satisfy this permission.
@@ -27,7 +27,7 @@ description: Authentication
   ```
 
 ## requireAuth2
-* ```ts
+```ts
   function requireAuth2(permissionLevel: PermissionLevel): void
   ```
   This function verifies that the action caller has the permission of specified permissionLevel. An error is thrown if the action caller does not satisfy this permission.
@@ -49,7 +49,7 @@ description: Authentication
   ```
 
 ## hasAuth
-* ```ts
+```ts
   function hasAuth(name: Name): bool
   ```
   This function verifies that the action caller has the permission of name@active.
@@ -71,7 +71,7 @@ description: Authentication
   ```
 
 ## isAccount
-* ```ts
+```ts
   function isAccount(name: Name): bool
   ```
   The function only performs the check, but will not throw an error if the name is not an existing account
@@ -94,7 +94,7 @@ description: Authentication
   ```
 
 ## currentReceiver
-* ```ts
+```ts
   function currentReceiver(): Name
   ```
   Get the current receiver of the action. Will always be equal to the name of the current executing contract.
@@ -113,7 +113,7 @@ description: Authentication
   ```
 
 ## getSender
-* ```ts
+```ts
   function getSender(): Name
   ```
   This function return Name(0) when current action is not an inline action.

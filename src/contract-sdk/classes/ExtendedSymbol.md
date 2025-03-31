@@ -8,7 +8,7 @@ An extended symbol stores code, precision of the token amount and a contract nam
 
 ## Constructors
 
-* ```ts
+```ts
   constructor(
     public sym: Symbol,
     public contract: Name
@@ -29,7 +29,7 @@ An extended symbol stores code, precision of the token amount and a contract nam
 
 ### Instance Methods
 
-* ```ts
+```ts
   toString(): string
   ```
   Returns the extended symbol as a string in format `precision,symbol@contract`
@@ -43,7 +43,7 @@ An extended symbol stores code, precision of the token amount and a contract nam
 
 ## Static Methods
 
-* ```ts
+```ts
   static function eq(a: ExtendedSymbol, b: ExtendedSymbol): bool
   ```
   Checks that symbols and contracts are equal for objects
@@ -51,7 +51,7 @@ An extended symbol stores code, precision of the token amount and a contract nam
   **Throws if:**
     - Symbols do not match or contracts do not match
 
-* ```ts
+```ts
   static function neq(a: ExtendedSymbol, b: ExtendedSymbol): bool
   ```
   Checks that symbols and contracts are not equal for objects
@@ -59,7 +59,7 @@ An extended symbol stores code, precision of the token amount and a contract nam
   **Throws if:**
     - Symbols are equal and contracts are equal
   
-* ```ts
+```ts
   static function lt(a: ExtendedSymbol, b: ExtendedSymbol): bool
   ```
   Checks that the symbol `a` is less than `b` and contract `a` is less than `b`

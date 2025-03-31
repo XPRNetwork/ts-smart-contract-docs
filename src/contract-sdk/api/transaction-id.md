@@ -7,7 +7,7 @@ description: Transaction ID
 
 ## getTransactionId
 
-* ```ts
+```ts
   function getTransactionId(): Checksum256
   ```
   This function returns the id of the currently executing transaction. The id of the transaction is a `sha256` checksum of the transaction data.
