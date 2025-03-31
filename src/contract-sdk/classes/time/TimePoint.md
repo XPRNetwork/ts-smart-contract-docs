@@ -8,7 +8,7 @@ Creates a time point object
 
 ## Constructor
 
-* ```ts
+```ts
   constructor(
     elapsed: i64 = 0
   )
@@ -24,32 +24,32 @@ Creates a time point object
 ```
 
 ## Fields
-* ```ts
+```ts
   var elapsed: Microseconds
   ```
   Represents microseconds elapsed since epoch
 
 
 ## Instance Methods
-* ```ts
+```ts
   function timeSinceEpoch(): i64
   ```
 
   Time in microseconds elapsed since epoch
 
-* ```ts
+```ts
   function msSinceEpoch(): i64
   ```
 
   Time in milliseconds elapsed since epoch
 
-* ```ts
+```ts
   function secSinceEpoch(): u32
   ```
 
   Time in seconds elapsed since epoch
 
-* ```ts
+```ts
   function toString(): string
   ```
 
@@ -57,52 +57,52 @@ Creates a time point object
 
 
 ## Static Math and Equality methods
-* ```ts
+```ts
   static function add(a: TimePoint, b: TimePoint): TimePoint
   ```
   Adds two time point values
 
-* ```ts
+```ts
   static function sub(a: TimePoint, b: TimePoint): TimePoint
   ```
   Substracts two time point values
 
-* ```ts
+```ts
   static function mul(a: TimePoint, b: TimePoint): TimePoint
   ```
   Multiplies two time point values
 
-* ```ts
+```ts
   static function div(a: TimePoint, b: TimePoint): TimePoint
   ```
   Divides two time point values
 
-* ```ts
+```ts
   static function eq(a: TimePoint, b: TimePoint): bool
   ```
   Checks that the amounts of two time point values are equal
 
-* ```ts
+```ts
   static function neq(a: TimePoint, b: TimePoint): bool
   ```
   Checks that the amounts of two time point values are not equal
   
-* ```ts
+```ts
   static function lt(a: TimePoint, b: TimePoint): bool
   ```
   Checks that the microseconds since epoch of a is less than b
 
-* ```ts
+```ts
   static function lte(a: TimePoint, b: TimePoint): bool
   ```
   Checks that the microseconds since epoch of a is less than or equal to b
 
-* ```ts
+```ts
   static function gt(a: TimePoint, b: TimePoint): bool
   ```
   Checks that the microseconds since epoch of a is greater than b
 
-* ```ts
+```ts
   static function gte(a: TimePoint, b: TimePoint): bool
   ```
   Checks that the microseconds since epoch of a is greater than or equal to b

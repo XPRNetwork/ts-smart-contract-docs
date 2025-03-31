@@ -9,19 +9,19 @@ Represents a public key object storing either a WebAuthN key
 
 ## Constructor
 
-* ```ts
+```ts
   constructor()
   ```
   Creates an empty checksum, data is added through `unpack` function.
 
 ## Fields
-* ```ts
+```ts
   var key: ECCPublicKey | null;
   ```
 
   ECC public key storing data bytes, null by default
 
-* ```ts
+```ts
   var userPresence: UserPresence;
   ```
 
@@ -34,41 +34,41 @@ Represents a public key object storing either a WebAuthN key
     }
     ```
 
-* ```ts
+```ts
   var rpid: string = "";
   ```
 
   Resource provider ID
 
 ## Instance Methods
-* ```ts
+```ts
   static function pack(): u8[]
   ```
 
   Serializes the ECC key data, userPresence and rpid into bytes.
 
-* ```ts
+```ts
   static function unpack(data: u8[]): usize
   ```
   Decodes and sets the bytes into ECC key data, userPresence and rpid. Returns 0.
 
 ## Static Equality methods
-* ```ts
+```ts
   static function eq(a: WebAuthNPublicKey, b: WebAuthNPublicKey): bool
   ```
   Checks that the two web auth public keys are equal
 
-* ```ts
+```ts
   static function neq(a: WebAuthNPublicKey, b: WebAuthNPublicKey): bool
   ```
   Checks that the two web auth public keys are not equal
 
-* ```ts
+```ts
   static function gt(a: WebAuthNPublicKey, b: WebAuthNPublicKey): bool
   ```
   Checks whether web auth a is larger than ECC public key b
 
-* ```ts
+```ts
   static function lt(a: WebAuthNPublicKey, b: WebAuthNPublicKey): bool
   ```
   Checks whether web auth a is less than ECC public key b
