@@ -24,47 +24,81 @@ export default {
     }
   },
   mounted() {
+    // All browser-side initialization happens here instead of created()
+    this.initializeTheme();
+    
     // Listen for system theme changes
-    if (window.matchMedia) {
-      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', this.handleSystemThemeChange);
+    if (typeof window !== 'undefined' && window.matchMedia) {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      
+      // Use the appropriate event listener method based on browser support
+      if (mediaQuery.addEventListener) {
+        mediaQuery.addEventListener('change', this.handleSystemThemeChange);
+      } else if (mediaQuery.addListener) {
+        // Older browsers support
+        mediaQuery.addListener(this.handleSystemThemeChange);
+      }
     }
   },
   beforeDestroy() {
     // Clean up event listener
-    if (window.matchMedia) {
-      window.matchMedia('(prefers-color-scheme: dark)').removeEventListener('change', this.handleSystemThemeChange);
+    if (typeof window !== 'undefined' && window.matchMedia) {
+      const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+      
+      // Use the appropriate removal method based on browser support
+      if (mediaQuery.removeEventListener) {
+        mediaQuery.removeEventListener('change', this.handleSystemThemeChange);
+      } else if (mediaQuery.removeListener) {
+        // Older browsers support
+        mediaQuery.removeListener(this.handleSystemThemeChange);
+      }
     }
   },
   created() {
-    // First check localStorage for saved preference
-    const savedTheme = localStorage.getItem('theme');
-    
-    if (savedTheme) {
-      // Use saved preference if available
-      this.isDarkTheme = savedTheme === 'dark';
-    } else {
-      // Check if system preference is available
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        // System prefers dark mode
-        this.isDarkTheme = true;
-      } else {
-        // Check current theme or default to light
-        const currentTheme = document.documentElement.getAttribute('data-theme');
-        this.isDarkTheme = currentTheme === 'dark';
-      }
-    }
-    
-    // Apply theme based on initial determination
-    if (this.isDarkTheme) {
-      document.documentElement.setAttribute('data-theme', 'dark');
-    } else {
-      document.documentElement.setAttribute('data-theme', '');
+    // Don't access browser APIs during SSR
+    if (typeof window === 'undefined' || typeof document === 'undefined') {
+      return;
     }
   },
   methods: {
-    toggleTheme() {
-      // Toggle theme state
-      this.isDarkTheme = !this.isDarkTheme;
+    initializeTheme() {
+      // Safe check for browser environment
+      if (typeof window === 'undefined' || typeof document === 'undefined') {
+        return;
+      }
+      
+      try {
+        // First check localStorage for saved preference
+        const savedTheme = localStorage.getItem('theme');
+        
+        if (savedTheme) {
+          // Use saved preference if available
+          this.isDarkTheme = savedTheme === 'dark';
+        } else {
+          // Check if system preference is available
+          if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // System prefers dark mode
+            this.isDarkTheme = true;
+          } else {
+            // Check current theme or default to light
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            this.isDarkTheme = currentTheme === 'dark';
+          }
+        }
+        
+        // Apply theme based on initial determination
+        this.applyTheme();
+      } catch (error) {
+        console.error('Error initializing theme:', error);
+        // Fallback to light theme if there's an error
+        this.isDarkTheme = false;
+      }
+    },
+    
+    applyTheme() {
+      if (typeof document === 'undefined') {
+        return;
+      }
       
       // Apply theme to HTML element
       if (this.isDarkTheme) {
@@ -72,27 +106,42 @@ export default {
       } else {
         document.documentElement.setAttribute('data-theme', '');
       }
+    },
+    
+    toggleTheme() {
+      // Toggle theme state
+      this.isDarkTheme = !this.isDarkTheme;
+      
+      // Apply theme to HTML element
+      this.applyTheme();
       
       // Save preference to localStorage
-      localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
+      try {
+        if (typeof window !== 'undefined' && window.localStorage) {
+          localStorage.setItem('theme', this.isDarkTheme ? 'dark' : 'light');
+        }
+      } catch (error) {
+        console.error('Error saving theme preference:', error);
+      }
     },
     
     handleSystemThemeChange(event) {
-      // Only update if user hasn't set a preference
-      if (!localStorage.getItem('theme')) {
-        this.isDarkTheme = event.matches;
-        
-        // Apply theme based on system change
-        if (this.isDarkTheme) {
-          document.documentElement.setAttribute('data-theme', 'dark');
-        } else {
-          document.documentElement.setAttribute('data-theme', '');
+      try {
+        // Only update if user hasn't set a preference
+        if (typeof window !== 'undefined' && window.localStorage && !localStorage.getItem('theme')) {
+          this.isDarkTheme = event.matches;
+          
+          // Apply theme based on system change
+          this.applyTheme();
         }
+      } catch (error) {
+        console.error('Error handling system theme change:', error);
       }
     }
   }
 }
 </script>
+
 
 <style scoped>
 .theme-switcher-container {
@@ -127,7 +176,7 @@ export default {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 5px;
+  padding: 1px 5px 0 5px;
 }
 
 .slider:before {
@@ -174,6 +223,7 @@ input:checked + .slider:before {
 }
 
 .icon.dark {
-  margin-left: 10px;
+  margin-left: 4px;
+  font-size: 12px;
 }
 </style>

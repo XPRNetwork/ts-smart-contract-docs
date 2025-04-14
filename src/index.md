@@ -81,9 +81,9 @@ pageClass: frontpage
     </div>
   </a>
   
-  <a class="learn-topics coming-soon" href="/your-first-dapp-with-the-web-sdk/your-first-dapp-with-the-web-sdk.html">
+  <a class="learn-topics " href="/smart-contracts/write-your-first-smart-contract.html">
   <div class="inner">
-    <div class="pills">Coming soon</div>
+    <div class="pills">Smart contracts</div>
     <div class="title">
       <h3 class="head">Write your first smart contract</h3>
       <div class="block-link">

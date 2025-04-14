@@ -62,6 +62,12 @@ function getDefaultSidebar() {
       sidebarDepth: 1,
     },
     {
+      title: "Write your first smart contract",
+      path: "/smart-contracts/write-your-first-smart-contract.md",
+      collapsable: true,
+      sidebarDepth: 1,
+    },
+    {
       title: "Documentation",
       collapsable: true,
       sidebarDepth: 1,

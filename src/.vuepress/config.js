@@ -7,7 +7,7 @@ module.exports = {
     "/": {
       lang: "en-US",
       title: "",
-      description: "Learn the XPR Network stack",
+      description: "Learn the XPR Network development",
     },
   },
 
@@ -66,6 +66,19 @@ module.exports = {
     ["link", {rel: "preconnect", href: "https://cdn.jsdelivr.net"}],
     ["meta", {name: "msapplication-TileColor", content: "#ffffff"}],
     ["meta", {name: "msapplication-config", content: "/browserconfig.xml"}],
+    ["meta", {name: "og:image", content: "/xprnetwork-devs-doc-og.png"}],
+    [
+      "meta",
+      {name: "og:title", content: "XPR Network Developers Documentation"},
+    ],
+    [
+      "meta",
+      {
+        name: "og:description",
+        content:
+          "Learn how to build dApp and smart contract on the fastest chain ever created, with 0 gas fee!",
+      },
+    ],
     ["meta", {name: "theme-color", content: "#ffffff"}],
     [
       "meta",
@@ -91,6 +104,7 @@ module.exports = {
     docsBranch: "master",
     editLinks: false,
     editLinkText: "Edit this page on GitHub",
+
     // algolia: {
     //   apiKey: '5055511efcf6b0b257029437f9544075',
     //   appId: 'IA5GQP2FPD',
