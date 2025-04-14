@@ -1,6 +1,6 @@
 # Write your first smart contract
 
-Smart contracts can seem intimidating—and yes, they are challenging\! But on the XPR Network, you can write smart contracts in TypeScript, and that’s a game-changer. Why? Let’s list the advantages:
+Smart contracts can seem intimidating and yes, they are challenging\! But on the XPR Network, you can write smart contracts in TypeScript, and that’s a game-changer. Why? Let’s list the advantages:
 
 * No need to learn a new programming language.  
 * No need to spend hours configuring your environment.  
@@ -22,9 +22,9 @@ This process is linear, predictable, and **deterministic**. That last word is ke
 
 XPR Network uses a resource system, a kind of "Holy Trinity": **CPU, NET, and RAM**.
 
-**CPU**: Computation time (in milliseconds). Each contract action must be completed within 30 ms. Your account receives 3.23 seconds of CPU at creation—enough to execute several actions.
+**CPU**: Computation time (in milliseconds). Each contract action must be completed within 30 ms. Your account receives **3.23** seconds of CPU at creation—enough to execute several actions.
 
-**NET**: The amount of data transmitted across the chain (in bytes). Each action's input consumes NET bandwidth. Every new account receives 16.6MB of NET—plenty for many actions.
+**NET**: The amount of data transmitted across the chain (in bytes). Each action's input consumes NET bandwidth. Every new account receives **16.6MB** of NET—plenty for many actions.
 
 **RAM**: On-chain storage (in bytes). RAM is scarce and should be used wisely. As a smart contract developer, you're responsible for managing RAM for your users.
 
@@ -57,7 +57,8 @@ Instead, you typically:
 * Define ranges with lower and upper bounds  
 * Use `for` or `while` loops for scanning
 
-This may feel unintuitive at first. That's why it helps to understand types, scopes, and bounds before writing code. Pro-tip: sketch your data structures on paper before implementing them.
+This may feel unintuitive at first. That's why it helps to understand types, scopes, and bounds before writing code. 
+>**Pro-tip**: sketch your data structures on paper before implementing them.
 
 ## Smart Contract Terminology
 
@@ -85,7 +86,7 @@ Our contract will hold tokens for users to allow them to post greeting messages.
 
 ## Ready ? Steady, GO!
 
-Now where are ready to go\! So let's use our good pal, the proton/CLI. If you haven’t installed this bad boy yet please refer to the **@proton/cli crash course** and follow the installation process. 
+Now where are ready to go\! So let's use our good pal, the proton/CLI. If you haven’t installed this bad boy yet please refer to the [**proton CLI crash course**](/cli-101/cli-crash-course.html) and follow the installation process. 
 
 Once it’s done create a new folder from your terminal and access it, run the following command
 
@@ -93,7 +94,7 @@ Once it’s done create a new folder from your terminal and access it, run the f
 proton generate:contract myfirstcontract
 ```
 
-It will run the interactive prompt command to create the smart contract. I feel it a bit unintuitive, so i  just answer the first question 
+It will run the interactive prompt command to create the smart contract. The interactive prompt is a way to scaffold your smart contract by providing actions names, params and types. For the sake of this tutorial, we will bypass the process.   
 
 ```javascript
 ? Enter new action name:
@@ -169,7 +170,7 @@ export class mycontract extends Contract {
 }
 ```
 
-Ok cool, before defining our transfer feature, i would like to introduce the `notify` flag. This flag is set on the `@action`, it defines that the action is triggered by a notification from another contract… WUUUT ?
+Ok cool, before defining our transfer feature, I would like to introduce the `notify` flag. This flag is set on the `@action`, it defines that the action is triggered by a notification from another contract… WUUUT ?
 
 When you define a contract’s action, you can specify that the action dispatches a notification to the account(s) involved in the action. If the notified account(s) have a contract that implements the same action defined as notification, it will be triggered. 
 
@@ -201,7 +202,13 @@ You can use the CLI to generate a new table
 proton generate:table greets
 ```
 
-I'm not a big fan of this method, I prefer to create my table manually, I also like to name my file with a `.table.ts`. It's just my own convention, it changes nothing.  
+I'm not a big fan of this method, I prefer to create my table manually, I also like to name my file with a `.table.ts`. It's just my own convention, it changes nothing. 
+
+>But if you feel not so confident with creating table manually, you can go with the CLI prompt with some benefit
+>- Table names and methods are validated, protects you from doing mistakes.
+>- CLI helps to generate a valid table structure.
+>- The table is added automatically to contract imports and added as a property to the contract.
+
 ![image2](/smart-contracts/write-your-first-sc-2.png)
 
 Open the `greeting.table.ts`,  here is the skeleton.
@@ -389,7 +396,7 @@ if (from == this.receiver) return;
 }
 ```
 
-Great now we are done with the checks. Now let’s store some values 🙂. We have to verify if the current user that transfers the amount has an entry or not in the `tickets` table. To do so we use the `get`method of the `TableStore`.
+Great now we are done with the checks. Now let’s store some values 🙂. We have to verify if the current user that transfers the amount has an entry or not in the `tickets` table. To do so we use the `get` method of the `TableStore`.
 
 Then we need to convert the transferred amount into a ticket number, so we do a little computation by dividing the amount of transferred tokens by … 10000\! Why ?? Well, because, in smart contract, the token value is displayed without a comma, and zeros are added to match the required precision. That means, for XPR by example who have a precision of 4, 1 XPR is expressed as 1000 on contract side.    
 We wrap the returned value from the calculus in an explicit cast as u32 to make sure it match the table type of the `count` field

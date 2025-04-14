@@ -4,7 +4,7 @@
   --primary-color: #007bff;
   --secondary-color: #6c757d;
   --background-color: #ffffff;
-  --border-color:rgb(226, 225, 225);
+  --alt-background-color:rgb(226, 225, 225);
   --text-color:rgb(36, 36, 36);
   --button-base-color:#000000;
   --button-text-color:#ffffff;
@@ -16,7 +16,7 @@
   --primary-color: #1e90ff;
   --secondary-color: #555;
   --background-color: #000000;
-  --border-color:rgb(57, 57, 57);
+  --alt-background-color:rgb(57, 57, 57);
   --text-color: #ffffff;
   --button-base-color:#ffffff;
   --button-text-color:#000000;
@@ -159,7 +159,7 @@ code {
   color:#ffffff!important;
 }
 
-blockquote {
+blockquote, blockquote {
   margin-top:0.5rem!important;
   margin-bottom:0.5rem!important;
   padding:0.5rem!important;
@@ -167,7 +167,7 @@ blockquote {
   box-sizing:border-box;
   border-radius:7px;
   border:2px solid #6f8eff;
-  background-color:#111111;
+  
 }
 
 blockquote>p {
@@ -178,7 +178,7 @@ blockquote>p {
 .nav-dropdown  {
 
 background-color:var(--background-color)!important;
-border:1px solid var(--border-color)!important;
+border:1px solid var(--alt-background-color)!important;
 
 }
 .nav-dropdown .dropdown-item h4 {
@@ -542,6 +542,13 @@ b, strong {
     letter-spacing:-2px;
   }
 
+}
+
+/******************
+* TABLES
+*******************/
+tr:nth-child(2n) {
+  background-color:var(--alt-background-color)
 }
 
 /******************
