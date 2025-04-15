@@ -99,12 +99,12 @@ const vertexShader = `
       1.0
     );
     
-    float yPosition = position.y + 0.5;
+    float yPosition = position.y + 1.0;
     float distanceFromCenter = abs(yPosition - uOpacityCenter);
-    vOpacity = 1.0 - clamp(distanceFromCenter / uOpacitySpread, 0.0, 1.0);
+    vOpacity = 1.0 - clamp(distanceFromCenter / uOpacitySpread, -0.9, 1.0);
     
     gl_Position = projectionMatrix * modelViewMatrix * vec4(newPosition, 1.0);
-    gl_PointSize = 4.0;
+    gl_PointSize = 2.0;
   }
 `
 
@@ -167,7 +167,8 @@ export default {
     const init = (container) => {
       scene = new THREE.Scene()
       camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000)
-      renderer = new THREE.WebGLRenderer({ antialias: true })
+      renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true })
+      renderer.setClearColor( 0x000000, 0 );
       renderer.setSize(container.clientWidth, container.clientHeight)
       container.appendChild(renderer.domElement)
 
@@ -203,6 +204,7 @@ export default {
 
       points = new THREE.Points(geometry, material)
       points.rotateX(2)
+      points.position.set(0,-1,0)
       scene.add(points)
 
       camera.position.set(-0.5903648502060375, 0.0002967409222046913, 1.3418267086872022)

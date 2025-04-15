@@ -7,7 +7,7 @@ module.exports = {
     "/": {
       lang: "en-US",
       title: "",
-      description: "Writing blockchain smart contracts using TS/AS semantics",
+      description: "Learn the XPR Network development",
     },
   },
 
@@ -66,6 +66,19 @@ module.exports = {
     ["link", {rel: "preconnect", href: "https://cdn.jsdelivr.net"}],
     ["meta", {name: "msapplication-TileColor", content: "#ffffff"}],
     ["meta", {name: "msapplication-config", content: "/browserconfig.xml"}],
+    ["meta", {name: "og:image", content: "/xprnetwork-devs-doc-og.png"}],
+    [
+      "meta",
+      {name: "og:title", content: "XPR Network Developers Documentation"},
+    ],
+    [
+      "meta",
+      {
+        name: "og:description",
+        content:
+          "Learn how to build dApp and smart contract on the fastest chain ever created, with 0 gas fee!",
+      },
+    ],
     ["meta", {name: "theme-color", content: "#ffffff"}],
     [
       "meta",
@@ -80,6 +93,7 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
+    shouldShowNavbar: false,
     logo: "/images/icon.svg",
     nav: require("./nav"),
     sidebar: require("./sidebar"),
@@ -90,6 +104,7 @@ module.exports = {
     docsBranch: "master",
     editLinks: false,
     editLinkText: "Edit this page on GitHub",
+
     // algolia: {
     //   apiKey: '5055511efcf6b0b257029437f9544075',
     //   appId: 'IA5GQP2FPD',
@@ -129,6 +144,7 @@ function extendMarkdown(md) {
   // Extend TypeScript grammar
 
   require("prismjs/components/prism-typescript");
+
   prism.languages.typescript.builtin = new RegExp(
     "\\b(?:" +
       [

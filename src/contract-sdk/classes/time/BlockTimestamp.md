@@ -10,7 +10,7 @@ Rarely used, typically in blockchain block headers
 
 ## Constructors
 
-* ```ts
+```ts
   constructor(
     public slot: u32 = 0
   )
@@ -25,68 +25,68 @@ Rarely used, typically in blockchain block headers
   // tp.slot == 5
 ```
 
-* ```ts
+```ts
   static fromTimePoint(t: TimePoint): BlockTimestamp
   ```
 
   Creates a BlockTimestamp object from a precise TimePoint
 
-* ```ts
+```ts
   static fromTimePointSec(t: TimePointSec): BlockTimestamp
   ```
 
   Creates a BlockTimestamp object from a precise TimePointSec
 
 ## Static Fields
-* ```ts
+```ts
   static blockIntervalMs: i32 = 500;
   ```
   Represents interval between each block
 
-* ```ts
+```ts
   static blockTimestampEpoch: i64 = 946684800000;
   ```
   Start of epoch
 
 ## Static Methods
-* ```ts
+```ts
   static function maximum(): BlockTimestamp
   ```
 
   Returns block timestamp of 0xffff (65535)
 
-* ```ts
+```ts
   static function min(): BlockTimestamp
   ```
 
   Returns block timestamp of 0
 
 ## Instance Methods
-* ```ts
+```ts
   function next(): BlockTimestamp
   ```
 
   Returns a new BlockTimestamp with slot incremented by 1
   
-* ```ts
+```ts
   function toTimePoint(): TimePoint
   ```
 
   Convert block timestamp to a TimePoint object
   
-* ```ts
+```ts
   function setTimePoint(t: TimePoint): void
   ```
 
   Sets the slot field using a time point
 
-* ```ts
+```ts
   function setTimePointSec(t: TimePointSec): void
   ```
 
   Sets the slot field using a time point sec
 
-* ```ts
+```ts
   function toString(): string
   ```
 
@@ -94,32 +94,32 @@ Rarely used, typically in blockchain block headers
 
 
 ## Static Equality methods
-* ```ts
+```ts
   static function eq(a: BlockTimestamp, b: BlockTimestamp): bool
   ```
   Checks that the slots of the two block timestamps are equal
 
-* ```ts
+```ts
   static function neq(a: BlockTimestamp, b: BlockTimestamp): bool
   ```
   Checks that the slots of the two block timestamps are not equal
   
-* ```ts
+```ts
   static function lt(a: BlockTimestamp, b: BlockTimestamp): bool
   ```
   Checks that the slot of a is less than b
 
-* ```ts
+```ts
   static function lte(a: BlockTimestamp, b: BlockTimestamp): bool
   ```
   Checks that the slot of a is less than or equal to b
 
-* ```ts
+```ts
   static function gt(a: BlockTimestamp, b: BlockTimestamp): bool
   ```
   Checks that the slot of a is greater than b
 
-* ```ts
+```ts
   static function gte(a: BlockTimestamp, b: BlockTimestamp): bool
   ```
   Checks that the slot of a is greater than or equal to b

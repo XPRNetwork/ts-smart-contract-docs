@@ -12,7 +12,7 @@ On XPR Network, users can freely register names with a minimum of 4 characters. 
 
 ## Constructors
 
-* ```ts
+```ts
   constructor(
     n: u64 = 0
   )
@@ -29,7 +29,7 @@ On XPR Network, users can freely register names with a minimum of 4 characters. 
  
 ----------------------------------------------------------------
 
-* ```ts
+```ts
   static fromString(s: string): Name
   ```
 
@@ -40,7 +40,7 @@ On XPR Network, users can freely register names with a minimum of 4 characters. 
 
 ### Instance Methods
 
-* ```ts
+```ts
   function suffix(): Name
   ```
   Returns the suffix of the name.
@@ -54,7 +54,7 @@ On XPR Network, users can freely register names with a minimum of 4 characters. 
   print(`${account1.suffix()}`) // account1
   ```
 
-* ```ts
+```ts
   function prefix(): Name
   ```
   Returns the prefix of the name.
@@ -71,7 +71,7 @@ On XPR Network, users can freely register names with a minimum of 4 characters. 
   print(`${account1.prefix()}`) // account1
   ```
 
-* ```ts
+```ts
   function toString(): string
   ```
   Converts a name to string.
@@ -83,7 +83,7 @@ On XPR Network, users can freely register names with a minimum of 4 characters. 
   ```
 
 ## Static Methods
-* ```ts
+```ts
   static function eq(a: Name, b: Name): bool
   ```
   Checks that the two names are equal
@@ -91,7 +91,7 @@ On XPR Network, users can freely register names with a minimum of 4 characters. 
   **Throws if:**
     - Name symbols do not match
 
-* ```ts
+```ts
   static function neq(a: Name, b: Name): bool
   ```
   Checks that the two names are not equal
@@ -99,22 +99,22 @@ On XPR Network, users can freely register names with a minimum of 4 characters. 
   **Throws if:**
     - Name symbols do not match
   
-* ```ts
+```ts
   static function lt(a: Name, b: Name): bool
   ```
   Checks that the u64 value of a is less than b
 
-* ```ts
+```ts
   static function gt(a: Name, b: Name): bool
   ```
   Checks that the u64 value of a is greater than b
 
-* ```ts
+```ts
   static function lte(a: Name, b: Name): bool
   ```
   Checks that the u64 value of a is less than or equal to b
 
-* ```ts
+```ts
   static function gte(a: Name, b: Name): bool
   ```
   Checks that the u64 value of a is greater than or equal to b

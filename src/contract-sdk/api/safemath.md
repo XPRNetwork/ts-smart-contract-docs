@@ -7,7 +7,7 @@ description: SafeMath
 This is an utility class with a set of static methods to perform mathematical operations without overflow.
 
 ### add
-* ```ts
+```ts
   static add(x: u64, y: u64): u64
   ```
   Returns the result of adding one u64 number to another
@@ -27,7 +27,7 @@ This is an utility class with a set of static methods to perform mathematical op
   ```
 
 ### sub
-* ```ts
+```ts
   static sub(x: u64, y: u64): u64
   ```
   Returns the result of substracting `y` from `x`
@@ -47,7 +47,7 @@ This is an utility class with a set of static methods to perform mathematical op
   ```
 
 ### mul
-* ```ts
+```ts
   static mul(x: u64, y: u64): u128
   ```
   Returns the result of multiplication `x` by `y`
@@ -64,7 +64,7 @@ This is an utility class with a set of static methods to perform mathematical op
   ```
 
 ### div
-* ```ts
+```ts
   static div(x: u64, y: u64): u64
   ```
   Returns the result of division `x` to `y`

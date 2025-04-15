@@ -8,7 +8,7 @@ Creates a microseconds time object
 
 ## Constructor
 
-* ```ts
+```ts
   constructor(
     public _count: i64 = 0
   )
@@ -24,32 +24,32 @@ Creates a microseconds time object
 ```
 
 ## Static Methods
-* ```ts
+```ts
   static function maximum(): Microseconds
   ```
 
   Returns maximum microseconds of 0x7FFFFFFFFFFFFFFF (9223372036854775807)
 
 ## Instance Methods
-* ```ts
+```ts
   function toTimePoint(): TimePoint
   ```
 
   Converts microseconds to a TimePoint object
 
-* ```ts
+```ts
   function toSeconds(): i64
   ```
 
   Converts microseconds to seconds
 
-* ```ts
+```ts
   function count(): i64
   ```
 
   Helper getter method to return internal _count
 
-* ```ts
+```ts
   function toString(): string
   ```
 
@@ -57,52 +57,52 @@ Creates a microseconds time object
 
 
 ## Static Math and Equality methods
-* ```ts
+```ts
   static function add(a: Microseconds, b: Microseconds): Microseconds
   ```
   Adds two microsecond values
 
-* ```ts
+```ts
   static function sub(a: Microseconds, b: Microseconds): Microseconds
   ```
   Substracts two microsecond values
 
-* ```ts
+```ts
   static function mul(a: Microseconds, b: Microseconds): Microseconds
   ```
   Multiplies two microsecond values
 
-* ```ts
+```ts
   static function div(a: Microseconds, b: Microseconds): Microseconds
   ```
   Divides two microsecond values
 
-* ```ts
+```ts
   static function eq(a: Microseconds, b: Microseconds): bool
   ```
   Checks that the amounts of two microsecond values are equal
 
-* ```ts
+```ts
   static function neq(a: Microseconds, b: Microseconds): bool
   ```
   Checks that the amounts of two microsecond values are not equal
   
-* ```ts
+```ts
   static function lt(a: Microseconds, b: Microseconds): bool
   ```
   Checks that the microseconds of a is less than b
 
-* ```ts
+```ts
   static function lte(a: Microseconds, b: Microseconds): bool
   ```
   Checks that the microseconds of a is less than or equal to b
 
-* ```ts
+```ts
   static function gt(a: Microseconds, b: Microseconds): bool
   ```
   Checks that the microseconds of a is greater than b
 
-* ```ts
+```ts
   static function gte(a: Microseconds, b: Microseconds): bool
   ```
   Checks that the microseconds of a is greater than or equal to b

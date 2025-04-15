@@ -8,7 +8,7 @@ An extended asset is a representation of a token's amount, symbol, precision and
 
 ## Constructors
 
-* ```ts
+```ts
   constructor(
     public quantity: Asset,
     public contract: Name
@@ -29,7 +29,7 @@ An extended asset is a representation of a token's amount, symbol, precision and
  
 ----------------------------------------------------------------
 
-* ```ts
+```ts
   static fromInteger(v: i64, s: ExtendedSymbol): ExtendedAsset
   ```
     Creates new symbol from i64 number and `ExtendedSymbol`
@@ -45,12 +45,12 @@ An extended asset is a representation of a token's amount, symbol, precision and
 
 ### Instance Methods
 
-* ```ts
+```ts
   function getExtendedSymbol(): ExtendedSymbol
   ```
   Returns the `ExtendedSymbol` object based on the current asset
 
-* ```ts
+```ts
   function toString(): string
   ```
   Returns the extended asset as a string in format `quantity sign@contract`.
@@ -67,7 +67,7 @@ An extended asset is a representation of a token's amount, symbol, precision and
   ```
 
 ## Static Methods
-* ```ts
+```ts
   static function add(a: ExtendedAsset, b: ExtendedAsset): ExtendedAsset
   ```
   Adds two extended assets with the same symbol and contract and returns a new extended assets with amount a + b
@@ -78,7 +78,7 @@ An extended asset is a representation of a token's amount, symbol, precision and
     - (a + b) underflows i64
     - (a + b) overflows i64
 
-* ```ts
+```ts
   static function sub(a: ExtendedAsset, b: ExtendedAsset): ExtendedAsset
   ```
   Substracts two extended assets with the same symbol and contract and returns a new extended asset with amount a - b
@@ -89,7 +89,7 @@ An extended asset is a representation of a token's amount, symbol, precision and
     - (a - b) underflows i64
     - (a - b) overflows i64
 
-* ```ts
+```ts
   static function eq(a: ExtendedAsset, b: ExtendedAsset): bool
   ```
   Checks that the amounts of two assets are equal
@@ -97,7 +97,7 @@ An extended asset is a representation of a token's amount, symbol, precision and
   **Throws if:**
     - Asset symbols do not match
 
-* ```ts
+```ts
   static function neq(a: ExtendedAsset, b: ExtendedAsset): bool
   ```
   Checks that the amounts of two assets are not equal and the contracts of two assets are not equal
@@ -105,7 +105,7 @@ An extended asset is a representation of a token's amount, symbol, precision and
   **Throws if:**
     - Asset symbols do not match
   
-* ```ts
+```ts
   static function lt(a: ExtendedAsset, b: ExtendedAsset): bool
   ```
   Checks that the amounts of a is less than b
@@ -114,7 +114,7 @@ An extended asset is a representation of a token's amount, symbol, precision and
     - Asset contracts do not match
     - Asset symbols do not match
 
-* ```ts
+```ts
   static function gt(a: ExtendedAsset, b: ExtendedAsset): bool
   ```
   Checks that the amounts of a is greater than b
@@ -123,7 +123,7 @@ An extended asset is a representation of a token's amount, symbol, precision and
     - Asset contracts do not match
     - Asset symbols do not match
 
-* ```ts
+```ts
   static function lte(a: Asset, b: Asset): bool
   ```
   Checks that the amounts of a is less than or equal to b
@@ -132,7 +132,7 @@ An extended asset is a representation of a token's amount, symbol, precision and
     - Asset contracts do not match
     - Asset symbols do not match
 
-* ```ts
+```ts
   static function gte(a: Asset, b: Asset): bool
   ```
   Checks that the amounts of a is greater than or equal to b

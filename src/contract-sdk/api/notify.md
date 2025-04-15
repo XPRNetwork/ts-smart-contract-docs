@@ -3,7 +3,7 @@ description: Notify
 ---
 
 ### requireRecipient
-* ```ts
+```ts
   function requireRecipient(name: Name): void
   ```
   Add the specified account to set of accounts to be notified about transaction
@@ -22,7 +22,7 @@ description: Notify
   ```
 
 ### readActionData
-* ```ts
+```ts
   function readActionData(): u8[]
   ```
   Users interact with the chain by sending a transaction.A transaction is essentially an array of actions that are executed sequentially.
@@ -32,7 +32,7 @@ description: Notify
   In most cases you don't need to do it, as the framework will handle it for you automatically. And you'll get unpacked values as action arguments
 
 ### unpackActionData
-* ```ts
+```ts
   function unpackActionData<T extends Packer>(): T
   ```
   Users interact with the chain by sending a transaction.A transaction is essentially an array of actions that are executed sequentially.
@@ -42,7 +42,7 @@ description: Notify
   In most cases you don't need to do it, as the framework will handle it for you automatically. And you'll get unpacked values as action arguments
 
 ### actionDataSize
-* ```ts
+```ts
   function actionDataSize(): u32
   ```
   Get the length of the current action's data field. This method is useful for dynamically sized actions

@@ -11,7 +11,7 @@ It is important to note that smart contracts view token amounts as raw values wi
 
 ## Constructors
 
-* ```ts
+```ts
   constructor(
     name: string="", 
     precision: u8=0
@@ -34,7 +34,7 @@ It is important to note that smart contracts view token amounts as raw values wi
  
 ----------------------------------------------------------------
 
-* ```ts
+```ts
   static fromU64(value: u64): Symbol
   ```
     Creates new symbol from u64 number
@@ -47,7 +47,7 @@ It is important to note that smart contracts view token amounts as raw values wi
 
 ### Instance Methods
 
-* ```ts
+```ts
   fromU64(value: u64): Symbol
   ```
   Creates new symbol from u64 number. 
@@ -59,7 +59,7 @@ It is important to note that smart contracts view token amounts as raw values wi
   print(symbol.toString()); // 4,XPR
   ```
 
-* ```ts
+```ts
   getSymbolString(): string
   ```
   Returns the symbol code
@@ -70,7 +70,7 @@ It is important to note that smart contracts view token amounts as raw values wi
   print(symbol.getSymbolString()); // XUSDC
   ```
 
-* ```ts
+```ts
   code(): u64
   ```
   Returns the code of the symbol as u64 number
@@ -81,7 +81,7 @@ It is important to note that smart contracts view token amounts as raw values wi
   printui(symbol.code()); // 288909120856,
   ```
 
-* ```ts
+```ts
   precision(): u8
   ```
   Returns the precision of the symbol
@@ -92,12 +92,12 @@ It is important to note that smart contracts view token amounts as raw values wi
   printui(symbol.precision()); // 6,
   ```
 
-* ```ts
+```ts
   isValid(): bool
   ```
   Checks the symbol is valid
 
-* ```ts
+```ts
   toString(): string
   ```
   Returns the symbol as a string in format `precision,symbol`
@@ -110,7 +110,7 @@ It is important to note that smart contracts view token amounts as raw values wi
 
 ## Static Methods
 
-* ```ts
+```ts
   static function eq(a: Symbol, b: Symbol): bool
   ```
   Checks that two symbols are equal
@@ -118,7 +118,7 @@ It is important to note that smart contracts view token amounts as raw values wi
   **Throws if:**
     - Symbols do not match
 
-* ```ts
+```ts
   static function neq(a: Symbol, b: Symbol): bool
   ```
   Checks that two symbols are not equal
@@ -126,7 +126,7 @@ It is important to note that smart contracts view token amounts as raw values wi
   **Throws if:**
     - Symbols are equal
   
-* ```ts
+```ts
   static function lt(a: Symbol, b: Symbol): bool
   ```
   Checks that the symbol a is less than b

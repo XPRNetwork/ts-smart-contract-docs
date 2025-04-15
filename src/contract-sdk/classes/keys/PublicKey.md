@@ -9,7 +9,7 @@ Represents a public key object storing either a K1, R1 or WebAuthN key
 
 ## Constructor
 
-* ```ts
+```ts
   constructor(
     keyType: PublicKeyType = PublicKeyType.K1,
     data: u8[] | null = null
@@ -21,7 +21,7 @@ Represents a public key object storing either a K1, R1 or WebAuthN key
   `data` - Data bytes of public key
 
 ## Fields
-* ```ts
+```ts
   var keyType: PublicKeyType;
   ```
 
@@ -34,25 +34,25 @@ Represents a public key object storing either a K1, R1 or WebAuthN key
     }
     ```
 
-* ```ts
+```ts
   var k1: ECCPublicKey | null;
   ```
 
   ECCPublicKey object is type is K1, null by default
 
-* ```ts
+```ts
   var r1: ECCPublicKey | null;
   ```
 
   ECCPublicKey object is type is R1, null by default
 
-* ```ts
+```ts
   var k1: ECCPublicKey | null;
   ```
 
   ECCPublicKey object is type is K1, null by default
 
-* ```ts
+```ts
   var webAuthN: WebAuthNPublicKey | null;
   ```
 
@@ -61,28 +61,28 @@ Represents a public key object storing either a K1, R1 or WebAuthN key
 
 
 ## Instance Methods
-* ```ts
+```ts
   static function toString(): string
   ```
   Prints the hex representation of the public key bytes. Note this will not print prefixes like PUB_K1, those are client-side
 
 ## Static Equality methods
-* ```ts
+```ts
   static function eq(a: PublicKey, b: PublicKey): bool
   ```
   Checks that the two public keys are equal
 
-* ```ts
+```ts
   static function neq(a: PublicKey, b: PublicKey): bool
   ```
   Checks that the two public keys are not equal
 
-* ```ts
+```ts
   static function gt(a: PublicKey, b: PublicKey): bool
   ```
   Checks whether public key a is larger than public key b
 
-* ```ts
+```ts
   static function lt(a: PublicKey, b: PublicKey): bool
   ```
   Checks whether public key a is less than public key b

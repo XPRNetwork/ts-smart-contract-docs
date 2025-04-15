@@ -9,7 +9,7 @@ Represents a public key object storing either a K1 or R1 key
 
 ## Constructor
 
-* ```ts
+```ts
   constructor(
     data: u8[] | null = null
   )
@@ -18,7 +18,7 @@ Represents a public key object storing either a K1 or R1 key
   `data` - Data bytes of public key
 
 ## Fields
-* ```ts
+```ts
   var data: u8[] | null;
   ```
 
@@ -26,28 +26,28 @@ Represents a public key object storing either a K1 or R1 key
 
 
 ## Instance Methods
-* ```ts
+```ts
   static function toString(): string
   ```
   Prints the hex representation of the public key bytes. Note this will not print prefixes like PUB_K1, those are client-side
 
 ## Static Equality methods
-* ```ts
+```ts
   static function eq(a: PublicKey, b: PublicKey): bool
   ```
   Checks that the two ECC public keys are equal
 
-* ```ts
+```ts
   static function neq(a: PublicKey, b: PublicKey): bool
   ```
   Checks that the two ECC public keys are not equal
 
-* ```ts
+```ts
   static function gt(a: PublicKey, b: PublicKey): bool
   ```
   Checks whether ECC public key a is larger than ECC public key b
 
-* ```ts
+```ts
   static function lt(a: PublicKey, b: PublicKey): bool
   ```
   Checks whether ECC public key a is less than ECC public key b

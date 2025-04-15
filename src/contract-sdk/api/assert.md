@@ -6,7 +6,7 @@ description: Assert
 
 ## check
 
-* ```ts
+```ts
   function check(condition: boolean, message: string): void
   ```
   This function verifies that the condition is true. If false, the entire transaction will abort, reverting all actions and table storage changes.

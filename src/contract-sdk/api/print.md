@@ -8,13 +8,13 @@ Print functions are the XPR Network equivalent of `console.log` and will be visi
 
 ## print
 
-* ```ts
+```ts
   function print(value: string): void
   ```
-* ```ts
+```ts
   function prints(value: string): void
   ```
-* ```ts
+```ts
   function printString(value: string): void
   ```
   All these functions are aliases. 
@@ -38,7 +38,7 @@ Print functions are the XPR Network equivalent of `console.log` and will be visi
 
 ## printui
 
-* ```ts
+```ts
   function printui(value: u64): void
   ```
   Prints value as a 64 bit unsigned integer.
@@ -59,7 +59,7 @@ Print functions are the XPR Network equivalent of `console.log` and will be visi
 
 ## printi
 
-* ```ts
+```ts
   function printi(value: i64): void
   ```
   Prints value as a 64 bit signed integer. 
@@ -81,7 +81,7 @@ Print functions are the XPR Network equivalent of `console.log` and will be visi
   ```
 
 ## printI128
-* ```ts
+```ts
   function printI128(value: I128): void
   ```
   Prints value as a 128 bit signed integer
@@ -104,7 +104,7 @@ Print functions are the XPR Network equivalent of `console.log` and will be visi
   ```
 
 ## printU128
-* ```ts
+```ts
   function printU128(value: U128): void
   ```
   Prints value as a 128 bit unsigned integer
@@ -126,7 +126,7 @@ Print functions are the XPR Network equivalent of `console.log` and will be visi
   ```
 
 ## printsf
-* ```ts
+```ts
   function printsf(value: f32): void
   ```
   Prints value as single-precision floating point number
@@ -150,7 +150,7 @@ Print functions are the XPR Network equivalent of `console.log` and will be visi
   ```
 
 ## printdf
-* ```ts
+```ts
   function printdf(value: f64): void
   ```
   Prints value as double-precision floating point number
@@ -172,7 +172,7 @@ Print functions are the XPR Network equivalent of `console.log` and will be visi
   ```
 
 ## printqf
-* ```ts
+```ts
   function printqf(value: Float128): void
   ```
   Prints value as quadruple-precision floating point number
@@ -192,7 +192,7 @@ Print functions are the XPR Network equivalent of `console.log` and will be visi
   ```
 
 ## printn
-* ```ts
+```ts
   function printn(value: Name): void
   ```
   Prints a 64 bit names as base32 encoded string
@@ -210,7 +210,7 @@ Print functions are the XPR Network equivalent of `console.log` and will be visi
   ```
 
 ## printArray
-* ```ts
+```ts
   function printArray(data: u8[]): void
   ```
   Prints byte array as string.
@@ -230,7 +230,7 @@ Print functions are the XPR Network equivalent of `console.log` and will be visi
   ```
 
 ## printHex
-* ```ts
+```ts
   function printHex(data: u8[]): void
   ```
   Prints bytes array as hex

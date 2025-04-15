@@ -1,32 +1,32 @@
 module.exports = [
   {
-    text: 'Community',
+    text: "Community",
     items: [
       {
-        text: 'Social',
+        text: "Social",
         items: [
           {
-            text: 'Telegram (Devs)',
-            link: 'https://t.me/protondev'
+            text: "Telegram devs channel",
+            link: "https://t.me/XPRNetwork/935158",
           },
           {
-            text: 'Telegram (Community)',
-            link: 'https://t.me/protonxpr'
+            text: "Telegram Community channel",
+            link: "https://t.me/XPRNetwork/1",
           },
           {
-            text: 'Twitter',
-            link: 'https://twitter.com/protonxpr'
+            text: "XPRNetwork on X",
+            link: "https://x.com/XPRNetwork",
           },
           {
-            text: 'Discord',
-            link: 'https://discord.com/invite/B2QDmgf'
-          }
-        ]
-      }
-    ]
+            text: "Discord",
+            link: "https://discord.com/invite/B2QDmgf",
+          },
+        ],
+      },
+    ],
   },
   {
-    text: 'GitHub',
-    link: 'https://github.com/ProtonProtocol/proton-ts-contracts'
+    text: "GitHub",
+    link: "https://github.com/XPRNetwork/developer-examples",
   },
-]
+];

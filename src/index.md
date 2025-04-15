@@ -1,6 +1,6 @@
 ---
-metaTitle: XPR Network Smart Contracts
-description: Build XPR Network Smart Contracts with Typescript
+metaTitle: XPR Developer documentation
+description: Learn to build amazing applications on XPR Network
 navbar: true
 sidebar: false
 editLink: false
@@ -19,7 +19,7 @@ pageClass: frontpage
     <a href="/getting-started/introduction.html" class="docs">
       Get Started
     </a>
-    <a href="https://github.com/ProtonProtocol/proton-ts-contracts" target="_blank" rel="noopener" class="github">
+    <a href="https://github.com/ProtonProtocol/proton-ts-contracts" target="_blank" rel="noopener" class="link">
       <span class="title">GitHub</span>
       <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
     </a>
@@ -81,9 +81,9 @@ pageClass: frontpage
     </div>
   </a>
   
-  <a class="learn-topics coming-soon" href="/your-first-dapp-with-the-web-sdk/your-first-dapp-with-the-web-sdk.html">
+  <a class="learn-topics " href="/smart-contracts/write-your-first-smart-contract.html">
   <div class="inner">
-    <div class="pills">Coming soon</div>
+    <div class="pills">Smart contracts</div>
     <div class="title">
       <h3 class="head">Write your first smart contract</h3>
       <div class="block-link">
@@ -201,83 +201,6 @@ pageClass: frontpage
 
 </div>
 
-<style scoped>
-#hero {
-  height:600px;
-  width:100vw;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-   @media (max-width:640px) {
-    height: 320px;
-    margin-top:80px!important;
-  }
-  
-}
-
-#hero .hero_content {
-  width:100%;
-  max-width:70vw;
-  display:flex;
-  flex-direction:column;
-  position:relative;
-  z-index:2;
-  @media (min-width:1601px) {
-    max-width:60vw;
-  }
-  @media (max-width:640px) {
-    max-width:100vw;
-    padding:20px
-  }
-}
-
-#hero h1 {
-  color: #fff;
-  text-align:left;
-  line-height:100%;
-  letter-spacing:-4px;
-  font-size: 4.8rem;
-  font-weight: 600;
-
- @media (max-width:640px) {
-    font-size: 2.4rem;
-    font-weight:700;
-    letter-spacing:-2px;
-  }
-
-}
-
-#hero h1 .words {
-  color: #7d0fde;
-  font-weight: 600;
-  
-}
-#logo {
-  display: inline-block;
-  width: 640px;
-}
-#logo svg {
-  width: 100%;
-  height: 100%;
-  max-height: 240px;
-  fill: #fff;
-}
-
-@media only screen and (max-width: 640px) {
-  #try {
-    display: none;
-  }
-}
-#sponsors {
-  margin-bottom: 2rem;
-}
-#community h2 svg {
-  display: inline-block;
-  height: 25px;
-  position: relative;
-  top: 3px;
-}
-</style>
 
 <style>
 .frontpage .page-edit {
