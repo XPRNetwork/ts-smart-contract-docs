@@ -1,6 +1,7 @@
 {
-  "buildCommand": "yarn build",
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "installCommand": "yarn install",
-  "framework": "vuepress"
+  "installCommand": "npm install --legacy-peer-deps",
+  "framework": null
 }
