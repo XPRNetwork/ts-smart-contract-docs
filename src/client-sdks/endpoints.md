@@ -2,95 +2,128 @@
 description: Chain IDs and Endpoints
 ---
 
+# Chain IDs and Endpoints
+
 ## Chain IDs
 
-XPR Network Mainnet: `384da888112027f0321850a169f737c33e53b388aad48b5adace4bab97f437e0`
- 
-XPR Network Testnet: `71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3dd`
+| Network | Chain ID |
+|---------|----------|
+| **Mainnet** | `384da888112027f0321850a169f737c33e53b388aad48b5adace4bab97f437e0` |
+| **Testnet** | `71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3dd` |
 
-## XPR Network Mainnet Endpoints
+## Mainnet API Endpoints
 
+*Last verified: January 2026*
+
+```
 https://api.protonnz.com
-
 https://proton.protonuk.io
-
 https://proton.eosusa.io
-
-https://hyperion.quantumblok.com
-
-https://main.proton.kiwi
-
-https://proton.eoscafeblock.com
-
 https://proton.cryptolions.io
-
-https://proton.eu.eosamsterdam.net
-
-https://proton-api.alvosec.com
-
-https://api.protonmt.com
-
+https://proton.eoscafeblock.com
 https://api.totalproton.tech
-
 https://mainnet.brotonbp.com
-
-https://api.proton.bountyblok.io
-
 https://proton.eu.eosamsterdam.net
-
-https://protonapi.blocksindia.com/
-
+https://protonapi.blocksindia.com
+https://api-xprnetwork-main.saltant.io
 https://protonapi.ledgerwise.io
-
-https://api-proton.saltant.io
-
-https://proton.pink.gg
-
 https://proton-api.eosiomadrid.io
-
 https://proton.genereos.io
-
-https://proton.edenia.cloud
-
-https://xpr.eosdublin.io
-
-https://proton.eoseoul.io
-
+https://api-proton.nodeone.network:8344
 https://proton-public.neftyblocks.com
+https://api-proton.eosarabia.net
+https://api.luminaryvisn.com
+```
 
-https://proton.cryptotribe.io
+### Mainnet Hyperion (History) Endpoints
 
+```
+https://proton.protonuk.io
+https://api-xprnetwork-main.saltant.io
+```
 
-## XPR Network Testnet Endpoints
+## Testnet API Endpoints
 
-https://proton-public-testnet.neftyblocks.com
+*Last verified: January 2026*
 
-https://tn1.protonnz.com
-
-https://proton-api-testnet.eosiomadrid.io
-
-https://proton-testnet.genereos.io
-
-https://proton-testnet.edenia.cloud
-
+```
+https://test.proton.eosusa.io
 https://testnet-api.alvosec.com
+https://proton-testnet.cryptolions.io
+https://testnet.brotonbp.com
+https://testnet-api.xprcore.com
+https://protontest.eu.eosamsterdam.net
+https://api-xprnetwork-test.saltant.io
+https://testnet-api.xprdata.org
+https://testnet.rockerone.io
+```
 
-https://testnet.proton.pink.gg
+## Usage Examples
 
-https://test.proton.eosusa.news
+### JavaScript/TypeScript
 
-https://api-testnet-proton.eosarabia.net
+```typescript
+import { JsonRpc } from '@proton/js';
 
-https://mainnet.eosamsterdam.net
+// Mainnet
+const mainnetRpc = new JsonRpc('https://proton.eosusa.io');
 
-https://api.test.protonmt.com
+// Testnet
+const testnetRpc = new JsonRpc('https://testnet-api.alvosec.com');
+```
 
-https://api-protontest.saltant.io
+### With Multiple Endpoints (Fault Tolerance)
 
-https://api.testnet.totalproton.tech
+```typescript
+const endpoints = [
+  'https://proton.eosusa.io',
+  'https://api.protonnz.com',
+  'https://proton.cryptolions.io'
+];
 
-https://xpr.testnet.eosdublin.io
+// The SDK will automatically failover to the next endpoint if one fails
+```
 
-https://api-protontest.nodeone.network:8344
+### CLI
 
-https://protontestnet.ledgerwise.io
+```bash
+# Set mainnet endpoint
+proton chain:set proton
+proton endpoint:set https://proton.eosusa.io
+
+# Set testnet endpoint
+proton chain:set proton-test
+proton endpoint:set https://testnet-api.alvosec.com
+```
+
+## P2P Peer Addresses
+
+For node operators running XPR Network nodes, P2P peer configurations are available in the official repositories:
+
+- **Mainnet**: [xpr.start](https://github.com/XPRNetwork/xpr.start)
+- **Testnet**: [xpr-testnet.start](https://github.com/XPRNetwork/xpr-testnet.start)
+
+## Endpoint Health
+
+To check if an endpoint is healthy:
+
+```bash
+curl -s https://proton.eosusa.io/v1/chain/get_info | jq '.head_block_num'
+```
+
+A healthy endpoint will return the current head block number.
+
+## Validating Endpoints
+
+This documentation includes a link checker script. Run it to verify all endpoints:
+
+```bash
+# Check all API endpoints
+npm run check-endpoints
+
+# Check all documentation links
+npm run check-docs-links
+
+# Check everything
+npm run check-links
+```

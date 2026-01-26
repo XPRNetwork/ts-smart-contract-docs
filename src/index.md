@@ -19,7 +19,7 @@ pageClass: frontpage
     <a href="/getting-started/introduction.html" class="docs">
       Get Started
     </a>
-    <a href="https://github.com/ProtonProtocol/proton-ts-contracts" target="_blank" rel="noopener" class="link">
+    <a href="https://github.com/XPRNetwork/ts-smart-contracts" target="_blank" rel="noopener" class="link">
       <span class="title">GitHub</span>
       <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
     </a>
@@ -33,14 +33,14 @@ pageClass: frontpage
 </div>
 <div class="content-layout" >
 <div>
-  <h2>Develop on XPRNetwork</h2>
+  <h2>Develop on XPR Network</h2>
   <div class="sub-topics_grid">
   <a class="learn-topics header" href="/getting-started/introduction.html">
   <div class="inner">
-    <div class="pills">XPRNetwork 101</div>
-    <h3 class="head">Learn the basics of XPRNetwork </h3>
+    <div class="pills">XPR Network 101</div>
+    <h3 class="head">Learn the basics of XPR Network </h3>
     <div class="title">
-    <p>Start your learning journey by learning the most important concept of XPRNetwork</p>
+    <p>Start your learning journey by learning the most important concept of XPR Network</p>
       <div class="block-link">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </div>
@@ -92,11 +92,22 @@ pageClass: frontpage
     </div>
     </div>
   </a>
-  <a class="learn-topics coming-soon" href="/your-first-dapp-with-the-web-sdk/your-first-dapp-with-the-web-sdk.html">
+  <a class="learn-topics" href="/guides/hello-world.html">
   <div class="inner">
-    <div class="pills">Coming soon</div>
+    <div class="pills">Tutorial</div>
     <div class="title">
-      <h3 class="head">React dApp development with XPRNKit </h3>
+      <h3 class="head">Hello World Contract</h3>
+      <div class="block-link">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </div>
+    </div>
+    </div>
+  </a>
+  <a class="learn-topics" href="/guides/key-value.html">
+  <div class="inner">
+    <div class="pills">Tutorial</div>
+    <div class="title">
+      <h3 class="head">Key-Value Storage Contract</h3>
       <div class="block-link">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </div>
@@ -120,7 +131,7 @@ pageClass: frontpage
   </div>
   <div class="resources">
     <h3 class="head">
-      XPRNetwork explorer
+      XPR Network explorer
     </h3>
     <p>Track transactions, manage account and interact with the chain with our Explorer</p>
     <a href="https://explorer.xprnetwork.org/" target="_blank" rel="noopener" class="external-link">
@@ -165,7 +176,7 @@ pageClass: frontpage
     <h3 class="head">
       NPM Package
     </h3>
-    <p>XPRNetwork NPM account is full of useful package that covers the broad development spectrum.</p>
+    <p>XPR Network NPM account is full of useful package that covers the broad development spectrum.</p>
     <a href="https://www.npmjs.com/org/proton" target="_blank" rel="noopener" class="external-link">
         <span class="title">Browse packages</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg>
@@ -175,7 +186,7 @@ pageClass: frontpage
   </div>
   </div>
 <!-- <div>
-  <h2>Built on XPRNetwork</h2>
+  <h2>Built on XPR Network</h2>
   <div class="sub-topics_grid">
   <div class="learn-topics">
   <div class="illustration"></div>

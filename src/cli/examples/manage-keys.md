@@ -4,10 +4,10 @@ In this guide, we will go through managing private keys.
 
 ### Pre-requisites
 
-- NodeJS 16 [Installation Guide](https://github.com/ProtonProtocol/proton-cli#install-nodejs)
+- NodeJS 16 [Installation Guide](https://github.com/XPRNetwork/proton-cli#install-nodejs)
 - NPM
 - Git
-- [XPR Network CLI](https://github.com/ProtonProtocol/proton-cli)
+- [XPR Network CLI](https://github.com/XPRNetwork/proton-cli)
 ``` bash
 npm install -g @proton/cli
 ```

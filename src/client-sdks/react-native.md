@@ -5,7 +5,7 @@ description: RN SDK
 # XPR Network React Native SDK
 
 ::: tip Contribute
-If you would like to contribute to our open source code, you can do so [here](https://github.com/ProtonProtocol/proton-web-sdk/tree/master/packages/proton-react-native-sdk)
+If you would like to contribute to our open source code, you can do so [here](https://github.com/XPRNetwork/proton-web-sdk/tree/master/packages/proton-react-native-sdk)
 :::
 
 ## Installation
@@ -37,7 +37,7 @@ class ProtonSDK {
   constructor() {
     this.chainId =
       '71ee83bcf52142d61019d95f9cc5427ba6a0d7ff8accd9e2088ae2abeaf3d3dd';
-    this.endpoints = ['https://testnet.protonchain.com']; // Multiple for fault tolerance
+    this.endpoints = ['https://testnet-api.alvosec.com']; // Multiple for fault tolerance
     this.requestAccount = 'taskly'; // optional
     this.session = null;
     this.link = null;

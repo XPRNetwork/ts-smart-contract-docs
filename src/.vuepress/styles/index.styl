@@ -459,6 +459,15 @@ b, strong {
   color: #6f8eff;
 }
 
+/* Links should be visible in both modes */
+a {
+  color: #6f8eff;
+}
+
+a:hover {
+  color: #8fa8ff;
+}
+
 /******************
 * APP BUTTON
 *******************/
@@ -547,6 +556,19 @@ b, strong {
 /******************
 * TABLES
 *******************/
+table {
+  color:var(--text-color);
+}
+
+th {
+  color:var(--text-color);
+  background-color:var(--alt-background-color);
+}
+
+td {
+  color:var(--text-color);
+}
+
 tr:nth-child(2n) {
   background-color:var(--alt-background-color)
 }
@@ -680,20 +702,46 @@ tr:nth-child(2n) {
 /**/
 .custom-block.tip {
   box-sizing:border-box;
-  background-color:#101010;
+  background-color:#1a1a2e;
   border-color:var(--primary-color)!important
 }
 
+.custom-block.tip .custom-block-title {
+  color:#ffffff!important;
+}
+
 .custom-block.tip>p {
-  color:var(--background-color)!important;
+  color:#ffffff!important;
+}
+
+.custom-block.tip a {
+  color:#6f8eff!important;
 }
 
 .custom-block.warning {
   box-sizing:border-box;
-  
-  
+  background-color:#2d2d0a;
+  border-color:#f0ad4e!important;
 }
 
-.custom-block.tip>p {
-  color:var(--background-color)!important;
+.custom-block.warning .custom-block-title {
+  color:#f0ad4e!important;
+}
+
+.custom-block.warning>p {
+  color:#ffffff!important;
+}
+
+.custom-block.danger {
+  box-sizing:border-box;
+  background-color:#2d0a0a;
+  border-color:#d9534f!important;
+}
+
+.custom-block.danger .custom-block-title {
+  color:#d9534f!important;
+}
+
+.custom-block.danger>p {
+  color:#ffffff!important;
 }

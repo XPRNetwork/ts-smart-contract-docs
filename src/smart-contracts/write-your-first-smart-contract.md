@@ -86,7 +86,7 @@ Our contract will hold tokens for users to allow them to post greeting messages.
 
 ## Ready ? Steady, GO!
 
-Now where are ready to go\! So let's use our good pal, the proton/CLI. If you haven’t installed this bad boy yet please refer to the [**proton CLI crash course**](/cli-101/cli-crash-course.html) and follow the installation process. 
+Now where are ready to go\! So let's use our good pal, the proton/CLI. If you haven’t installed this bad boy yet please refer to the [**proton CLI crash course**](/cli-101/cli-crash-course.md) and follow the installation process. 
 
 Once it’s done create a new folder from your terminal and access it, run the following command
 
@@ -1283,11 +1283,11 @@ proton contract:set your_account_name ./target
 // get abi for eosio
 // get abi for eosio
 // WASM Successfully Deployed:
-// https://proton-test.ProtonScan.io/tx/...
+// https://testnet.explorer.xprnetwork.org/tx/...
 // get abi for eosio
 // get abi for eosio
 // ABI Successfully Deployed:
-// https://testnet.protonscan.io/tx/...
+// https://testnet.explorer.xprnetwork.org/tx/...
 ```
 
 HORRRRAY we did it\! Now our contract is living on the testnet \! Visit the link [https://testnet.explorer.xprnetwork.org/](https://testnet.explorer.xprnetwork.org/) search for you account, and go to the contract tab you should have this\! 

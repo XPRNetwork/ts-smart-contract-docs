@@ -11,23 +11,23 @@ We don’t want to dig too deep in the way the identity process works, but it’
 
 ### Transport
 
-The transport refers to the method or protocol used for communication between the wallet and the blockchain, typically the XPRNetwork network. It handles the secure transfer of data, such as user transactions, between the wallet and the XPRNetwork nodes. Common transports can include HTTP(S) or WebSocket connections, depending on the specific wallet implementation. You will hear about transport in the @proton/web-sdk instantiation, unless you never interact with it directly.
+The transport refers to the method or protocol used for communication between the wallet and the blockchain, typically the XPR Network. It handles the secure transfer of data, such as user transactions, between the wallet and the XPR Network nodes. Common transports can include HTTP(S) or WebSocket connections, depending on the specific wallet implementation. You will hear about transport in the @proton/web-sdk instantiation, unless you never interact with it directly.
 
 ### Storage
 
-Storage refers to the place where the link and session are stored. This refers to a local storage on the device (e.g., browser local storage, or secure hardware wallets) this is how wallet information is persisted during interactions with the XPRNetwork network. You will hear about storage in the @proton/web-sdk instantiation, unless you never interact with it directly.
+Storage refers to the place where the link and session are stored. This refers to a local storage on the device (e.g., browser local storage, or secure hardware wallets) this is how wallet information is persisted during interactions with the XPR Network. You will hear about storage in the @proton/web-sdk instantiation, unless you never interact with it directly.
 
 ### PSR
 
-The **Proton Signing Request (PSR)** is a standardized format used to simplify the process of signing transactions in the XPRNetwork blockchain ecosystem. It provides a way for users and applications to interact with XPRNetwork blockchains by packaging transaction requests, which include the necessary data, permissions, and actions, into a format that can be signed by a user's private key. This allows for secure, off-chain signing while enabling users to authorize actions like token transfers or smart contract interactions without exposing their private keys. PSR enhances the usability and security of decentralized applications by streamlining the signing process and improving user experience. PSR is a thing that you almost never see in his true form, but it’s the input for all QR code you see when you sign identity or action on XPRNetwork
+The **Proton Signing Request (PSR)** is a standardized format used to simplify the process of signing transactions in the XPR Network blockchain ecosystem. It provides a way for users and applications to interact with XPR Network blockchains by packaging transaction requests, which include the necessary data, permissions, and actions, into a format that can be signed by a user's private key. This allows for secure, off-chain signing while enabling users to authorize actions like token transfers or smart contract interactions without exposing their private keys. PSR enhances the usability and security of decentralized applications by streamlining the signing process and improving user experience. PSR is a thing that you almost never see in his true form, but it’s the input for all QR code you see when you sign identity or action on XPR Network
 
 ### Session
 
-A session in this context represents the duration of an active connection between the wallet and the dApp or service. During the session, user authentication and other wallet-related actions take place. A session helps ensure that a user is continuously authenticated without having to re-enter credentials for each interaction, improving the user experience. Session is returned when the user authenticates successfully  within XPRNetwork. It’s the central piece for all interaction between the session owner (the connected user) and your dApp.
+A session in this context represents the duration of an active connection between the wallet and the dApp or service. During the session, user authentication and other wallet-related actions take place. A session helps ensure that a user is continuously authenticated without having to re-enter credentials for each interaction, improving the user experience. Session is returned when the user authenticates successfully  within XPR Network. It’s the central piece for all interaction between the session owner (the connected user) and your dApp.
 
 ### Link
 
-A link is the connection established between the XPRNetwork account and an external service or dApp (decentralized application). It allows the wallet to interact with blockchain services. Links are often used in the context of connecting the wallet to websites or applications that need access to blockchain data or user transactions. You will hear about link in the @proton/web-sdk instantiation, unless you never interact with it directly. Session is returned when the user authenticates successfully  within XPRNetwork. It’s the central piece for all interaction between the session owner and your dApp.
+A link is the connection established between the XPR Network account and an external service or dApp (decentralized application). It allows the wallet to interact with blockchain services. Links are often used in the context of connecting the wallet to websites or applications that need access to blockchain data or user transactions. You will hear about link in the @proton/web-sdk instantiation, unless you never interact with it directly. Session is returned when the user authenticates successfully  within XPR Network. It’s the central piece for all interaction between the session owner and your dApp.
 
 ## The proton/web-sdk
 
@@ -249,7 +249,7 @@ Let’s run our application
 
 Hooray, now we have our first working dApp. Can we go further ? Sure, but before, why not create our own smart contract ? Follow us to the next section to start developing smart contracts.
 
-<a class="learn-topics footer">
+<a href="/smart-contracts/write-your-first-smart-contract.html" class="learn-topics footer">
     <div class="inner">
     <h2 class="head">Session complete</h2>
     <div class="title">

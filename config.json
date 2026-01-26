@@ -1,6 +1,6 @@
 {
     "index_name": "proton",
-    "sitemap_urls": ["https://docs.protonchain.com/sitemap.xml"],
+    "sitemap_urls": ["https://docs.xprnetwork.org/sitemap.xml"],
     "start_urls": [],
     "stop_urls": [],
     "selectors": {

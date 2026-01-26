@@ -6,7 +6,7 @@ description: Web SDK
 # XPR Network Web SDK
 
 ::: tip Contribute
-If you would like to contribute to our open source code, you can do so [here](https://github.com/ProtonProtocol/ProtonWeb)
+If you would like to contribute to our open source code, you can do so [here](https://github.com/XPRNetwork/proton-web-sdk)
 :::
 
 ## Installation
@@ -49,7 +49,7 @@ The following is a list of arguments that ProtonWebSDK accepts:
 
 _Custom Storage_
 
-By default, the SDK will use local storage with a default prefix of 'proton-storage.' The implementation can be found on [Github](https://github.com/ProtonProtocol/ProtonWeb/blob/master/packages/proton-web-sdk/src/index.ts).&#x20;
+By default, the SDK will use local storage with a default prefix of 'proton-storage.' The implementation can be found on [Github](https://github.com/XPRNetwork/proton-web-sdk/blob/master/packages/proton-web-sdk/src/index.ts).&#x20;
 
 In order to use a custom storage method, please implement the following interface.
 
@@ -194,7 +194,7 @@ The `memo` value serves as additional details attached to the transaction, but d
 > 
 > For all other transactions including `XPR`, the account must be set to `eosio.tokens`
 
-FOOBAR token is a test token that can be used for testing purposes on XPR Network mainnet. This token is dispensed for free at the [Foobar Faucet](https://foobar.protonchain.com). For any transactions with FOOBAR token, please reference the code block below.
+FOOBAR token is a test token that can be used for testing purposes on XPR Network mainnet. For any transactions with FOOBAR token, please reference the code block below.
 
 ```ts
 const actions = [{
