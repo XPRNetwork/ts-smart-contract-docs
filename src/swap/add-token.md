@@ -16,7 +16,7 @@ description: Propose to add token
 
 **1. Prepare deposit of FOOBAR and XPR**
 
-ProtonScan: [Link](https://www.protonscan.io/account/proton.swaps?loadContract=true&tab=Actions&account=proton.swaps&scope=proton.swaps&limit=100&action=depositprep&table=pools)
+ProtonScan: [Link](https://explorer.xprnetwork.org/account/proton.swaps?loadContract=true&tab=Actions&account=proton.swaps&scope=proton.swaps&limit=100&action=depositprep&table=pools)
 
 `owner` = `myaccount`
 
@@ -26,7 +26,7 @@ ProtonScan: [Link](https://www.protonscan.io/account/proton.swaps?loadContract=t
 
 **3. Add proposal**
 
-ProtonScan: [Link](https://www.protonscan.io/account/proton.swaps?loadContract=true&tab=Actions&account=proton.swaps&scope=proton.swaps&limit=100&action=proposaladd)
+ProtonScan: [Link](https://explorer.xprnetwork.org/account/proton.swaps?loadContract=true&tab=Actions&account=proton.swaps&scope=proton.swaps&limit=100&action=proposaladd)
 
 `pool_creator` = `myaccount`
 

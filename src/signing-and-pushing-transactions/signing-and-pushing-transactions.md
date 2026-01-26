@@ -152,7 +152,7 @@ You will see that we have 2 tables in the tables tab: **`tickets`** and **`greet
 In the actions tab, you see that we have only a single **`greet`** action, to publish a greeting message by sending an account name as the **`greeter`** and the greeting **`message`**.     
 ![image3](/sign-and-push-txs/sign-and-push-tx_3.png)  
 
-Let's try to use this contract \! The process now involves 2 actions: a regular **`transfer`** action, the one that allows you to send tokens to any account on XPRNetwork and the **`greet`** action to publish a greeting. We will just do the first action to see what’s happen on the contract side.
+Let's try to use this contract \! The process now involves 2 actions: a regular **`transfer`** action, the one that allows you to send tokens to any account on XPR Network and the **`greet`** action to publish a greeting. We will just do the first action to see what’s happen on the contract side.
 
 ```javascript
 import {Api, JsonRpc, JsSignatureProvider} from "@proton/js";

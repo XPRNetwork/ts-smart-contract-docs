@@ -99,7 +99,7 @@ module.exports = {
     sidebar: require("./sidebar"),
     sidebarDepth: 1,
     displayAllHeaders: false,
-    docsRepo: "ProtonProtocol/proton-ts-sc-docs",
+    docsRepo: "XPRNetwork/ts-smart-contract-docs",
     docsDir: "src",
     docsBranch: "master",
     editLinks: false,
@@ -128,7 +128,7 @@ module.exports = {
     [
       "vuepress-plugin-sitemap",
       {
-        hostname: "https://www.docs.protonchain.com",
+        hostname: "https://docs.xprnetwork.org",
         exclude: ["/404.html"],
       },
     ],

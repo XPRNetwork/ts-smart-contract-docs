@@ -1,6 +1,6 @@
 # Proton Web SDK
 
-The Proton Web SDK is a comprehensive toolkit for integrating XPRNetwork blockchain functionality into web applications. It provides a set of tools and utilities for handling wallet connections, transactions, and blockchain interactions.
+The Proton Web SDK is a comprehensive toolkit for integrating XPR Network blockchain functionality into web applications. It provides a set of tools and utilities for handling wallet connections, transactions, and blockchain interactions.
 
 ## Package Structure
 
@@ -111,7 +111,7 @@ const connect = async () => {
     try {
         const { session } = await ConnectWallet({
             linkOptions: {
-                endpoints: ['https://api.rockerone.io'],
+                endpoints: ['https://proton.eosusa.io'],
                 chainId: '384da888112027f0321850a169f737c33e53b388aad48b5adace4bab97f437e0',
             },
             transportOptions: {

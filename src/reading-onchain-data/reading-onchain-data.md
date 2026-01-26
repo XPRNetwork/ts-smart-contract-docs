@@ -1,4 +1,4 @@
-# Reading data from XPRNetwork
+# Reading data from XPR Network
 
 You can explore the [code examples on github](https://github.com/XPRNetwork/developer-examples/tree/main/1_reading_from_xprnetwork_tables) 
 
@@ -16,11 +16,11 @@ With your favorite package manager, initialize a new project. Then we will insta
 npm install typescript @proton/js
 ```
 
-Most interactions with XPRNetwork goes through the @proton/js package. Later when we discuss frontend integration, you will see that @proton/web-sdk uses @proton/js package as dependency to push transactions to the chain.
+Most interactions with XPR Network goes through the @proton/js package. Later when we discuss frontend integration, you will see that @proton/web-sdk uses @proton/js package as dependency to push transactions to the chain.
 
-## Your gateway to XPRNetwork data: The JSONRpc
+## Your gateway to XPR Network data: The JSONRpc
 
-All data request from XPRNetwork are made with the JSONRpc, so let’s import and instanciate  it to our index.ts file 
+All data request from XPR Network are made with the JSONRpc, so let’s import and instanciate  it to our index.ts file 
 
 ```javascript
 import {JSONRpc} from ‘@proton/js’;
@@ -29,7 +29,7 @@ const jsonRpc = new JSONRpc([‘https://testnet.rockerone.io’,...])
 
 ```
 
-Here we create our jsonRpc instance, and provide XPRNetwork endpoints as an array of strings. Why an array ? Because the JSONRpc is smart enough to check if an endpoint is not available and switch to another one. 
+Here we create our jsonRpc instance, and provide XPR Network endpoints as an array of strings. Why an array ? Because the JSONRpc is smart enough to check if an endpoint is not available and switch to another one. 
 
 Now let’s fetch some data with the get\_table\_rows method from the JSONRpc instance.
 
@@ -54,7 +54,7 @@ Now lets run this code. \`node index.ts\` This snippet should print, it’s time
 
 By using **`code:eosio.token`**, we're instructing the **`eosio.token`** contract to retrieve data from the **`account`** table, using the **`eosio.token`** scope. 
 
-What exactly is a scope? A scope is a key concept in XPRNetwork’s table, it represents a distinct subset of data within a table. Scoping helps keep data organized and simplifies queries. While not all tables utilize multiple scopes, the default scope is always the name of the contract. 
+What exactly is a scope? A scope is a key concept in XPR Network's table, it represents a distinct subset of data within a table. Scoping helps keep data organized and simplifies queries. While not all tables utilize multiple scopes, the default scope is always the name of the contract. 
 
 ## Response structure
 
@@ -108,7 +108,7 @@ This change should print
 }
 ```
 
-So far so good \! Let’s see another example with the **`atomicassets`** contract, the NFT protocol on XPRNetwork and get the list of available NFTs collections.
+So far so good \! Let’s see another example with the **`atomicassets`** contract, the NFT protocol on XPR Network and get the list of available NFTs collections.
 
 ```javascript
 import {JsonRpc} from "@proton/js";

@@ -4,10 +4,10 @@ In this guide, we will go through what deploying a token contract to an example 
 
 ### Pre-requisites
 
-- NodeJS 16 [Installation Guide](https://github.com/ProtonProtocol/proton-cli#install-nodejs)
+- NodeJS 16 [Installation Guide](https://github.com/XPRNetwork/proton-cli#install-nodejs)
 - NPM
 - Git
-- [XPR Network CLI](https://github.com/ProtonProtocol/proton-cli)
+- [XPR Network CLI](https://github.com/XPRNetwork/proton-cli)
 ``` bash
 npm install -g @proton/cli
 ```
@@ -29,7 +29,7 @@ proton ram:buy tokentester tokentester 200000
 3. Set token contract
 
 ```
-proton contract:set tokentester https://github.com/ProtonProtocol/proton-ts-contracts/tree/main/external/xtokens
+proton contract:set tokentester https://github.com/XPRNetwork/ts-smart-contracts/tree/main/external/xtokens
 ```
 
 4. Create token

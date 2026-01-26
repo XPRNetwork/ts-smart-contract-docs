@@ -10,10 +10,10 @@ Let's start!
 
 ### Pre-requisites
 
-- NodeJS 16 [Installation Guide](https://github.com/ProtonProtocol/proton-cli#install-nodejs)
+- NodeJS 16 [Installation Guide](https://github.com/XPRNetwork/proton-cli#install-nodejs)
 - NPM
 - Git
-- [XPR Network CLI](https://github.com/ProtonProtocol/proton-cli)
+- [XPR Network CLI](https://github.com/XPRNetwork/proton-cli)
 ``` bash
 npm install -g @proton/cli
 ```
@@ -335,7 +335,7 @@ npm install -g @proton/cli
         ```
     2. Update one of the values by key:
         ```
-        proton action <ACCOUNT_NAME> updatevalues '{"actor":"<ACCOUNT_NAME>","values":[{"key":"webpage","value":"protonchain.com"}]}' <ACCOUNT_NAME>
+        proton action <ACCOUNT_NAME> updatevalues '{"actor":"<ACCOUNT_NAME>","values":[{"key":"webpage","value":"xprnetwork.org"}]}' <ACCOUNT_NAME>
         ```
 18. The only thing we cannot do using the contract is data removal. We can only add or update values. So let's implement this feature in our contract. Let's add new action to KV contract using CLI command `proton generate:action`. The action name will be `removekeys`. It will have 2 parameters:
     1.  with `actor` parameter that is `Name`

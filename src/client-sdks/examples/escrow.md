@@ -17,7 +17,7 @@ const { link, session } = await ProtonSDK({
     linkOptions: {
         endpoints: [
             'https://api.protonnz.com',
-            'https://proton.eosusa.news'
+            'https://proton.eosusa.io'
         ] // Mainnet endpoints. Replace with your own if needed 
     },
     transportOptions: {

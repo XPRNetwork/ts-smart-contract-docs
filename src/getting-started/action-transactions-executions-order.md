@@ -2,7 +2,7 @@
 
 ## What’s a transaction ?
 
-To keep it short for now, let’s say a transaction to be just a batch of actions to be executed in a sequence,  In fact it’s little bit more than just an array, it also has a bunch of fields (expiration time, block num, signature,...) but the api of XPRNetwork takes care of that.
+To keep it short for now, let’s say a transaction to be just a batch of actions to be executed in a sequence,  In fact it’s little bit more than just an array, it also has a bunch of fields (expiration time, block num, signature,...) but the api of XPR Network takes care of that.
 
 ## What’s an action ?
 
@@ -32,7 +32,7 @@ const action = {
 
 Let’s explain the structure.
 
-Basically, XPRNetwork actions contain these four fields: account, name, authorization and data. Let’s see what each is:
+Basically, XPR Network actions contain these four fields: account, name, authorization and data. Let’s see what each is:
 
 *  **`account:`** The **`` `account` ``** is in fact the account that “hosts” the smart contract. In this case the \`**`` eosio.token` ``** contract.  
 * **`name:`** This is the command name you are invoking through this action, in our case it’s the \`**`` transfer` ``** action  

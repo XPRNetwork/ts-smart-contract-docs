@@ -1,13 +1,16 @@
 {
-  "name": "proton-ts-sc-docs",
+  "name": "xpr-network-docs",
   "private": true,
-  "version": "0.0.0",
-  "description": "Proton's Smart Contract docs.",
+  "version": "1.0.0",
+  "description": "XPR Network Developer Documentation",
   "scripts": {
     "start": "yarn dev",
     "dev": "vuepress dev src",
     "build": "vuepress build src",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "check-links": "node scripts/check-links.js",
+    "check-endpoints": "node scripts/check-links.js --endpoints-only",
+    "check-docs-links": "node scripts/check-links.js --links-only"
   },
   "devDependencies": {
     "@proton/vuepress-plugin-graphviz": "^2.2.1",

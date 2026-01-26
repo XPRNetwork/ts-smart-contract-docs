@@ -2,7 +2,7 @@
 
 ## What is the @proton/cli ?
 
-I often define the @proton/cli package as “The swiss army knife for XPRNetwork devs”.Create account, manage resources, perform permission mutation, claim faucet… This little command line interface allows you to interact with most of the useful actions,contracts and API spread across multiple platforms in the XPRNetwork ecosystem from a single place: your terminal \!
+I often define the @proton/cli package as “The swiss army knife for XPR Network devs”.Create account, manage resources, perform permission mutation, claim faucet… This little command line interface allows you to interact with most of the useful actions,contracts and API spread across multiple platforms in the XPR Network ecosystem from a single place: your terminal \!
 
 In this short course section, we will see how to install it, and how to use a few commands. We will cover it in depth later in this course.
 
@@ -98,7 +98,7 @@ Success: Switched to chain proton
 **Remember:** After switching the chain, the setting remains active till the next switch, even if you close your terminal. I use switches so often that I sometimes forget which chain I am. To be sure you perform your operation on the right chain, invoke this command before starting to enter other commands. 
 
 
-## Creating a new XPRNetwork account: The dev way\!
+## Creating a new XPR Network account: The dev way\!
 
 Ok first be sure you are on testnet \!
 
@@ -106,7 +106,7 @@ Ok first be sure you are on testnet \!
 proton chain:set proton-testSuccess: Switched to chain proton-test
 ```
 
-Great\! Now let’s create a new XPRNetwork account\!  Because we are devs, and we are organised we will output the process to a file to keep our keys and mnemonic stored in a place, it could be anywhere.When I start a new project,  I tend to store my testnet keys in a .json file. Let’s start the process en type this command, of course change the name to one that suits you and who follow the rule of XPRNetwork names (see [Getting started / A quick note on data types](https://docs.google.com/document/u/6/d/1Va5wF66JmGPwVEUWy-ZWtoXryoSpzM41rEyz5S9uaGY/edit) on name if you haven’t read yet):
+Great\! Now let’s create a new XPR Network account\!  Because we are devs, and we are organised we will output the process to a file to keep our keys and mnemonic stored in a place, it could be anywhere.When I start a new project,  I tend to store my testnet keys in a .json file. Let’s start the process en type this command, of course change the name to one that suits you and who follow the rule of XPR Network names (see [Getting started / A quick note on data types](https://docs.google.com/document/u/6/d/1Va5wF66JmGPwVEUWy-ZWtoXryoSpzM41rEyz5S9uaGY/edit) on name if you haven’t read yet):
 
 ```javascript
 proton create:account devcourse > devcourse.json
@@ -249,11 +249,11 @@ And the return response shows us how rich this account is \! As you can see the 
 
 ---
 
-<a class="learn-topics footer">
+<a href="/reading-onchain-data/reading-onchain-data.html" class="learn-topics footer">
     <div class="inner">
     <h2 class="head">Session complete</h2>
     <div class="title">
-    <p>Next: Write your first dApp</p>
+    <p>Next: Reading Chain Data</p>
       <div class="block-link">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </div>

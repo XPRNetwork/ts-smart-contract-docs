@@ -17,10 +17,6 @@ module.exports = [
             text: "XPRNetwork on X",
             link: "https://x.com/XPRNetwork",
           },
-          {
-            text: "Discord",
-            link: "https://discord.com/invite/B2QDmgf",
-          },
         ],
       },
     ],

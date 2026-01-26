@@ -5,10 +5,10 @@ On your way to your first XPR Network Smart Contract!
 
 ### Pre-requisites
 
-- NodeJS 16 [Installation Guide](https://github.com/ProtonProtocol/proton-cli#install-nodejs)
+- NodeJS 16 [Installation Guide](https://github.com/XPRNetwork/proton-cli#install-nodejs)
 - NPM
 - Git
-- [XPR Network CLI](https://github.com/ProtonProtocol/proton-cli)
+- [XPR Network CLI](https://github.com/XPRNetwork/proton-cli)
 ``` bash
 npm install -g @proton/cli
 ```
@@ -58,7 +58,7 @@ proton contract:set <ACCOUNT_NAME> ./target
 ```
 
 ## Interact with deployed contract
-Typically, users would interact with your smart contract using a web interface integrated with the [XPR Network Web SDK](https://github.com/ProtonProtocol/ProtonWeb), that allows logging in with the [WebAuth Wallet](http://webauth.com/). Earlier in this tutorial, we also saw how to run a simulated playground and execute actions inside it using `npm run playground`
+Typically, users would interact with your smart contract using a web interface integrated with the [XPR Network Web SDK](https://github.com/XPRNetwork/proton-web-sdk), that allows logging in with the [WebAuth Wallet](http://webauth.com/). Earlier in this tutorial, we also saw how to run a simulated playground and execute actions inside it using `npm run playground`
 
 Next, we will interact with the contract through our CLI to verify successful deployment to the blockchain. 
 

@@ -11,7 +11,7 @@ Notifications are a way for smart contracts to alert other contracts and users a
 
 Contracts can listen for incoming notifications and perform actions in response to them.
 
-Users will see two types of transactions in their transaction history on [ProtonScan](https://protonscan.io):
+Users will see two types of transactions in their transaction history on [ProtonScan](https://explorer.xprnetwork.org):
 1. Transactions that they authorized with one of their permissions
 2. Transactions that specify them as a recipient
 
