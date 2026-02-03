@@ -86,7 +86,7 @@ Our contract will hold tokens for users to allow them to post greeting messages.
 
 ## Ready ? Steady, GO!
 
-Now where are ready to go\! So let's use our good pal, the proton/CLI. If you haven’t installed this bad boy yet please refer to the [**proton CLI crash course**](/cli-101/cli-crash-course.md) and follow the installation process. 
+Now we are ready to go\! So let's use our good pal, the proton/CLI. If you haven’t installed this bad boy yet please refer to the [**proton CLI crash course**](/cli-101/cli-crash-course.md) and follow the installation process. 
 
 Once it’s done create a new folder from your terminal and access it, run the following command
 
@@ -148,7 +148,7 @@ Let’s break down the contract structure. The `@contract` decorator tells the c
 
 It’s pretty empty isn't it? Yes, but before adding real functionality, let’s focus on the action. 
 
-We named the action `transfer` but it’s just a default name, to be a real `transfer` action, i mean an action that could handle token transfer, we need to add more stuff. First we need to add parameters, a transfer token action requires 4 parameters. Let’s introduce each of them and their types. If you are not familiar with types, please read **A quick note on data types**
+We named the action `transfer` but it's just a default name, to be a real `transfer` action, i mean an action that could handle token transfer, we need to add more stuff. First we need to add parameters, a transfer token action requires 4 parameters. Let's introduce each of them and their types. If you are not familiar with types, please read the [Data Types](/getting-started/data-types) guide.
 
 - **from:**  the emitter account of the token transfer as **Name**  
 - **to:** the recipient account of the token transfer as **Name**  

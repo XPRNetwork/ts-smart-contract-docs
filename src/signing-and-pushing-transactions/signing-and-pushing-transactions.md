@@ -7,14 +7,14 @@ This is where things start to be really fun\! By signing and pushing transaction
 ## Notes on this course part
 
 
-> **Be careful \!** <br/> In this course we will use our private key to sign transactions in our account behalf  from our code, for this we reference our private key in a .env file. **Never reference your private key directly in your code\!** If you don’t understand why we are remaining you this, you should read [Getting started / terminology for private key definition](https://docs.google.com/document/u/6/d/1Va5wF66JmGPwVEUWy-ZWtoXryoSpzM41rEyz5S9uaGY/edit)
+> **Be careful \!** <br/> In this course we will use our private key to sign transactions in our account behalf  from our code, for this we reference our private key in a .env file. **Never reference your private key directly in your code\!** If you don't understand why we are reminding you this, you should read [Terminology](/getting-started/terminology)
 
-Note that we are signing transactions “the back end way”. This is not how you allow other user to interact with your application, this will be covered in the next chapter [Your first dapp with the web-sdk](https://docs.google.com/document/u/6/d/1Va5wF66JmGPwVEUWy-ZWtoXryoSpzM41rEyz5S9uaGY/edit)
+Note that we are signing transactions “the back end way”. This is not how you allow other user to interact with your application, this will be covered in the next chapter [Your First dApp](/your-first-dapp-with-the-web-sdk/your-first-dapp-with-the-web-sdk)
 
 
 ## Sign transaction with the @proton/js API class
 
-First, let me introduce you to 2 new classes from the @proton/js package: the **``API`**\`and the **``JsSignatureProvider`**\`. In fact the JSONRpc class, introduced in [1 Reading the on-chain data](https://docs.google.com/document/u/6/d/1Va5wF66JmGPwVEUWy-ZWtoXryoSpzM41rEyz5S9uaGY/edit), is one of the two building blocks of the API. The API class accepts two arguments when you instanciate it: a JSONRpc instance and a JsSignatureProvider instance. The API allows us to push transactions, signed by the JsSignatureProvider using the private key you provide.
+First, let me introduce you to 2 new classes from the @proton/js package: the **``API`**\`and the **``JsSignatureProvider`**\`. In fact the JSONRpc class, introduced in [Reading Chain Data](/reading-onchain-data/reading-onchain-data), is one of the two building blocks of the API. The API class accepts two arguments when you instanciate it: a JSONRpc instance and a JsSignatureProvider instance. The API allows us to push transactions, signed by the JsSignatureProvider using the private key you provide.
 
 Let’s just goes with the basic setup:
 
@@ -26,7 +26,7 @@ const signatureProvider = new JsSignatureProvider(['PVT_K1_...']);
 const api = new Api({ rpc: jsonRpc, signatureProvider: signatureProvider });
 ```
 
-So we keep our good old JSONRpc friend we saw from [1 Reading the on-chain data](https://docs.google.com/document/u/6/d/1Va5wF66JmGPwVEUWy-ZWtoXryoSpzM41rEyz5S9uaGY/edit). We the new class we spoke about above, the **`JsSignatureProvider`** and the **`API**`.`
+So we keep our good old JSONRpc friend we saw from [Reading Chain Data](/reading-onchain-data/reading-onchain-data). We the new class we spoke about above, the **`JsSignatureProvider`** and the **`API**`.`
 
 Now it’s time to create an action (check [documentation about actions](?tab=t.6mn84wfngzyo) if you haven’t read yet ), if you haven’t read  and try to push it. Make sure the private key provided in the JsSignatureProvider constructor array is the one that belong to the **`authorization.actor`** and the **`data.from`**
 
@@ -39,7 +39,7 @@ const api = new Api({ rpc: jsonRpc, signatureProvider: signatureProvider });
 
 const action = {
   account:"eosio.token",
-  name:"tranfer",
+  name:"transfer",
   authorization: [
     {
       actor: "devcourse",
@@ -135,7 +135,7 @@ Look at this\! We have a **`transaction_id`** and the **`receipt`** have a “ex
 As you can see all informations from the **`action`** are in the actions tab, and our transaction\_id is the same from the **`api.transact`** response call. 
 
 That’s the basics of signing and pushing transactions. You see how easy it is.   
- And you can stack actions in the transaction, but keep in mind that [execution order matters](https://docs.google.com/document/u/6/d/1Va5wF66JmGPwVEUWy-ZWtoXryoSpzM41rEyz5S9uaGY/edit).
+ And you can stack actions in the transaction, but keep in mind that [execution order matters](/getting-started/action-transactions-executions-order).
 
 ## A more functional example 
 
@@ -143,9 +143,9 @@ The most common example is the **`escrow contract`**. Just a quick overview of w
 
 > An **escrow** is a financial arrangement in which a third party holds and manages funds or assets on behalf of two other parties involved in a transaction. The third party only releases the funds or assets when certain predefined conditions are met. This ensures that both parties fulfill their obligations, providing protection to both the buyer and the seller.*
 
-For this example we have deployed a dedicated smart contract to keep the process simple at this point. This very example will be analysed in deep on [3 Your first dApp with the web-sdk](https://docs.google.com/document/u/6/d/1Va5wF66JmGPwVEUWy-ZWtoXryoSpzM41rEyz5S9uaGY/edit) and [4 introduction to smart contracts](https://docs.google.com/document/u/6/d/1Va5wF66JmGPwVEUWy-ZWtoXryoSpzM41rEyz5S9uaGY/edit). 
+For this example we have deployed a dedicated smart contract to keep the process simple at this point. This very example will be analysed in deep on [Your First dApp](/your-first-dapp-with-the-web-sdk/your-first-dapp-with-the-web-sdk) and [Write Your First Smart Contract](/smart-contracts/write-your-first-smart-contract). 
 
-The contract in question is a greeting contract with an escrow process. In short, by paying 10 XPR to the contract, you are authorized to publish a message… Lame but easy to understand. A quick look at the [41.devcourse contract on testnet](https://testnet.explorer.xprnetwork.org/account/41.devcourse?loadContract=true&tab=Tables&account=41.devcourse&scope=41.devcourse&limit=100)   
+The contract in question is a greeting contract with an escrow process. In short, by paying 10 XPR to the contract, you are authorized to publish a message. Simple, but effective for learning. A quick look at the [41.devcourse contract on testnet](https://testnet.explorer.xprnetwork.org/account/41.devcourse?loadContract=true&tab=Tables&account=41.devcourse&scope=41.devcourse&limit=100)   
 ![image2](/sign-and-push-txs/sign-and-push-tx_2.png)  
 You will see that we have 2 tables in the tables tab: **`tickets`** and **`greets`**. The tickets table holds “How many authorization to publish greeting you buy” and greets is “The message you have published using a ticket”. 
 
