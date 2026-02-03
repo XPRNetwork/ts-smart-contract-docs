@@ -13,6 +13,7 @@ function getDefaultSidebar() {
       sidebarDepth: 1,
       children: [
         { title: "Introduction", path: "/getting-started/introduction" },
+        { title: "For Ethereum Developers", path: "/getting-started/for-ethereum-developers" },
         { title: "Mainnet vs Testnet", path: "/getting-started/mainnet-vs-testnet" },
         { title: "Terminology", path: "/getting-started/terminology" },
         { title: "Data Types", path: "/getting-started/data-types" },
@@ -32,6 +33,7 @@ function getDefaultSidebar() {
         { title: "CLI Crash Course", path: "/cli-101/cli-crash-course" },
         { title: "Hello World Contract", path: "/guides/hello-world" },
         { title: "Key-Value Storage", path: "/guides/key-value" },
+        { title: "Create a Token", path: "/guides/create-token" },
         { title: "Reading Chain Data", path: "/reading-onchain-data/reading-onchain-data" },
         { title: "Signing Transactions", path: "/signing-and-pushing-transactions/signing-and-pushing-transactions" },
         { title: "Your First dApp", path: "/your-first-dapp-with-the-web-sdk/your-first-dapp-with-the-web-sdk" },

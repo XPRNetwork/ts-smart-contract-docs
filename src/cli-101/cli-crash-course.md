@@ -106,7 +106,7 @@ Ok first be sure you are on testnet \!
 proton chain:set proton-testSuccess: Switched to chain proton-test
 ```
 
-Great\! Now let’s create a new XPR Network account\!  Because we are devs, and we are organised we will output the process to a file to keep our keys and mnemonic stored in a place, it could be anywhere.When I start a new project,  I tend to store my testnet keys in a .json file. Let’s start the process en type this command, of course change the name to one that suits you and who follow the rule of XPR Network names (see [Getting started / A quick note on data types](https://docs.google.com/document/u/6/d/1Va5wF66JmGPwVEUWy-ZWtoXryoSpzM41rEyz5S9uaGY/edit) on name if you haven’t read yet):
+Great\! Now let’s create a new XPR Network account\!  Because we are devs, and we are organised we will output the process to a file to keep our keys and mnemonic stored in a place, it could be anywhere.When I start a new project,  I tend to store my testnet keys in a .json file. Let’s start the process en type this command, of course change the name to one that suits you and who follow the rule of XPR Network names (see [Data Types](/getting-started/data-types) if you haven't read yet):
 
 ```javascript
 proton create:account devcourse > devcourse.json

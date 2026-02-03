@@ -5,8 +5,8 @@ You can explore the [code examples on github](https://github.com/XPRNetwork/deve
 This is where your journey begins, let’s go small but fun. In this topic we will just read data from the chain, this is the most basic of every Web3 dev routine.   
 There is some important information you have to be aware of:
 
-* **Fetching data:** You cannot make complex queries like good old database language, nor using a deep foreign key system. If you want to manage complex data structure, better to rely on a server side solution, but we will discuss this later.  
-* …
+* **Fetching data:** You cannot make complex queries like good old database language, nor using a deep foreign key system. If you want to manage complex data structure, better to rely on a server side solution, but we will discuss this later.
+* **No authentication required:** Reading blockchain data is public and doesn't require any wallet connection or signatures.
 
 ## Let start with the setup
 

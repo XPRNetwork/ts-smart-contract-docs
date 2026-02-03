@@ -237,7 +237,7 @@ npm install -g @proton/cli
     --------------------
     ```
     As you see in the `AFTER` block, the data was properly saved and we are able to read it.
-12. Now let's try to deploy our contract to the blockchain and check how it will work inside the chain. It is easy to do using XPR Network CLI (more detailed info can be found [here](/introduction/getting-started.md#create-testnet-account)):
+12. Now let's try to deploy our contract to the blockchain and check how it will work inside the chain. It is easy to do using XPR Network CLI (more detailed info can be found in the [CLI Crash Course](/cli-101/cli-crash-course)):
     1. Create an account in `proton-test` chain using these commands (account can contain 12 characters max using charset a-z and 1-5):
         ```bash
         proton chain:set proton-test

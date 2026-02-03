@@ -13,7 +13,7 @@ Here is what an action look like
 ```javascript
 const action = {
   account:"eosio.token",
-  name:"tranfer",
+  name:"transfer",
   authorization: [
     {
       actor: "devcourse",

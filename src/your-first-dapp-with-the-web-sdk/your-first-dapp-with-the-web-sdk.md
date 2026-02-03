@@ -111,10 +111,8 @@ Ok we added a bunch of code, let’s analyse it.
 2. Next, we create an onClick handler for our button, within which we call the \`ConnectWallet\` function with the required configuration.  
    **`linkOptions`** defines the link between your dApp and the user wallet, it requires an \`endpoints\` array  and if the previous session needs to be restored if exist with the **`restoreSession`** boolean field.  
    **`selectorOptions`** provides configuration for the wallet type selection modal, shown in the first step of the identity process. The  **`enabledWalletTypes`** defines which wallet type will be shown on the list of available WebAuth wallet types.    
-   **`transportOptions`** defines the relation between your dApp creator account (...//TODO better definition)   
+   **`transportOptions`** configures how the signing request is transported to the wallet. The **`requestAccount`** field identifies your dApp to the wallet system.   
 3. Once the connection process is completed, the **`ConnectWallet`** function returns a  **`ConnectWalletRet`** that contains a **`session`**  object used to access the user account, sign and push TXs and a **`link`** object, which represents the user connection with your dApp.
-
-**// TODO app screen capture**
 
 So far so good, we have our connection, now let’s see the next step.
 
@@ -244,8 +242,7 @@ And finally, we request a transaction signature with the `transact` method from 
 You can pass your transaction in three flavors, but here we use the `actions` array. The second argument is the transaction options, here we just need to pass the `broadcast` flag as true.   
 Always think about error management with a `try/catch` block. 
 
-Let’s run our application   
-**// TODO app screenshot**
+Let's run our application and test it.
 
 Hooray, now we have our first working dApp. Can we go further ? Sure, but before, why not create our own smart contract ? Follow us to the next section to start developing smart contracts.
 
