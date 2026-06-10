@@ -7,7 +7,7 @@
     "start": "yarn dev",
     "dev": "vuepress dev src",
     "build": "vuepress build src",
-    "prepare": "husky install",
+    "prepare": "husky",
     "check-links": "node scripts/check-links.js",
     "check-endpoints": "node scripts/check-links.js --endpoints-only",
     "check-docs-links": "node scripts/check-links.js --links-only"

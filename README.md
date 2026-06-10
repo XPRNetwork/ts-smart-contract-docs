@@ -22,20 +22,14 @@ Building
 To work on the site locally, install the dependencies and start a development server serving at [localhost:8080](http://localhost:8080/):
 
 ```sh
-npm install
-npm start
+yarn
+yarn start
 ```
 
 To build the site to `dist`, i.e. to verify that it works as expected:
 
 ```sh
-npm run build
-```
-
-Serve distribution files with:
-
-```sh
-npm run serve
+yarn run build
 ```
 
 Merge

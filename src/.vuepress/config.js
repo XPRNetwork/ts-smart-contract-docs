@@ -66,7 +66,7 @@ module.exports = {
     ["link", {rel: "preconnect", href: "https://cdn.jsdelivr.net"}],
     ["meta", {name: "msapplication-TileColor", content: "#ffffff"}],
     ["meta", {name: "msapplication-config", content: "/browserconfig.xml"}],
-    ["meta", {name: "og:image", content: "/xprnetwork-devs-doc-og.png"}],
+    ["meta", {name: "og:image", content: "https://docs.xprnetwork.org/xprnetwork-devs-doc-og.png"}],
     [
       "meta",
       {name: "og:title", content: "XPR Network Developers Documentation"},
