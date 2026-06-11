@@ -37,36 +37,6 @@ body, .navbar, .sidebar {
   font-style: normal;
 }
 
-
-.navbar .logo {
-  height:2.4rem!important;
-}
-
-.action {
-  display:grid;
-  gri-template-columns:max-content max-content;
-  gap:40px;
-}
-.action a.docs,.action a.github  {
-  border-radius:16px!important;
-
-}
-
-.action a.docs{
-  background-color:#2943c4!important;
-  color:#ffffff!important;
-}
-.action a.github{
-  padding-right:2px!important;
-  background-color:#ffffff!important;
-  color:#000000!important;
-}
-
-.action a.github span {
-  margin-right:40px
-
-}
-
 .external-link{
   display:flex;
   width:max-content;
@@ -116,8 +86,11 @@ pre[class*="language-"] {
 }
 
 .sidebar{
- padding:20px!important;
+ padding-left: 20px;
+ padding-right: 20px;
+ padding-top: 4.2em;
 }
+
 .sidebar::-webkit-scrollbar {
   width: 0.1em;
 }
@@ -147,12 +120,6 @@ pre[class*="language-"] {
 
 .sidebar-group .sidebar-heading{
     color:var(--text-color);
-}
-
-
-
-.navbar .links {
-  background-color:transparent!important
 }
 
 code {
@@ -192,15 +159,23 @@ border:1px solid var(--alt-background-color)!important;
 }
 
 .theme-default-content {
-  max-width:100vw!important;
-  margin:0!important;
-  padding:0!important;
+  max-width:100% !important;
+  margin:0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+  box-sizing: border-box;
+
+  @media (max-width: 419px) {
+    &:not(.custom) {
+      padding-top: 2.5em;
+    }
+  }
   
 }
 
 .theme-default-content #hero {
   position:relative!important;
-  max-width:100vw!important;
+  max-width:100% !important;
   margin:0!important;
   padding:0!important;
   
@@ -214,7 +189,7 @@ border:1px solid var(--alt-background-color)!important;
   }
   
   @media (max-width:640px) {
-    max-width:100vw;
+    max-width:100%;
     margin:0 20px;
   }
 }
@@ -398,15 +373,6 @@ details table td {
   padding-bottom: 0;
   color:#ffffff;
 }
-.action {
-  user-select: none;
-  display:flex;
-  @media (max-width:640px) {
-    gap:20px;
-    flex-direction:column;
-  }
-}
-
 
 /******************
 APP HEADER
@@ -472,37 +438,62 @@ a:hover {
 * APP BUTTON
 *******************/
 
-.action a {
-  display: flex;
-  justify-content:stretch;
-  font-size: 1.2rem;
-  color: #fff;
-  background-color: #020ECB;
-  padding: .8rem 1.6rem;
-  border-radius: 16px;
-  transition: background-color .1s ease;
-  text-decoration: none !important;
-  justify-content:center;
-  align-items:center;  
+.action {
+  gap:40px;
+  user-select: none;
+  display:flex;
+  
+  @media (max-width:640px) {
+    gap:20px;
+    flex-direction:column;
+  }
+
+  a {
+    display: flex;
+    justify-content:stretch;
+    font-size: 1.2rem;
+    color: #fff;
+    background-color: #020ECB;
+    padding: .8rem 1.6rem;
+    border-radius: 16px;
+    transition: background-color .1s ease;
+    text-decoration: none !important;
+    justify-content:center;
+    align-items: center;  
+    min-height: 32px;
+
+    &:hover {
+      background-color: #1a8ae7;
+    }
+
+    svg {
+      width: 1em;
+      position: relative;
+      display: inline-block;
+    }
+
+    .title {
+      display: inline-block;
+    }
+
+    &.link {
+      gap: 4px;
+      color: var(--button-text-color);
+      background: var(--button-base-color);
+
+      &:hover {
+        background: var(--button-hover-color);
+      }
+    }
+
+    &.docs{
+      background-color: #2943c4;
+      color: #ffffff;
+    }
+  }
 }
-.action a:hover {
-  background-color: #1a8ae7;
-}
-.action a svg {
-  width: 2em;
-  position: relative;
-  left: -10px;
-  float: left;
-  height: 32px;
-}
-.action a.link {
-  color: var(--button-text-color);
-  background: var(--button-base-color);
-  margin-right: 10px;
-}
-.action a.link:hover {
-  background: var(--button-hover-color);
-}
+
+
 
 /******************
 * HERO WAVE
@@ -510,7 +501,7 @@ a:hover {
 
 #hero {
   height:600px;
-  width:100vw;
+  width:100%;
   display:flex;
   justify-content:center;
   align-items:center;
@@ -528,11 +519,12 @@ a:hover {
   flex-direction:column;
   position:relative;
   z-index:2;
+  box-sizing: border-box;
   @media (min-width:1601px) {
     max-width:60vw;
   }
   @media (max-width:640px) {
-    max-width:100vw;
+    max-width:100%;
     padding:20px
   }
 }
@@ -548,7 +540,7 @@ a:hover {
  @media (max-width:640px) {
     font-size: 2.4rem;
     font-weight:700;w
-    letter-spacing:-2px;
+    letter-spacing:-1px;
   }
 
 }

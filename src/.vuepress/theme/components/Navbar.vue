@@ -31,8 +31,10 @@
         v-if="isAlgoliaSearch"
         :options="algolia"
       />
-      
-      <SearchBox v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false" />
+      <div v-else-if="$site.themeConfig.search !== false && $page.frontmatter.search !== false"
+        class="search-box-block">
+        <SearchBox  />
+      </div>
       <NavLinks class="can-hide" />
       <ThemeSwitch />
     </div>
@@ -103,46 +105,74 @@ $navbar-horizontal-padding = 1.5rem
 
 .navbar
   padding $navbar-vertical-padding $navbar-horizontal-padding
-  line-height $navbarHeight - 1.4rem
+  // line-height $navbarHeight - 1.4rem
+  display flex
+  align-items center
+  justify-content flex-start
+  gap: 8px
+
+
   a, span, img
     display inline-block
+
+  .sidebar-button
+    position relative
+    top auto
+    left auto
+
   .logo
     height $navbarHeight - 1.4rem
     min-width $navbarHeight - 1.4rem
-    margin-right 0.8rem
+    // margin-right 0.8rem
     vertical-align top
+    // .navbar .logo {
+    height 2.4rem
+// }
+
   .site-name
     font-size 1.3rem
     font-weight 600
     color $textColor
     position relative
+
   .links
     gap:10px
     justify-content:center
     align-items:center
-    padding-left 1.5rem
     box-sizing border-box
-    background-color white
+    background-color transparent
     white-space nowrap
     font-size 0.9rem
-    position absolute
-    right $navbar-horizontal-padding
-    top $navbar-vertical-padding
     display flex
+    margin-inline-start auto
+
+  .search-box-block
+    position relative
+    min-height 2em
+
     .search-box
-      flex: 0 0 auto
-      vertical-align top
+      position absolute
+      right 0
+      top 50%
+      margin-top -1.1em
 
 @media (max-width: $MQMobile)
   .navbar
-    padding-left 4rem
+    // padding-left 4rem
+
+    padding-left 1em
+    padding-right 1em
+
+    .logo
+      height 1.5em
+
     .can-hide
       display none
-    .links
-      padding-left 1.5rem
     .site-name
       width calc(100vw - 9.4rem)
       overflow hidden
       white-space nowrap
       text-overflow ellipsis
+    .search-box input 
+      left auto
 </style>
